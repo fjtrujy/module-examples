@@ -6,9 +6,9 @@
 //  Copyright © 2018 Francisco Javier Trujillo Mata. All rights reserved.
 //
 
-import UIKit
+import FTMTableSectionModules
 
-class MainViewController: UIViewController {
+class MainViewController: ModulesViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

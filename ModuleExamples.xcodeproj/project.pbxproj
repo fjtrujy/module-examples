@@ -17,6 +17,7 @@
 		B536E7CA219CD339005B7F38 /* moduleExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7C9219CD339005B7F38 /* moduleExamplesUITests.swift */; };
 		B55BF7BC219CD4B300B937C7 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55BF7BB219CD4B300B937C7 /* MainViewController.xib */; };
 		B55BF7BD219CD4DD00B937C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7AB219CD338005B7F38 /* MainViewController.swift */; };
+		B55BF7C0219CD73500B937C7 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7BF219CD73500B937C7 /* AppModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		B536E7C9219CD339005B7F38 /* moduleExamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moduleExamplesUITests.swift; sourceTree = "<group>"; };
 		B536E7CB219CD339005B7F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55BF7BB219CD4B300B937C7 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		B55BF7BF219CD73500B937C7 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 		C8CCE563A0A7C130AA8CC504 /* Pods_ModuleExamplesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModuleExamplesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5C1099AE660DF4C5CB6B7B /* Pods-ModuleExamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamplesTests.release.xcconfig"; path = "Target Support Files/Pods-ModuleExamplesTests/Pods-ModuleExamplesTests.release.xcconfig"; sourceTree = "<group>"; };
 		E88604EE41ECBCE47DF2DE70 /* Pods_ModuleExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModuleExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,8 +166,17 @@
 		B55BF7BA219CD46600B937C7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B55BF7BE219CD6F000B937C7 /* AppsModule */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		B55BF7BE219CD6F000B937C7 /* AppsModule */ = {
+			isa = PBXGroup;
+			children = (
+				B55BF7BF219CD73500B937C7 /* AppModule.swift */,
+			);
+			path = AppsModule;
 			sourceTree = "<group>";
 		};
 		E48E7882F69881F784C068B5 /* Pods */ = {
@@ -178,7 +189,6 @@
 				571DC642B87AD4D75E22CF76 /* Pods-ModuleExamplesUITests.debug.xcconfig */,
 				77BB0D313ACFD338C7CF3A4C /* Pods-ModuleExamplesUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -410,6 +420,7 @@
 			files = (
 				B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */,
 				B55BF7BD219CD4DD00B937C7 /* MainViewController.swift in Sources */,
+				B55BF7C0219CD73500B937C7 /* AppModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
