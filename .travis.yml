@@ -23,9 +23,6 @@ before_install:
 script:
     - set -o pipefail
 
-    - echo Check if the library described by the podspec can be built
-    - pod lib lint --allow-warnings
-
     - echo Build
     - xcodebuild clean build -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
 
