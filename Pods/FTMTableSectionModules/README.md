@@ -1,0 +1,193 @@
+# FTMTableSectionModules
+
+[![Build Status](https://travis-ci.org/fjtrujy/FTMTableSectionModules.svg?branch=master)](https://travis-ci.org/fjtrujy/FTMTableSectionModules)
+[![Version](https://img.shields.io/cocoapods/v/FTMTableSectionModules.svg?style=flat)](http://cocoapods.org/pods/FTMTableSectionModules)
+[![License](https://img.shields.io/cocoapods/l/FTMTableSectionModules.svg?style=flat)](http://cocoapods.org/pods/FTMTableSectionModules)
+[![Platform](https://img.shields.io/cocoapods/p/FTMTableSectionModules.svg?style=flat)](http://cocoapods.org/pods/FTMTableSectionModules)
+[![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/fjtrujy/ftmtablesectionmodules)](http://clayallsopp.github.io/readme-score?url=https://github.com/fjtrujy/ftmtablesectionmodules)
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Requirements
+
+Is valid for iOS 7 and higher.
+Requires Swift 3.0 and XCodde 8.0 or higher.
+
+## Installation
+
+FTMTableSectionModules is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'FTMTableSectionModules'
+```
+
+## How to use it
+
+FTMTableSectionModules basically is a pack of tools that is helping you to develop faster. This libabry is so useful for those UIViewControllers that are based in UITableView.
+The main concept in this libary is, a Module means a Section in a UITableView, so there is a subclass of UIViewController called ModulesViewController that manage all modules.
+
+A Module is a like and mini UIViewController, should be able to work it self.
+
+Basically a ModulesViewController has an array of TableSectionModules.
+
+Sometimes an example is easier to understand than 1000 words.. so, please to see the example use:
+
+```ruby
+pod  try 'FTMTableSectionModules'
+```
+
+If you don't have `pod try` installed go to https://github.com/CocoaPods/cocoapods-try to install it.
+
+Inside you will see an example of a ViewController with 2 differents modules and a couple of cells per module.
+
+In case that you still want to see here the examples, let's give a try.
+
+![Let me give it a try](https://raw.githubusercontent.com/fjtrujy/FTMTableSectionModules/master/Example/FTMTableSectionModules/Images.xcassets/FirstModule/giveATry.imageset/giveATry.jpg)
+
+#### 1. Create a Module
+You need to create a subclass of `TableSectionModule`
+
+```swift
+class FirstSectionModule: TableSectionModule {}
+```
+
+#### 2. Override the needed methods in the Module
+There are a lot of methods that could be override. The most usuals are: 
+
+* Registration of `UITableViewCell`/`UITableViewHeaderFooterView` with `Class`/`Nib`
+```swift
+override func registerClassForCells() -> [AnyClass]
+override func registerClassForHeadersFooters() -> [AnyClass]
+override func registerNibsForCells() -> [AnyClass] 
+override func registerNibsForHeadersFooters() -> [AnyClass] 
+```
+
+* Creation of rows, this is the like the data source of the `UITableView`
+```swift
+override func createRows()
+```
+
+* Dequeue and configure of the `UITableViewCell`
+```swift
+override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell
+```
+* Rest of method that could be override
+You can override basically the same method that the `UITableViewDelegate` and `UITableViewDataSource` offer.
+
+* Obviously you will need to create&configure all the `UITableViewCells` that the Module would contains.
+<br><br>
+###### Example of `TableSectionModule` with methods
+<br>
+
+```swift
+import FTMTableSectionModules
+
+class FirstSectionModule: TableSectionModule {
+    override func registerNibsForCells() -> [AnyClass] {
+        return super.registerNibsForCells() + [
+            Example1TableViewCell.classForCoder(),
+        ]
+    }
+    
+    override func registerClassForCells() -> [AnyClass] {
+        return super.registerClassForCells() + [UITableViewCell.classForCoder()]
+    }
+    
+    override func createRows() {
+        super.createRows()
+        
+        self.rows.append(String(describing: Example1TableViewCell.self) as AnyObject)
+        self.rows.append(String(describing: UITableViewCell.self) as AnyObject)
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: className, for: indexPath)
+        
+        let className = self.rows[(indexPath as NSIndexPath).row] as! String
+        //Addtional configuration for the cell
+        switch className {
+        case String(describing: UITableViewCell.self):
+            cell.textLabel?.text = "A tottally native cell"
+            break
+        default:
+            break
+        }
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
+        return 44.0
+}
+```
+
+<br><br>
+#### 3. Create a ModulesViewController
+You need to create a subclass of `ModulesViewController`
+```swift
+class MyViewController: ModulesViewController {}
+```
+
+#### 4. Override the needed methods in the ViewController
+The methods to be override in the `ModulesViewController` are less than on the `Modules`. Usually is just needed to override the `createModules`
+
+```swift
+override func createModules()
+```
+This method will add all the modules that the view controller could have. Like this example:
+
+```swift
+override func createModules() {
+        super.createModules()
+        
+        self.appendModule(FirstSectionModule(tableView: self.tableView!))
+    }
+```
+
+<br>
+
+###### Example of `ModulesViewController` with methods
+<br>
+
+```swift
+import FTMTableSectionModules
+
+class MyViewController: ModulesViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        self.tableView?.rowHeight = UITableViewAutomaticDimension
+        self.tableView?.estimatedRowHeight = 44
+        
+        self.tableView?.tableFooterView = UIView()
+    }
+
+    override func createModules() {
+        super.createModules()
+        
+        self.appendModule(FirstSectionModule(tableView: self.tableView!))
+    }
+
+}
+
+```
+<br><br><br>
+As could appreciate this is a very good approach to avoid masive view controllers. The main idea is to split responsabilities. 
+
+- A `ModulesViewController` will manage (add/remove) `TableSectionModule`
+- A `TableSectionModule` will manage the cells that the section itself will contains
+- A `TableSectionModule` could contain enough logic & responsability how to make it fully work that section of the `UITableView`
+
+<br><br>
+##### Enjoy and be module my developer! :godmode:
+<br><br>
+## Author
+
+Francisco Javier Trujillo Mata, fjtrujy@gmail.com
+
+## License
+
+FTMTableSectionModules is available under the MIT license. See the LICENSE file for more info.

@@ -1,0 +1,16 @@
+PODS:
+  - FTMTableSectionModules (0.1.9)
+
+DEPENDENCIES:
+  - FTMTableSectionModules
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FTMTableSectionModules
+
+SPEC CHECKSUMS:
+  FTMTableSectionModules: 93609f22f8a60c60084e5d74aa7c038fd0f2151a
+
+PODFILE CHECKSUM: 3c78b3aec4307fce12bdc425ffaeebabfde8865d
+
+COCOAPODS: 1.6.0.beta.2
