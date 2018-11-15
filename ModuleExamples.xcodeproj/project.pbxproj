@@ -11,13 +11,18 @@
 		8225AB7FB6A1375313FF6719 /* Pods_ModuleExamples_ModuleExamplesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21DD02D3A0FF56C6F676E99 /* Pods_ModuleExamples_ModuleExamplesUITests.framework */; };
 		9B5FEA497B86AB6FE9759457 /* Pods_ModuleExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011F882C271B328682D6546B /* Pods_ModuleExamples.framework */; };
 		B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7A9219CD338005B7F38 /* AppDelegate.swift */; };
-		B536E7B1219CD339005B7F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B536E7B0219CD339005B7F38 /* Assets.xcassets */; };
 		B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B536E7B2219CD339005B7F38 /* LaunchScreen.storyboard */; };
 		B536E7BF219CD339005B7F38 /* ModuleExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7BE219CD339005B7F38 /* ModuleExamplesTests.swift */; };
 		B536E7CA219CD339005B7F38 /* ModuleExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7C9219CD339005B7F38 /* ModuleExamplesUITests.swift */; };
 		B55BF7BC219CD4B300B937C7 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55BF7BB219CD4B300B937C7 /* MainViewController.xib */; };
 		B55BF7BD219CD4DD00B937C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7AB219CD338005B7F38 /* MainViewController.swift */; };
 		B55BF7C0219CD73500B937C7 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7BF219CD73500B937C7 /* AppModule.swift */; };
+		B55BF7C3219CE9D300B937C7 /* AppModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7C2219CE9D300B937C7 /* AppModuleModel.swift */; };
+		B55BF7C5219CE9FC00B937C7 /* GenericAppInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7C4219CE9FC00B937C7 /* GenericAppInformation.swift */; };
+		B55BF7C7219CECE200B937C7 /* AppsModuleAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55BF7C6219CECE200B937C7 /* AppsModuleAssets.xcassets */; };
+		B55BF7C9219CF0F200B937C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55BF7C8219CF0F200B937C7 /* Images.xcassets */; };
+		B55BF7CD219CF80400B937C7 /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7CB219CF80400B937C7 /* FacebookViewController.swift */; };
+		B55BF7CE219CF80400B937C7 /* FacebookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55BF7CC219CF80400B937C7 /* FacebookViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +51,6 @@
 		B536E7A6219CD338005B7F38 /* ModuleExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B536E7A9219CD338005B7F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B536E7AB219CD338005B7F38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		B536E7B0219CD339005B7F38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B536E7B3219CD339005B7F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B536E7B5219CD339005B7F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B536E7BA219CD339005B7F38 /* ModuleExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModuleExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +61,12 @@
 		B536E7CB219CD339005B7F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55BF7BB219CD4B300B937C7 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		B55BF7BF219CD73500B937C7 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
+		B55BF7C2219CE9D300B937C7 /* AppModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModuleModel.swift; sourceTree = "<group>"; };
+		B55BF7C4219CE9FC00B937C7 /* GenericAppInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericAppInformation.swift; sourceTree = "<group>"; };
+		B55BF7C6219CECE200B937C7 /* AppsModuleAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppsModuleAssets.xcassets; sourceTree = "<group>"; };
+		B55BF7C8219CF0F200B937C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B55BF7CB219CF80400B937C7 /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
+		B55BF7CC219CF80400B937C7 /* FacebookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacebookViewController.xib; sourceTree = "<group>"; };
 		B782DA01B35280E8E592AEB6 /* Pods-ModuleExamples-ModuleExamplesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamples-ModuleExamplesUITests.debug.xcconfig"; path = "Target Support Files/Pods-ModuleExamples-ModuleExamplesUITests/Pods-ModuleExamples-ModuleExamplesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D13D1109F93C8EBA265E1428 /* Pods-ModuleExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamples.debug.xcconfig"; path = "Target Support Files/Pods-ModuleExamples/Pods-ModuleExamples.debug.xcconfig"; sourceTree = "<group>"; };
 		F1EFAA66E22F6BE06DAC54EE /* Pods-ModuleExamples-ModuleExamplesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamples-ModuleExamplesUITests.release.xcconfig"; path = "Target Support Files/Pods-ModuleExamples-ModuleExamplesUITests/Pods-ModuleExamples-ModuleExamplesUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,9 +139,9 @@
 				B55BF7BA219CD46600B937C7 /* Modules */,
 				B55BF7B9219CD45C00B937C7 /* ViewControllers */,
 				B536E7A9219CD338005B7F38 /* AppDelegate.swift */,
-				B536E7B0219CD339005B7F38 /* Assets.xcassets */,
 				B536E7B2219CD339005B7F38 /* LaunchScreen.storyboard */,
 				B536E7B5219CD339005B7F38 /* Info.plist */,
+				B55BF7C8219CF0F200B937C7 /* Images.xcassets */,
 			);
 			path = ModuleExamples;
 			sourceTree = "<group>";
@@ -157,6 +167,7 @@
 		B55BF7B9219CD45C00B937C7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B55BF7CA219CF7CF00B937C7 /* FacebookViewController */,
 				B536E7AB219CD338005B7F38 /* MainViewController.swift */,
 				B55BF7BB219CD4B300B937C7 /* MainViewController.xib */,
 			);
@@ -174,9 +185,29 @@
 		B55BF7BE219CD6F000B937C7 /* AppsModule */ = {
 			isa = PBXGroup;
 			children = (
+				B55BF7C1219CE9B200B937C7 /* Model */,
 				B55BF7BF219CD73500B937C7 /* AppModule.swift */,
+				B55BF7C6219CECE200B937C7 /* AppsModuleAssets.xcassets */,
 			);
 			path = AppsModule;
+			sourceTree = "<group>";
+		};
+		B55BF7C1219CE9B200B937C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B55BF7C2219CE9D300B937C7 /* AppModuleModel.swift */,
+				B55BF7C4219CE9FC00B937C7 /* GenericAppInformation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B55BF7CA219CF7CF00B937C7 /* FacebookViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B55BF7CB219CF80400B937C7 /* FacebookViewController.swift */,
+				B55BF7CC219CF80400B937C7 /* FacebookViewController.xib */,
+			);
+			path = FacebookViewController;
 			sourceTree = "<group>";
 		};
 		E48E7882F69881F784C068B5 /* Pods */ = {
@@ -302,9 +333,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55BF7C7219CECE200B937C7 /* AppsModuleAssets.xcassets in Resources */,
+				B55BF7C9219CF0F200B937C7 /* Images.xcassets in Resources */,
 				B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */,
 				B55BF7BC219CD4B300B937C7 /* MainViewController.xib in Resources */,
-				B536E7B1219CD339005B7F38 /* Assets.xcassets in Resources */,
+				B55BF7CE219CF80400B937C7 /* FacebookViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +499,10 @@
 			files = (
 				B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */,
 				B55BF7BD219CD4DD00B937C7 /* MainViewController.swift in Sources */,
+				B55BF7CD219CF80400B937C7 /* FacebookViewController.swift in Sources */,
+				B55BF7C5219CE9FC00B937C7 /* GenericAppInformation.swift in Sources */,
 				B55BF7C0219CD73500B937C7 /* AppModule.swift in Sources */,
+				B55BF7C3219CE9D300B937C7 /* AppModuleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Override point for customization after application launch.
             
             self.window = UIWindow.init(frame: UIScreen.main.bounds)
-            self.window?.rootViewController = MainViewController.init()
+            self.window?.rootViewController = UINavigationController(rootViewController: MainViewController())
             // Override point for customization after application launch.
             self.window?.makeKeyAndVisible()
             
