@@ -2,15 +2,21 @@ PODS:
   - FTMTableSectionModules (0.1.9)
 
 DEPENDENCIES:
-  - FTMTableSectionModules
+  - FTMTableSectionModules (from `https://github.com/fjtrujy/FTMTableSectionModules.git`, branch `master`)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - FTMTableSectionModules
+EXTERNAL SOURCES:
+  FTMTableSectionModules:
+    :branch: master
+    :git: https://github.com/fjtrujy/FTMTableSectionModules.git
+
+CHECKOUT OPTIONS:
+  FTMTableSectionModules:
+    :commit: ab2e04427c9db4d74d27fb6c7e9cf896b8c76832
+    :git: https://github.com/fjtrujy/FTMTableSectionModules.git
 
 SPEC CHECKSUMS:
   FTMTableSectionModules: 93609f22f8a60c60084e5d74aa7c038fd0f2151a
 
-PODFILE CHECKSUM: caad4963a4dc2793f2ae3a80305ed86f301cde8f
+PODFILE CHECKSUM: aaa0be29d59eeda243a5738718c296d586d0bbad
 
 COCOAPODS: 1.6.0.beta.2

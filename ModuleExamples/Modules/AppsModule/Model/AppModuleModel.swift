@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum SupportedApp {
+    case facebook
+    case whatsapp
+}
+
 class AppModuleModel: NSObject {
     private(set) var appsDescription: String
     private(set) var apps : Array<GenericAppInformation>
@@ -16,8 +21,12 @@ class AppModuleModel: NSObject {
         appsDescription = "List of most used apps"
         
         apps = []
-        apps.append(GenericAppInformation(appName: "Facebook", appIcon: UIImage(named: "facebookIcon")!))
-        apps.append(GenericAppInformation(appName: "Whatsapp", appIcon: UIImage(named: "whatsappIcon")!))
+        apps.append(GenericAppInformation(app: SupportedApp.facebook,
+                                          appName: "Facebook",
+                                          appIcon: UIImage(named: "facebookIcon")!))
+        apps.append(GenericAppInformation(app: SupportedApp.whatsapp,
+                                          appName: "Whatsapp",
+                                          appIcon: UIImage(named: "whatsappIcon")!))
         
         super.init()
     }

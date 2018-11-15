@@ -8,7 +8,7 @@ target 'ModuleExamples' do
   inhibit_all_warnings!
 
   # Pods for ModuleExamples
-  pod 'FTMTableSectionModules'
+  pod 'FTMTableSectionModules', :git => 'https://github.com/fjtrujy/FTMTableSectionModules.git', :branch => 'master'
 
   target 'ModuleExamplesTests' do
     # Pods for testing

@@ -56,7 +56,7 @@ class AppModule: TableSectionModule {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30//UITableView.automaticDimension
+        return 30.0
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
@@ -74,5 +74,5 @@ class AppModule: TableSectionModule {
 
 //MARK: ApppModuleDelegate
 protocol AppModuleDelegate: class {
-    func appSelected(_ app: GenericAppInformation?)
+    func appSelected(_ appInformation: GenericAppInformation?)
 }

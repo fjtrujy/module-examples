@@ -15,8 +15,8 @@ class MainViewController: ModulesViewController, AppModuleDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "Modules are wonderfull!"
         self.tableView?.rowHeight = UITableView.automaticDimension
-        self.tableView?.estimatedRowHeight = 44
-        self.tableView?.estimatedSectionHeaderHeight = 30
+//        self.tableView?.estimatedRowHeight = 44
+//        self.tableView?.estimatedSectionHeaderHeight = 30
         
         self.tableView?.tableFooterView = UIView()
     }
@@ -31,8 +31,18 @@ class MainViewController: ModulesViewController, AppModuleDelegate {
     }
     
     //MARK: AppModuleDelegate
-    func appSelected(_ app: GenericAppInformation?) {
-        navigationController?.pushViewController(FacebookViewController(), animated: true)
+    func appSelected(_ appInformation: GenericAppInformation?) {
+        
+        let viewcontroller : UIViewController
+        switch appInformation!.app {
+        case .facebook:
+            viewcontroller = FacebookViewController()
+            break
+        case .whatsapp:
+            viewcontroller = WhatsappViewController()
+            break
+        }
+        navigationController?.pushViewController(viewcontroller, animated: true)
     }
 
 }
