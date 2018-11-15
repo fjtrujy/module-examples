@@ -8,7 +8,7 @@
 
 import FTMTableSectionModules
 
-class MainViewController: ModulesViewController {
+class MainViewController: ModulesViewController, AppModuleDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +23,17 @@ class MainViewController: ModulesViewController {
     
     override func createModules() {
         super.createModules()
-        appendModule(AppModule(tableView: tableView!))
+        
+        //AppModule
+        let appModule = AppModule(tableView: tableView!)
+        appModule.delegate = self
+        appendModule(appModule)
     }
-
+    
+    //MARK: AppModuleDelegate
+    func appSelected(_ app: GenericAppInformation?) {
+        navigationController?.pushViewController(FacebookViewController(), animated: true)
+    }
 
 }
 

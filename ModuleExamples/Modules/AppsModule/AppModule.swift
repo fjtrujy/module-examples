@@ -9,6 +9,8 @@
 import FTMTableSectionModules
 
 class AppModule: TableSectionModule {
+    weak var delegate: AppModuleDelegate?
+    
     private var info : AppModuleModel
     
     override init(tableView: UITableView) {
@@ -60,4 +62,17 @@ class AppModule: TableSectionModule {
     override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
         return 60.0
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+        let appInfo = info.apps[indexPath.row]
+        
+        delegate?.appSelected(appInfo)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+//MARK: ApppModuleDelegate
+protocol AppModuleDelegate: class {
+    func appSelected(_ app: GenericAppInformation?)
 }
