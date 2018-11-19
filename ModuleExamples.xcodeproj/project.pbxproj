@@ -28,6 +28,9 @@
 		B55BF7D6219E22F000B937C7 /* WhatsappStateModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7D5219E22F000B937C7 /* WhatsappStateModule.swift */; };
 		B55BF7DA219E232100B937C7 /* WhatsappStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7D8219E232100B937C7 /* WhatsappStatusCell.swift */; };
 		B55BF7DB219E232100B937C7 /* WhatsappStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55BF7D9219E232100B937C7 /* WhatsappStatusCell.xib */; };
+		B55BF7DD21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7DC21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift */; };
+		B55BF7DF21A1891900B937C7 /* StatusModuleAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55BF7DE21A1891800B937C7 /* StatusModuleAssets.xcassets */; };
+		B55BF7E121A1946000B937C7 /* WhatsappStateModuleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7E021A1946000B937C7 /* WhatsappStateModuleDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		B55BF7D5219E22F000B937C7 /* WhatsappStateModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStateModule.swift; sourceTree = "<group>"; };
 		B55BF7D8219E232100B937C7 /* WhatsappStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatusCell.swift; sourceTree = "<group>"; };
 		B55BF7D9219E232100B937C7 /* WhatsappStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhatsappStatusCell.xib; sourceTree = "<group>"; };
+		B55BF7DC21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatusCellDecorator.swift; sourceTree = "<group>"; };
+		B55BF7DE21A1891800B937C7 /* StatusModuleAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StatusModuleAssets.xcassets; sourceTree = "<group>"; };
+		B55BF7E021A1946000B937C7 /* WhatsappStateModuleDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStateModuleDecorator.swift; sourceTree = "<group>"; };
 		B782DA01B35280E8E592AEB6 /* Pods-ModuleExamples-ModuleExamplesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamples-ModuleExamplesUITests.debug.xcconfig"; path = "Target Support Files/Pods-ModuleExamples-ModuleExamplesUITests/Pods-ModuleExamples-ModuleExamplesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D13D1109F93C8EBA265E1428 /* Pods-ModuleExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamples.debug.xcconfig"; path = "Target Support Files/Pods-ModuleExamples/Pods-ModuleExamples.debug.xcconfig"; sourceTree = "<group>"; };
 		F1EFAA66E22F6BE06DAC54EE /* Pods-ModuleExamples-ModuleExamplesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamples-ModuleExamplesUITests.release.xcconfig"; path = "Target Support Files/Pods-ModuleExamples-ModuleExamplesUITests/Pods-ModuleExamples-ModuleExamplesUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -236,6 +242,8 @@
 			children = (
 				B55BF7D7219E230300B937C7 /* Cells */,
 				B55BF7D5219E22F000B937C7 /* WhatsappStateModule.swift */,
+				B55BF7E021A1946000B937C7 /* WhatsappStateModuleDecorator.swift */,
+				B55BF7DE21A1891800B937C7 /* StatusModuleAssets.xcassets */,
 			);
 			path = StatusModule;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 			children = (
 				B55BF7D8219E232100B937C7 /* WhatsappStatusCell.swift */,
 				B55BF7D9219E232100B937C7 /* WhatsappStatusCell.xib */,
+				B55BF7DC21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -376,6 +385,7 @@
 				B55BF7C9219CF0F200B937C7 /* Images.xcassets in Resources */,
 				B55BF7D3219E21B000B937C7 /* WhatsappViewController.xib in Resources */,
 				B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */,
+				B55BF7DF21A1891900B937C7 /* StatusModuleAssets.xcassets in Resources */,
 				B55BF7DB219E232100B937C7 /* WhatsappStatusCell.xib in Resources */,
 				B55BF7BC219CD4B300B937C7 /* MainViewController.xib in Resources */,
 				B55BF7CE219CF80400B937C7 /* FacebookViewController.xib in Resources */,
@@ -541,9 +551,11 @@
 				B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */,
 				B55BF7BD219CD4DD00B937C7 /* MainViewController.swift in Sources */,
 				B55BF7CD219CF80400B937C7 /* FacebookViewController.swift in Sources */,
+				B55BF7DD21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift in Sources */,
 				B55BF7D6219E22F000B937C7 /* WhatsappStateModule.swift in Sources */,
 				B55BF7C5219CE9FC00B937C7 /* GenericAppInformation.swift in Sources */,
 				B55BF7C0219CD73500B937C7 /* AppModule.swift in Sources */,
+				B55BF7E121A1946000B937C7 /* WhatsappStateModuleDecorator.swift in Sources */,
 				B55BF7C3219CE9D300B937C7 /* AppModuleModel.swift in Sources */,
 				B55BF7DA219E232100B937C7 /* WhatsappStatusCell.swift in Sources */,
 				B55BF7D2219E21B000B937C7 /* WhatsappViewController.swift in Sources */,

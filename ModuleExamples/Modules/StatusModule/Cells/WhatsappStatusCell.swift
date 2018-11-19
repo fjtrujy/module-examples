@@ -11,15 +11,24 @@ import UIKit
 class WhatsappStatusCell: UITableViewCell {
     @IBOutlet weak open var stateDescription : UILabel?
     @IBOutlet weak open var stateImage : UIImageView?
+    @IBOutlet weak open var buttonsView : UIView?
+    @IBOutlet weak open var cameraButton : UIButton?
+    @IBOutlet weak open var editButton : UIButton?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configure(decorator : WhatsappStatusCellDecorator) {
+        backgroundColor = decorator.backgroundColor
+        buttonsView?.backgroundColor = decorator.backgroundColor
+        
+        stateDescription?.attributedText = decorator.attributedInfo
+        
+        buttonsView?.isHidden = decorator.hideButtons
+        cameraButton?.setImage(decorator.camaraIcon, for: UIControl.State.normal)
+        editButton?.setImage(decorator.editIcon, for: UIControl.State.normal)
+        
     }
     
 }

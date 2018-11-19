@@ -19,7 +19,17 @@ class WhatsappViewController: ModulesViewController {
     override func createModules() {
         super.createModules()
         
-        self.appendModule(WhatsappStateModule(tableView: tableView!))
+        //My Status Module
+        let myStatusModule = WhatsappStateModule.init(tableView: tableView!)
+        
+        // Values ideally received from request/responses
+        let myStatusModuleDecorator = WhatsappStateModuleDecorator()
+        myStatusModuleDecorator.rows = [
+            WhatsappStatusCellDecorator.init(title: "My Status", subtitle: "Add to my status", buttons: true),
+        ]
+        
+        myStatusModule.configure(decorator: myStatusModuleDecorator)
+        self.appendModule(myStatusModule)
     }
 
 }
