@@ -10,6 +10,14 @@
 		5F0948D6D9FAE5F59BB51DF8 /* Pods_ModuleExamples_ModuleExamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F1118AAEB6428C2987F6CF4 /* Pods_ModuleExamples_ModuleExamplesTests.framework */; };
 		8225AB7FB6A1375313FF6719 /* Pods_ModuleExamples_ModuleExamplesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21DD02D3A0FF56C6F676E99 /* Pods_ModuleExamples_ModuleExamplesUITests.framework */; };
 		9B5FEA497B86AB6FE9759457 /* Pods_ModuleExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011F882C271B328682D6546B /* Pods_ModuleExamples.framework */; };
+		B5022A6121A73265001E0FB0 /* NewPostModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A6021A73265001E0FB0 /* NewPostModule.swift */; };
+		B5022A6521A73437001E0FB0 /* WhatsOnYourMindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A6321A73437001E0FB0 /* WhatsOnYourMindCell.swift */; };
+		B5022A6621A73437001E0FB0 /* WhatsOnYourMindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5022A6421A73437001E0FB0 /* WhatsOnYourMindCell.xib */; };
+		B5022A6821A73642001E0FB0 /* WhatsOnYourMindDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A6721A73642001E0FB0 /* WhatsOnYourMindDecorator.swift */; };
+		B5022A6A21A73C41001E0FB0 /* NewPostAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5022A6921A73C41001E0FB0 /* NewPostAssets.xcassets */; };
+		B5022A6D21A74A0A001E0FB0 /* NewPostActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A6B21A74A0A001E0FB0 /* NewPostActionsCell.swift */; };
+		B5022A6E21A74A0A001E0FB0 /* NewPostActionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5022A6C21A74A0A001E0FB0 /* NewPostActionsCell.xib */; };
+		B5022A7021A74A17001E0FB0 /* NewPostActionsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A6F21A74A17001E0FB0 /* NewPostActionsDecorator.swift */; };
 		B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7A9219CD338005B7F38 /* AppDelegate.swift */; };
 		B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B536E7B2219CD339005B7F38 /* LaunchScreen.storyboard */; };
 		B536E7BF219CD339005B7F38 /* ModuleExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7BE219CD339005B7F38 /* ModuleExamplesTests.swift */; };
@@ -56,6 +64,14 @@
 		76380571E14EA61867534D92 /* Pods-ModuleExamples-ModuleExamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamples-ModuleExamplesTests.debug.xcconfig"; path = "Target Support Files/Pods-ModuleExamples-ModuleExamplesTests/Pods-ModuleExamples-ModuleExamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F1118AAEB6428C2987F6CF4 /* Pods_ModuleExamples_ModuleExamplesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModuleExamples_ModuleExamplesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDA64253B9A9A484371C5E0 /* Pods-ModuleExamples-ModuleExamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamples-ModuleExamplesTests.release.xcconfig"; path = "Target Support Files/Pods-ModuleExamples-ModuleExamplesTests/Pods-ModuleExamples-ModuleExamplesTests.release.xcconfig"; sourceTree = "<group>"; };
+		B5022A6021A73265001E0FB0 /* NewPostModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostModule.swift; sourceTree = "<group>"; };
+		B5022A6321A73437001E0FB0 /* WhatsOnYourMindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsOnYourMindCell.swift; sourceTree = "<group>"; };
+		B5022A6421A73437001E0FB0 /* WhatsOnYourMindCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhatsOnYourMindCell.xib; sourceTree = "<group>"; };
+		B5022A6721A73642001E0FB0 /* WhatsOnYourMindDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsOnYourMindDecorator.swift; sourceTree = "<group>"; };
+		B5022A6921A73C41001E0FB0 /* NewPostAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NewPostAssets.xcassets; sourceTree = "<group>"; };
+		B5022A6B21A74A0A001E0FB0 /* NewPostActionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostActionsCell.swift; sourceTree = "<group>"; };
+		B5022A6C21A74A0A001E0FB0 /* NewPostActionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostActionsCell.xib; sourceTree = "<group>"; };
+		B5022A6F21A74A17001E0FB0 /* NewPostActionsDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostActionsDecorator.swift; sourceTree = "<group>"; };
 		B536E7A6219CD338005B7F38 /* ModuleExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B536E7A9219CD338005B7F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B536E7AB219CD338005B7F38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +143,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B5022A5F21A7322B001E0FB0 /* NewPostModule */ = {
+			isa = PBXGroup;
+			children = (
+				B5022A6221A73410001E0FB0 /* Cells */,
+				B5022A6021A73265001E0FB0 /* NewPostModule.swift */,
+				B5022A6921A73C41001E0FB0 /* NewPostAssets.xcassets */,
+			);
+			path = NewPostModule;
+			sourceTree = "<group>";
+		};
+		B5022A6221A73410001E0FB0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B5022A6321A73437001E0FB0 /* WhatsOnYourMindCell.swift */,
+				B5022A6421A73437001E0FB0 /* WhatsOnYourMindCell.xib */,
+				B5022A6721A73642001E0FB0 /* WhatsOnYourMindDecorator.swift */,
+				B5022A6B21A74A0A001E0FB0 /* NewPostActionsCell.swift */,
+				B5022A6C21A74A0A001E0FB0 /* NewPostActionsCell.xib */,
+				B5022A6F21A74A17001E0FB0 /* NewPostActionsDecorator.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B536E79D219CD337005B7F38 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +233,7 @@
 		B55BF7BA219CD46600B937C7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B5022A5F21A7322B001E0FB0 /* NewPostModule */,
 				B55BF7D4219E228400B937C7 /* StatusModule */,
 				B55BF7BE219CD6F000B937C7 /* AppsModule */,
 			);
@@ -385,8 +425,11 @@
 				B55BF7C9219CF0F200B937C7 /* Images.xcassets in Resources */,
 				B55BF7D3219E21B000B937C7 /* WhatsappViewController.xib in Resources */,
 				B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */,
+				B5022A6621A73437001E0FB0 /* WhatsOnYourMindCell.xib in Resources */,
 				B55BF7DF21A1891900B937C7 /* StatusModuleAssets.xcassets in Resources */,
 				B55BF7DB219E232100B937C7 /* WhatsappStatusCell.xib in Resources */,
+				B5022A6A21A73C41001E0FB0 /* NewPostAssets.xcassets in Resources */,
+				B5022A6E21A74A0A001E0FB0 /* NewPostActionsCell.xib in Resources */,
 				B55BF7BC219CD4B300B937C7 /* MainViewController.xib in Resources */,
 				B55BF7CE219CF80400B937C7 /* FacebookViewController.xib in Resources */,
 			);
@@ -554,15 +597,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5022A6121A73265001E0FB0 /* NewPostModule.swift in Sources */,
 				B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */,
 				B55BF7BD219CD4DD00B937C7 /* MainViewController.swift in Sources */,
+				B5022A6821A73642001E0FB0 /* WhatsOnYourMindDecorator.swift in Sources */,
 				B55BF7CD219CF80400B937C7 /* FacebookViewController.swift in Sources */,
 				B55BF7DD21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift in Sources */,
 				B55BF7D6219E22F000B937C7 /* WhatsappStateModule.swift in Sources */,
 				B55BF7C5219CE9FC00B937C7 /* GenericAppInformation.swift in Sources */,
+				B5022A6D21A74A0A001E0FB0 /* NewPostActionsCell.swift in Sources */,
 				B55BF7C0219CD73500B937C7 /* AppModule.swift in Sources */,
 				B55BF7E121A1946000B937C7 /* WhatsappStateModuleDecorator.swift in Sources */,
 				B55BF7C3219CE9D300B937C7 /* AppModuleModel.swift in Sources */,
+				B5022A7021A74A17001E0FB0 /* NewPostActionsDecorator.swift in Sources */,
+				B5022A6521A73437001E0FB0 /* WhatsOnYourMindCell.swift in Sources */,
 				B55BF7DA219E232100B937C7 /* WhatsappStatusCell.swift in Sources */,
 				B55BF7D2219E21B000B937C7 /* WhatsappViewController.swift in Sources */,
 			);

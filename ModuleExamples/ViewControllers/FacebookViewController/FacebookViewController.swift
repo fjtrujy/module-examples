@@ -14,5 +14,16 @@ class FacebookViewController: ModulesViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tableView?.tableFooterView = UIView()
+    }
+    
+    override func createModules() {
+        super.createModules()
+        
+        newPostModule()
+    }
+    
+    func newPostModule() {
+        appendModule(NewPostModule.init(tableView: tableView!))
     }
 }

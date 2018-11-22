@@ -69,4 +69,8 @@ class WhatsappStateModule: TableSectionModule {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
