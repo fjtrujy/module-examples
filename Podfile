@@ -9,6 +9,7 @@ target 'ModuleExamples' do
 
   # Pods for ModuleExamples
   pod 'FTMTableSectionModules', :git => 'https://github.com/fjtrujy/FTMTableSectionModules.git', :branch => 'master'
+  pod 'CircleImageView'
 
   target 'ModuleExamplesTests' do
     # Pods for testing

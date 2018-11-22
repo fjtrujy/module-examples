@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CircleImageView
 
 class WhatsappStatusCell: UITableViewCell {
     @IBOutlet weak open var stateDescription : UILabel?
-    @IBOutlet weak open var stateImage : UIImageView?
+    @IBOutlet weak open var stateImage : CircleImageView?
     @IBOutlet weak open var buttonsView : UIView?
     @IBOutlet weak open var cameraButton : UIButton?
     @IBOutlet weak open var editButton : UIButton?
@@ -23,12 +24,12 @@ class WhatsappStatusCell: UITableViewCell {
         backgroundColor = decorator.backgroundColor
         buttonsView?.backgroundColor = decorator.backgroundColor
         
+        stateImage?.image = decorator.profileIcon
         stateDescription?.attributedText = decorator.attributedInfo
         
         buttonsView?.isHidden = decorator.hideButtons
         cameraButton?.setImage(decorator.camaraIcon, for: UIControl.State.normal)
         editButton?.setImage(decorator.editIcon, for: UIControl.State.normal)
-        
     }
     
 }

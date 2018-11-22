@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kwh-8q-a73">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kwh-8q-a73" customClass="CircleImageView">
                         <rect key="frame" x="8" y="8" width="27.5" height="27.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="kwh-8q-a73" secondAttribute="height" multiplier="1:1" id="aaG-p2-m0U"/>
@@ -34,11 +34,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZI-ST-G0S">
                         <rect key="frame" x="265" y="0.0" width="55" height="43.5"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycv-YY-zi2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycv-YY-zi2">
                                 <rect key="frame" x="8" y="16" width="11.5" height="11.5"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PA9-2P-gxL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PA9-2P-gxL">
                                 <rect key="frame" x="35.5" y="16" width="11.5" height="11.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PA9-2P-gxL" secondAttribute="height" multiplier="1:1" id="R9B-he-j6h"/>
@@ -79,7 +79,7 @@
                 <outlet property="cameraButton" destination="Ycv-YY-zi2" id="X6Z-1S-Qpu"/>
                 <outlet property="editButton" destination="PA9-2P-gxL" id="O58-4h-nhm"/>
                 <outlet property="stateDescription" destination="6qQ-Ui-bCx" id="TTE-Ye-Tdi"/>
-                <outlet property="stateImage" destination="kwh-8q-a73" id="Hyc-PS-eZ9"/>
+                <outlet property="stateImage" destination="kwh-8q-a73" id="Yyc-Sr-6tw"/>
             </connections>
             <point key="canvasLocation" x="226" y="94"/>
         </tableViewCell>

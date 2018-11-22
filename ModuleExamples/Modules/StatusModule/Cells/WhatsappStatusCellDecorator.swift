@@ -9,13 +9,14 @@
 import UIKit
 
 class WhatsappStatusCellDecorator: NSObject {
+    private var imageName : String?
     private var title : String?
     private var subtitle : String?
     private var buttons : Bool?
     
-    public init(title: String, subtitle: String, buttons: Bool) {
+    public init(imageName: String, title: String, subtitle: String, buttons: Bool) {
         super.init()
-        
+        self.imageName = imageName
         self.title = title
         self.subtitle = subtitle
         self.buttons = buttons
@@ -35,16 +36,20 @@ class WhatsappStatusCellDecorator: NSObject {
         return attr
     }
     
+    var profileIcon: UIImage? {
+        return UIImage(named: imageName!)
+    }
+    
     var hideButtons : Bool {
         return !buttons!
     }
     
-    var camaraIcon : UIImage {
-        return (buttons! ? UIImage(named: "cameraStatusIcon") : nil)!
+    var camaraIcon : UIImage? {
+        return (buttons! ? UIImage(named: "cameraStatusIcon") : nil)
     }
     
-    var editIcon : UIImage {
-        return UIImage(named: "editStatusIcon")!
+    var editIcon : UIImage? {
+        return (buttons! ? UIImage(named: "editStatusIcon") : nil)
     }
     
 }

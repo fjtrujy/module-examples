@@ -1,0 +1,6 @@
+framework module CircleImageView {
+  umbrella header "CircleImageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -13,6 +13,8 @@ class WhatsappStateModule: TableSectionModule {
     
     func configure(decorator : WhatsappStateModuleDecorator) {
         self.decorator = decorator
+        
+        createRows()
     }
     
     override func registerClassForHeadersFooters() -> [AnyClass] {
@@ -34,26 +36,25 @@ class WhatsappStateModule: TableSectionModule {
             rows = rows + decorator!.rows!
         }
         
-        self.reload
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20
+        return 25
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return 50;
+        return 70;
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 20;
+        return 25;
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let identifier = String(describing: UITableViewHeaderFooterView.self)
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: identifier)
         
-        header?.textLabel?.text = decorator?.headerTitle
+        header?.textLabel?.text = decorator?.headerTitle?.uppercased()
         
         return header
     }
