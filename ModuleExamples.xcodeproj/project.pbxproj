@@ -18,6 +18,10 @@
 		B5022A6D21A74A0A001E0FB0 /* NewPostActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A6B21A74A0A001E0FB0 /* NewPostActionsCell.swift */; };
 		B5022A6E21A74A0A001E0FB0 /* NewPostActionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5022A6C21A74A0A001E0FB0 /* NewPostActionsCell.xib */; };
 		B5022A7021A74A17001E0FB0 /* NewPostActionsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A6F21A74A17001E0FB0 /* NewPostActionsDecorator.swift */; };
+		B5022A7321AB2101001E0FB0 /* StoriesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A7221AB2101001E0FB0 /* StoriesModule.swift */; };
+		B5022A7621AB2148001E0FB0 /* StoriesTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A7421AB2148001E0FB0 /* StoriesTitleCell.swift */; };
+		B5022A7721AB2148001E0FB0 /* StoriesTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5022A7521AB2148001E0FB0 /* StoriesTitleCell.xib */; };
+		B5022A7921AB224B001E0FB0 /* StoriesTitleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A7821AB224B001E0FB0 /* StoriesTitleDecorator.swift */; };
 		B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7A9219CD338005B7F38 /* AppDelegate.swift */; };
 		B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B536E7B2219CD339005B7F38 /* LaunchScreen.storyboard */; };
 		B536E7BF219CD339005B7F38 /* ModuleExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7BE219CD339005B7F38 /* ModuleExamplesTests.swift */; };
@@ -72,6 +76,10 @@
 		B5022A6B21A74A0A001E0FB0 /* NewPostActionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostActionsCell.swift; sourceTree = "<group>"; };
 		B5022A6C21A74A0A001E0FB0 /* NewPostActionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostActionsCell.xib; sourceTree = "<group>"; };
 		B5022A6F21A74A17001E0FB0 /* NewPostActionsDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostActionsDecorator.swift; sourceTree = "<group>"; };
+		B5022A7221AB2101001E0FB0 /* StoriesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesModule.swift; sourceTree = "<group>"; };
+		B5022A7421AB2148001E0FB0 /* StoriesTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTitleCell.swift; sourceTree = "<group>"; };
+		B5022A7521AB2148001E0FB0 /* StoriesTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesTitleCell.xib; sourceTree = "<group>"; };
+		B5022A7821AB224B001E0FB0 /* StoriesTitleDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTitleDecorator.swift; sourceTree = "<group>"; };
 		B536E7A6219CD338005B7F38 /* ModuleExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B536E7A9219CD338005B7F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B536E7AB219CD338005B7F38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +174,17 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B5022A7121AB20E6001E0FB0 /* StoriesModule */ = {
+			isa = PBXGroup;
+			children = (
+				B5022A7221AB2101001E0FB0 /* StoriesModule.swift */,
+				B5022A7421AB2148001E0FB0 /* StoriesTitleCell.swift */,
+				B5022A7521AB2148001E0FB0 /* StoriesTitleCell.xib */,
+				B5022A7821AB224B001E0FB0 /* StoriesTitleDecorator.swift */,
+			);
+			path = StoriesModule;
+			sourceTree = "<group>";
+		};
 		B536E79D219CD337005B7F38 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +252,7 @@
 		B55BF7BA219CD46600B937C7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B5022A7121AB20E6001E0FB0 /* StoriesModule */,
 				B5022A5F21A7322B001E0FB0 /* NewPostModule */,
 				B55BF7D4219E228400B937C7 /* StatusModule */,
 				B55BF7BE219CD6F000B937C7 /* AppsModule */,
@@ -425,6 +445,7 @@
 				B55BF7C9219CF0F200B937C7 /* Images.xcassets in Resources */,
 				B55BF7D3219E21B000B937C7 /* WhatsappViewController.xib in Resources */,
 				B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */,
+				B5022A7721AB2148001E0FB0 /* StoriesTitleCell.xib in Resources */,
 				B5022A6621A73437001E0FB0 /* WhatsOnYourMindCell.xib in Resources */,
 				B55BF7DF21A1891900B937C7 /* StatusModuleAssets.xcassets in Resources */,
 				B55BF7DB219E232100B937C7 /* WhatsappStatusCell.xib in Resources */,
@@ -601,6 +622,7 @@
 				B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */,
 				B55BF7BD219CD4DD00B937C7 /* MainViewController.swift in Sources */,
 				B5022A6821A73642001E0FB0 /* WhatsOnYourMindDecorator.swift in Sources */,
+				B5022A7321AB2101001E0FB0 /* StoriesModule.swift in Sources */,
 				B55BF7CD219CF80400B937C7 /* FacebookViewController.swift in Sources */,
 				B55BF7DD21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift in Sources */,
 				B55BF7D6219E22F000B937C7 /* WhatsappStateModule.swift in Sources */,
@@ -608,6 +630,8 @@
 				B5022A6D21A74A0A001E0FB0 /* NewPostActionsCell.swift in Sources */,
 				B55BF7C0219CD73500B937C7 /* AppModule.swift in Sources */,
 				B55BF7E121A1946000B937C7 /* WhatsappStateModuleDecorator.swift in Sources */,
+				B5022A7621AB2148001E0FB0 /* StoriesTitleCell.swift in Sources */,
+				B5022A7921AB224B001E0FB0 /* StoriesTitleDecorator.swift in Sources */,
 				B55BF7C3219CE9D300B937C7 /* AppModuleModel.swift in Sources */,
 				B5022A7021A74A17001E0FB0 /* NewPostActionsDecorator.swift in Sources */,
 				B5022A6521A73437001E0FB0 /* WhatsOnYourMindCell.swift in Sources */,

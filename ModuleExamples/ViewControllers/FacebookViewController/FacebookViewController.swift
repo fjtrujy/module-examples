@@ -21,9 +21,14 @@ class FacebookViewController: ModulesViewController {
         super.createModules()
         
         newPostModule()
+        storiesModule()
     }
     
     func newPostModule() {
         appendModule(NewPostModule.init(tableView: tableView!))
+    }
+    
+    func storiesModule() {
+        appendModule(StoriesModule.init(tableView: tableView!))
     }
 }
