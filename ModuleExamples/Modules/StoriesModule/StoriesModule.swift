@@ -9,6 +9,27 @@
 import FTMTableSectionModules
 
 class StoriesModule: TableSectionModule {
+    override init(tableView: UITableView) {
+        super.init(tableView: tableView)
+        
+        let path = Bundle.main.path(forResource: "stories", ofType: "json")
+        let jsonData = try? NSData(contentsOfFile: path!, options: NSData.ReadingOptions.mappedIfSafe)
+        let decoded = String(data: jsonData! as Data, encoding: String.Encoding.ascii)
+        
+        StoriesDataModule(payload: convertToDictionary(text: decoded!)!)
+    }
+    
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
+    
     override func registerNibsForCells() -> [AnyClass] {
         return super.registerNibsForCells() + [
             StoriesTitleCell.classForCoder()

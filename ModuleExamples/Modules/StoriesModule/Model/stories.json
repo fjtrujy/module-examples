@@ -1,0 +1,54 @@
+{
+    "stories":[
+        {
+            "username":"Carles Tete",
+            "profileImagePath":"https://picsum.photos/200/300/?random",
+            "storyImagePath":"https://picsum.photos/50/50/?random"
+        },
+        {
+            "username":"Pableras Pan",
+            "profileImagePath":"https://picsum.photos/200/300/?random",
+            "storyImagePath":"https://picsum.photos/50/50/?random"
+        },
+        {
+            "username":"Mad Mocana",
+            "profileImagePath":"https://picsum.photos/200/300/?random",
+            "storyImagePath":"https://picsum.photos/50/50/?random"
+        },
+        {
+            "username":"Barry Lete",
+            "profileImagePath":"https://picsum.photos/200/300/?random",
+            "storyImagePath":"https://picsum.photos/50/50/?random"
+        },
+        {
+            "username":"JDRap",
+            "profileImagePath":"https://picsum.photos/200/300/?random",
+            "storyImagePath":"https://picsum.photos/50/50/?random"
+        },
+        {
+            "username":"Jhon Hater",
+            "profileImagePath":"https://picsum.photos/200/300/?random",
+            "storyImagePath":"https://picsum.photos/50/50/?random"
+        },
+        {
+            "username":"Carlos Colacao",
+            "profileImagePath":"https://picsum.photos/200/300/?random",
+            "storyImagePath":"https://picsum.photos/50/50/?random"
+        },
+        {
+            "username":"Ciervo 1",
+            "profileImagePath":"https://picsum.photos/200/300/?random",
+            "storyImagePath":"https://picsum.photos/50/50/?random"
+        },
+        {
+            "username":"Ciervo 2",
+            "profileImagePath":"https://picsum.photos/200/300/?random",
+            "storyImagePath":"https://picsum.photos/50/50/?random"
+        },
+        {
+            "username":"Ciervo 3",
+            "profileImagePath":"https://picsum.photos/200/300/?random",
+            "storyImagePath":"https://picsum.photos/50/50/?random"
+        }
+    ]
+}
