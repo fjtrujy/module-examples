@@ -22,6 +22,8 @@
 		B5022A7621AB2148001E0FB0 /* StoriesTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A7421AB2148001E0FB0 /* StoriesTitleCell.swift */; };
 		B5022A7721AB2148001E0FB0 /* StoriesTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5022A7521AB2148001E0FB0 /* StoriesTitleCell.xib */; };
 		B5022A7921AB224B001E0FB0 /* StoriesTitleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A7821AB224B001E0FB0 /* StoriesTitleDecorator.swift */; };
+		B5022A7C21AB262F001E0FB0 /* StoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A7B21AB262F001E0FB0 /* StoryDataModel.swift */; };
+		B5022A7F21AB2D01001E0FB0 /* StoriesDataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A7E21AB2D01001E0FB0 /* StoriesDataModule.swift */; };
 		B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7A9219CD338005B7F38 /* AppDelegate.swift */; };
 		B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B536E7B2219CD339005B7F38 /* LaunchScreen.storyboard */; };
 		B536E7BF219CD339005B7F38 /* ModuleExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7BE219CD339005B7F38 /* ModuleExamplesTests.swift */; };
@@ -80,6 +82,8 @@
 		B5022A7421AB2148001E0FB0 /* StoriesTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTitleCell.swift; sourceTree = "<group>"; };
 		B5022A7521AB2148001E0FB0 /* StoriesTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesTitleCell.xib; sourceTree = "<group>"; };
 		B5022A7821AB224B001E0FB0 /* StoriesTitleDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTitleDecorator.swift; sourceTree = "<group>"; };
+		B5022A7B21AB262F001E0FB0 /* StoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataModel.swift; sourceTree = "<group>"; };
+		B5022A7E21AB2D01001E0FB0 /* StoriesDataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesDataModule.swift; sourceTree = "<group>"; };
 		B536E7A6219CD338005B7F38 /* ModuleExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B536E7A9219CD338005B7F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B536E7AB219CD338005B7F38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -177,12 +181,22 @@
 		B5022A7121AB20E6001E0FB0 /* StoriesModule */ = {
 			isa = PBXGroup;
 			children = (
+				B5022A7A21AB260F001E0FB0 /* Model */,
 				B5022A7221AB2101001E0FB0 /* StoriesModule.swift */,
 				B5022A7421AB2148001E0FB0 /* StoriesTitleCell.swift */,
 				B5022A7521AB2148001E0FB0 /* StoriesTitleCell.xib */,
 				B5022A7821AB224B001E0FB0 /* StoriesTitleDecorator.swift */,
 			);
 			path = StoriesModule;
+			sourceTree = "<group>";
+		};
+		B5022A7A21AB260F001E0FB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5022A7B21AB262F001E0FB0 /* StoryDataModel.swift */,
+				B5022A7E21AB2D01001E0FB0 /* StoriesDataModule.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B536E79D219CD337005B7F38 = {
@@ -620,6 +634,7 @@
 			files = (
 				B5022A6121A73265001E0FB0 /* NewPostModule.swift in Sources */,
 				B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */,
+				B5022A7F21AB2D01001E0FB0 /* StoriesDataModule.swift in Sources */,
 				B55BF7BD219CD4DD00B937C7 /* MainViewController.swift in Sources */,
 				B5022A6821A73642001E0FB0 /* WhatsOnYourMindDecorator.swift in Sources */,
 				B5022A7321AB2101001E0FB0 /* StoriesModule.swift in Sources */,
@@ -637,6 +652,7 @@
 				B5022A6521A73437001E0FB0 /* WhatsOnYourMindCell.swift in Sources */,
 				B55BF7DA219E232100B937C7 /* WhatsappStatusCell.swift in Sources */,
 				B55BF7D2219E21B000B937C7 /* WhatsappViewController.swift in Sources */,
+				B5022A7C21AB262F001E0FB0 /* StoryDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
