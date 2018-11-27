@@ -9,51 +9,80 @@
 import FTMTableSectionModules
 
 class StoriesModule: TableSectionModule {
+    var storiesDataModel : StoriesDataModel?
+    
     override init(tableView: UITableView) {
         super.init(tableView: tableView)
         
-        let path = Bundle.main.path(forResource: "stories", ofType: "json")
-        let jsonData = try? NSData(contentsOfFile: path!, options: NSData.ReadingOptions.mappedIfSafe)
-        let decoded = String(data: jsonData! as Data, encoding: String.Encoding.ascii)
-        
-        StoriesDataModule(payload: convertToDictionary(text: decoded!)!)
+        fetchStories()
     }
     
-    func convertToDictionary(text: String) -> [String: Any]? {
-        if let data = text.data(using: .utf8) {
+    func fetchStories() {
+        //Mocking information
+       if let filePath = Bundle.main.path(forResource: "stories", ofType: "json"), let data = NSData(contentsOfFile: filePath) {
+        
             do {
-                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-            } catch {
-                print(error.localizedDescription)
+                let payload = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions.allowFragments)
+                storiesDataModel = StoriesDataModel(payload: payload as! Dictionary<String, Any>)
+                createRows()
+            }
+            catch {
+                //Handle error
             }
         }
-        return nil
     }
     
     override func registerNibsForCells() -> [AnyClass] {
         return super.registerNibsForCells() + [
-            StoriesTitleCell.classForCoder()
+            StoriesTitleCell.classForCoder(),
+            StoriesImageCell.classForCoder(),
         ]
     }
     
     override func createRows() {
         super.createRows()
         
-        rows.append(String(describing: StoriesTitleCell.self) as AnyObject)
+        if (storiesDataModel != nil) {
+            rows.append(String(describing: StoriesTitleCell.self) as AnyObject)
+            rows.append(String(describing: StoriesImageCell.self) as AnyObject)
+        }
+        
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let cell : UITableViewCell
+        let cellClass : String = rows[indexPath.row] as! String
         
-        cell = tableView.dequeueReusableCell(withIdentifier: String(describing: StoriesTitleCell.self), for: indexPath)
+        cell = tableView.dequeueReusableCell(withIdentifier: cellClass, for: indexPath)
+        switch cellClass {
+        case String(describing: StoriesImageCell.self):
+            let storiesImageCell : StoriesImageCell = cell as! StoriesImageCell
+            storiesImageCell.configure(dataModel: storiesDataModel!)
+            break
+        default:
+            break
+        }
+        
         removeSeparatorInsetForCell(cell, forIndexPath: indexPath)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return 30;
+        var height = super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+        let cellClass : String = rows[indexPath.row] as! String
+        
+        switch cellClass {
+        case String(describing: StoriesImageCell.self):
+            height = 151
+            break
+        default:
+            height = 30
+            break
+        }
+        
+        return height;
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {

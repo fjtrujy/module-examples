@@ -1,14 +1,19 @@
 PODS:
   - CircleImageView (1.0.1)
   - FTMTableSectionModules (0.1.9)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
 
 DEPENDENCIES:
   - CircleImageView
   - FTMTableSectionModules (from `https://github.com/fjtrujy/FTMTableSectionModules.git`, branch `master`)
+  - SDWebImage
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CircleImageView
+    - SDWebImage
 
 EXTERNAL SOURCES:
   FTMTableSectionModules:
@@ -23,7 +28,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   CircleImageView: 3339a6d2755333cf9fefdc9a76aa00d62957c7fb
   FTMTableSectionModules: 93609f22f8a60c60084e5d74aa7c038fd0f2151a
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 7c8094c948df1aeab9965b3973923391bce0fc15
+PODFILE CHECKSUM: 9c3db1c2a772b3bb425cd4dd1c1b6d1aa76dcfe9
 
 COCOAPODS: 1.6.0.beta.2
