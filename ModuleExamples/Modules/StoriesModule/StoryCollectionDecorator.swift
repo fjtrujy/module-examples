@@ -36,6 +36,10 @@ class StoryCollectionDecorator: NSObject {
     func backgroundColor() -> UIColor {
         return UIColor.white
     }
+    
+    func borderColor() -> UIColor {
+        return UIColor.blue
+    }
 }
 
 //MARK: DecoratorBasicInfo
@@ -46,7 +50,7 @@ extension StoryCollectionDecorator {
     }
     
     private var titleFont : UIFont {
-        return UIFont.systemFont(ofSize:11)
+        return UIFont.boldSystemFont(ofSize:12)
     }
     
     private var attributes : [NSAttributedString.Key : Any] {

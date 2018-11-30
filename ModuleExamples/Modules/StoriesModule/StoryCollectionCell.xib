@@ -22,6 +22,9 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2oC-aw-w2O">
                         <rect key="frame" x="0.0" y="0.0" width="116" height="132"/>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xh3-pz-bI0" customClass="CircleImageView">
+                        <rect key="frame" x="7" y="7" width="32" height="32"/>
+                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1HZ-VE-ktI" customClass="CircleImageView">
                         <rect key="frame" x="8" y="8" width="30" height="30"/>
                         <constraints>
@@ -41,12 +44,16 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="xh3-pz-bI0" firstAttribute="centerY" secondItem="1HZ-VE-ktI" secondAttribute="centerY" id="1eU-ew-OKd"/>
                 <constraint firstAttribute="bottom" secondItem="ca9-US-u4i" secondAttribute="bottom" constant="9" id="2bC-RS-3ux"/>
                 <constraint firstAttribute="bottom" secondItem="2oC-aw-w2O" secondAttribute="bottom" id="5Ed-Pe-GuP"/>
                 <constraint firstItem="ca9-US-u4i" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="88o-Te-hr6"/>
                 <constraint firstItem="1HZ-VE-ktI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="J6i-T3-573"/>
+                <constraint firstItem="xh3-pz-bI0" firstAttribute="width" secondItem="1HZ-VE-ktI" secondAttribute="width" constant="2" id="Pwz-I5-mmg"/>
+                <constraint firstItem="xh3-pz-bI0" firstAttribute="height" secondItem="1HZ-VE-ktI" secondAttribute="height" constant="2" id="RSS-Dv-f1s"/>
                 <constraint firstAttribute="trailing" secondItem="ca9-US-u4i" secondAttribute="trailing" constant="8" id="U2P-Mb-Okj"/>
                 <constraint firstItem="1HZ-VE-ktI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="ic1-di-O3c"/>
+                <constraint firstItem="xh3-pz-bI0" firstAttribute="centerX" secondItem="1HZ-VE-ktI" secondAttribute="centerX" id="rrm-Oc-xVP"/>
                 <constraint firstAttribute="trailing" secondItem="2oC-aw-w2O" secondAttribute="trailing" id="suQ-Sx-cZe"/>
                 <constraint firstItem="2oC-aw-w2O" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uBQ-0z-Vox"/>
                 <constraint firstItem="2oC-aw-w2O" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xRq-K3-b1f"/>
@@ -54,6 +61,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="116" height="132"/>
             <connections>
+                <outlet property="borderImageView" destination="xh3-pz-bI0" id="HoV-Iz-oF8"/>
                 <outlet property="profileImageView" destination="1HZ-VE-ktI" id="D2g-kl-15s"/>
                 <outlet property="profileLabel" destination="ca9-US-u4i" id="rFH-Ir-iJG"/>
                 <outlet property="storyImageView" destination="2oC-aw-w2O" id="nEs-Nn-WTd"/>
