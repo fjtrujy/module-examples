@@ -11,6 +11,7 @@ import UIKit
 enum SupportedApp {
     case facebook
     case whatsapp
+    case potpurri
 }
 
 class AppModuleModel: NSObject {
@@ -27,6 +28,9 @@ class AppModuleModel: NSObject {
         apps.append(GenericAppInformation(app: SupportedApp.whatsapp,
                                           appName: "Whatsapp",
                                           appIcon: UIImage(named: "whatsappIcon")!))
+        apps.append(GenericAppInformation(app: SupportedApp.potpurri,
+                                          appName: "Potpurri",
+                                          appIcon: UIImage(named: "")))
         
         super.init()
     }

@@ -38,7 +38,11 @@ class MainViewController: ModulesViewController, AppModuleDelegate {
         case .whatsapp:
             viewcontroller = WhatsappViewController()
             break
+        case .potpurri:
+            viewcontroller = PotpurryViewController()
+            break
         }
+        
         navigationController?.pushViewController(viewcontroller, animated: true)
     }
 

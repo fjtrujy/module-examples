@@ -11,9 +11,9 @@ import UIKit
 class GenericAppInformation: NSObject {
     private(set) var appName : String
     private(set) var app : SupportedApp
-    private(set) var appIcon : UIImage
+    private(set) var appIcon : UIImage?
     
-    init(app: SupportedApp, appName: String, appIcon: UIImage) {
+    init(app: SupportedApp, appName: String, appIcon: UIImage?) {
         self.app = app
         self.appName = appName
         self.appIcon = appIcon

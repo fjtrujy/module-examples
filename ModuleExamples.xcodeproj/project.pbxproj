@@ -30,6 +30,9 @@
 		B5022A8C21ADC625001E0FB0 /* StoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A8A21ADC625001E0FB0 /* StoryCollectionCell.swift */; };
 		B5022A8D21ADC625001E0FB0 /* StoryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5022A8B21ADC625001E0FB0 /* StoryCollectionCell.xib */; };
 		B5022A8F21ADC85E001E0FB0 /* StoryCollectionDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A8E21ADC85E001E0FB0 /* StoryCollectionDecorator.swift */; };
+		B5253BD921B1EC9700003820 /* PotpurryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5253BD721B1EC9700003820 /* PotpurryViewController.swift */; };
+		B5253BDA21B1EC9700003820 /* PotpurryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5253BD821B1EC9700003820 /* PotpurryViewController.xib */; };
+		B5253BDD21B1EF6200003820 /* FoldUnfoldModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5253BDC21B1EF6200003820 /* FoldUnfoldModule.swift */; };
 		B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7A9219CD338005B7F38 /* AppDelegate.swift */; };
 		B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B536E7B2219CD339005B7F38 /* LaunchScreen.storyboard */; };
 		B536E7BF219CD339005B7F38 /* ModuleExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7BE219CD339005B7F38 /* ModuleExamplesTests.swift */; };
@@ -96,6 +99,9 @@
 		B5022A8A21ADC625001E0FB0 /* StoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionCell.swift; sourceTree = "<group>"; };
 		B5022A8B21ADC625001E0FB0 /* StoryCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionCell.xib; sourceTree = "<group>"; };
 		B5022A8E21ADC85E001E0FB0 /* StoryCollectionDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionDecorator.swift; sourceTree = "<group>"; };
+		B5253BD721B1EC9700003820 /* PotpurryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotpurryViewController.swift; sourceTree = "<group>"; };
+		B5253BD821B1EC9700003820 /* PotpurryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PotpurryViewController.xib; sourceTree = "<group>"; };
+		B5253BDC21B1EF6200003820 /* FoldUnfoldModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldUnfoldModule.swift; sourceTree = "<group>"; };
 		B536E7A6219CD338005B7F38 /* ModuleExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B536E7A9219CD338005B7F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B536E7AB219CD338005B7F38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +223,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B5253BD621B1EC4F00003820 /* PotpurryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5253BD721B1EC9700003820 /* PotpurryViewController.swift */,
+				B5253BD821B1EC9700003820 /* PotpurryViewController.xib */,
+			);
+			path = PotpurryViewController;
+			sourceTree = "<group>";
+		};
+		B5253BDB21B1EF3700003820 /* FoldUnfoldModule */ = {
+			isa = PBXGroup;
+			children = (
+				B5253BDC21B1EF6200003820 /* FoldUnfoldModule.swift */,
+			);
+			path = FoldUnfoldModule;
+			sourceTree = "<group>";
+		};
 		B536E79D219CD337005B7F38 = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +296,7 @@
 		B55BF7B9219CD45C00B937C7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B5253BD621B1EC4F00003820 /* PotpurryViewController */,
 				B55BF7CF219E213600B937C7 /* WhatsappViewController */,
 				B55BF7CA219CF7CF00B937C7 /* FacebookViewController */,
 				B536E7AB219CD338005B7F38 /* MainViewController.swift */,
@@ -284,6 +308,7 @@
 		B55BF7BA219CD46600B937C7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B5253BDB21B1EF3700003820 /* FoldUnfoldModule */,
 				B5022A7121AB20E6001E0FB0 /* StoriesModule */,
 				B5022A5F21A7322B001E0FB0 /* NewPostModule */,
 				B55BF7D4219E228400B937C7 /* StatusModule */,
@@ -488,6 +513,7 @@
 				B5022A6E21A74A0A001E0FB0 /* NewPostActionsCell.xib in Resources */,
 				B55BF7BC219CD4B300B937C7 /* MainViewController.xib in Resources */,
 				B55BF7CE219CF80400B937C7 /* FacebookViewController.xib in Resources */,
+				B5253BDA21B1EC9700003820 /* PotpurryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +701,7 @@
 				B55BF7E121A1946000B937C7 /* WhatsappStateModuleDecorator.swift in Sources */,
 				B5022A7621AB2148001E0FB0 /* StoriesTitleCell.swift in Sources */,
 				B5022A7921AB224B001E0FB0 /* StoriesTitleDecorator.swift in Sources */,
+				B5253BDD21B1EF6200003820 /* FoldUnfoldModule.swift in Sources */,
 				B55BF7C3219CE9D300B937C7 /* AppModuleModel.swift in Sources */,
 				B5022A7021A74A17001E0FB0 /* NewPostActionsDecorator.swift in Sources */,
 				B5022A8921ADC448001E0FB0 /* StoriesDataModel.swift in Sources */,
@@ -683,6 +710,7 @@
 				B5022A8C21ADC625001E0FB0 /* StoryCollectionCell.swift in Sources */,
 				B55BF7D2219E21B000B937C7 /* WhatsappViewController.swift in Sources */,
 				B5022A7C21AB262F001E0FB0 /* StoryDataModel.swift in Sources */,
+				B5253BD921B1EC9700003820 /* PotpurryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

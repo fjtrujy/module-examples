@@ -22,7 +22,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   FTMTableSectionModules:
-    :commit: ab2e04427c9db4d74d27fb6c7e9cf896b8c76832
+    :commit: 849faf5cd9b2b16fd8e1633791d8f0fba05a9006
     :git: https://github.com/fjtrujy/FTMTableSectionModules.git
 
 SPEC CHECKSUMS:

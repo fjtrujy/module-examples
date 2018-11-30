@@ -15,6 +15,7 @@ class FacebookViewController: ModulesViewController {
 
         // Do any additional setup after loading the view.
         self.tableView?.tableFooterView = UIView()
+        self.title = "Facebook - MainView"
     }
     
     override func createModules() {

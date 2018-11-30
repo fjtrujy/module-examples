@@ -14,6 +14,7 @@ class WhatsappViewController: ModulesViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = "Whatsapp - States"
     }
     
     override func createModules() {
