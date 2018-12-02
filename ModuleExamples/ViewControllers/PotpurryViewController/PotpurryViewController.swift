@@ -23,7 +23,7 @@ class PotpurryViewController: ModulesViewController {
         
         foldUnfoldModule()
         pushVCModule()
-        
+        addRemoveModule()
     }
 
     func foldUnfoldModule() {
@@ -34,6 +34,10 @@ class PotpurryViewController: ModulesViewController {
         let module = PushVCModule(tableView: tableView!)
         module.delegate = self
         appendModule(module)
+    }
+    
+    func addRemoveModule() {
+        appendModule(AddRemoveCellsModule(tableView: tableView!))
     }
 }
 

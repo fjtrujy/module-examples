@@ -34,6 +34,7 @@
 		B5253BDA21B1EC9700003820 /* PotpurryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5253BD821B1EC9700003820 /* PotpurryViewController.xib */; };
 		B5253BDD21B1EF6200003820 /* FoldUnfoldModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5253BDC21B1EF6200003820 /* FoldUnfoldModule.swift */; };
 		B5253BE021B40A2200003820 /* PushVCModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5253BDF21B40A2200003820 /* PushVCModule.swift */; };
+		B5253BE321B4138200003820 /* AddRemoveCellsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5253BE221B4138200003820 /* AddRemoveCellsModule.swift */; };
 		B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7A9219CD338005B7F38 /* AppDelegate.swift */; };
 		B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B536E7B2219CD339005B7F38 /* LaunchScreen.storyboard */; };
 		B536E7BF219CD339005B7F38 /* ModuleExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7BE219CD339005B7F38 /* ModuleExamplesTests.swift */; };
@@ -104,6 +105,7 @@
 		B5253BD821B1EC9700003820 /* PotpurryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PotpurryViewController.xib; sourceTree = "<group>"; };
 		B5253BDC21B1EF6200003820 /* FoldUnfoldModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldUnfoldModule.swift; sourceTree = "<group>"; };
 		B5253BDF21B40A2200003820 /* PushVCModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushVCModule.swift; sourceTree = "<group>"; };
+		B5253BE221B4138200003820 /* AddRemoveCellsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemoveCellsModule.swift; sourceTree = "<group>"; };
 		B536E7A6219CD338005B7F38 /* ModuleExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B536E7A9219CD338005B7F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B536E7AB219CD338005B7F38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,14 @@
 			path = PushVCModule;
 			sourceTree = "<group>";
 		};
+		B5253BE121B4134700003820 /* AddRemoveCellsModule */ = {
+			isa = PBXGroup;
+			children = (
+				B5253BE221B4138200003820 /* AddRemoveCellsModule.swift */,
+			);
+			path = AddRemoveCellsModule;
+			sourceTree = "<group>";
+		};
 		B536E79D219CD337005B7F38 = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +328,7 @@
 		B55BF7BA219CD46600B937C7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B5253BE121B4134700003820 /* AddRemoveCellsModule */,
 				B5253BDE21B40A0600003820 /* PushVCModule */,
 				B5253BDB21B1EF3700003820 /* FoldUnfoldModule */,
 				B5022A7121AB20E6001E0FB0 /* StoriesModule */,
@@ -701,6 +712,7 @@
 				B5253BE021B40A2200003820 /* PushVCModule.swift in Sources */,
 				B5022A8421ADBE0B001E0FB0 /* StoriesImageCell.swift in Sources */,
 				B55BF7BD219CD4DD00B937C7 /* MainViewController.swift in Sources */,
+				B5253BE321B4138200003820 /* AddRemoveCellsModule.swift in Sources */,
 				B5022A6821A73642001E0FB0 /* WhatsOnYourMindDecorator.swift in Sources */,
 				B5022A7321AB2101001E0FB0 /* StoriesModule.swift in Sources */,
 				B55BF7CD219CF80400B937C7 /* FacebookViewController.swift in Sources */,
