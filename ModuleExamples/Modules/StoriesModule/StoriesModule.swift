@@ -59,9 +59,7 @@ class StoriesModule: TableSectionModule {
         case String(describing: StoriesImageCell.self):
             let storiesImageCell : StoriesImageCell = cell as! StoriesImageCell
             storiesImageCell.configure(dataModel: storiesDataModel!)
-            break
-        default:
-            break
+        default: break
         }
         
         removeSeparatorInsetForCell(cell, forIndexPath: indexPath)
@@ -76,10 +74,8 @@ class StoriesModule: TableSectionModule {
         switch cellClass {
         case String(describing: StoriesImageCell.self):
             height = 151
-            break
         default:
             height = 30
-            break
         }
         
         return height;

@@ -34,13 +34,12 @@ class MainViewController: ModulesViewController, AppModuleDelegate {
         switch appInformation!.app {
         case .facebook:
             viewcontroller = FacebookViewController()
-            break
         case .whatsapp:
             viewcontroller = WhatsappViewController()
-            break
         case .potpurri:
             viewcontroller = PotpurryViewController()
-            break
+        case .playground:
+            viewcontroller = PlaygroundViewController()
         }
         
         navigationController?.pushViewController(viewcontroller, animated: true)

@@ -40,12 +40,9 @@ class NewPostModule: TableSectionModule {
         switch identifier {
         case String(describing: WhatsOnYourMindCell.self):
             height = 70
-            break
         case String(describing: NewPostActionsCell.self):
             height = 40
-            break
-        default:
-            break
+        default: break
         }
         
         return height
