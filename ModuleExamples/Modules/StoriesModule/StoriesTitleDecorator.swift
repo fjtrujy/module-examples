@@ -23,7 +23,7 @@ class StoriesTitleDecorator: NSObject {
     }
 }
 
-//MARK: DecoratorBasicInfo
+//MARK: - DecoratorBasicInfo
 extension StoriesTitleDecorator {
     
     private var titleColor : UIColor {

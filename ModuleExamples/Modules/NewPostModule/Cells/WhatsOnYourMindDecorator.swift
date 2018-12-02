@@ -22,7 +22,7 @@ class WhatsOnYourMindDecorator: NSObject {
     }
 }
 
-//MARK: DecoratorBasicInfo
+//MARK: - DecoratorBasicInfo
 extension WhatsOnYourMindDecorator {
     
     private var titleColor : UIColor {

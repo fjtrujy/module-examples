@@ -54,7 +54,7 @@ class WhatsappStatusCellDecorator: NSObject {
     
 }
 
-//MARK: DecoratorBasicInfo
+//MARK: - DecoratorBasicInfo
 extension WhatsappStatusCellDecorator {
     
     private var titleColor : UIColor {

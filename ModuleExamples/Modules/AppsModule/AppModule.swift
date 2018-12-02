@@ -72,7 +72,7 @@ class AppModule: TableSectionModule {
     }
 }
 
-//MARK: ApppModuleDelegate
+//MARK: - ApppModuleDelegate
 protocol AppModuleDelegate: class {
     func appSelected(_ appInformation: GenericAppInformation?)
 }

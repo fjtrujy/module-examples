@@ -27,7 +27,7 @@ class MainViewController: ModulesViewController, AppModuleDelegate {
         appendModule(appModule)
     }
     
-    //MARK: AppModuleDelegate
+    //MARK: - AppModuleDelegate
     func appSelected(_ appInformation: GenericAppInformation?) {
         
         let viewcontroller : UIViewController

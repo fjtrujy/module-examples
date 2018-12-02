@@ -22,10 +22,24 @@ class PotpurryViewController: ModulesViewController {
         super.createModules()
         
         foldUnfoldModule()
+        pushVCModule()
         
     }
 
     func foldUnfoldModule() {
         appendModule(FoldUnfoldModule(tableView: tableView!))
+    }
+    
+    func pushVCModule() {
+        let module = PushVCModule(tableView: tableView!)
+        module.delegate = self
+        appendModule(module)
+    }
+}
+
+//MARK: - Modules delegate
+extension PotpurryViewController : PushVCModuleDelegate {
+    func pushVCModuleRequestPush(_ pushVCModule: PushVCModule) {
+        navigationController?.pushViewController(PotpurryViewController(), animated: true)
     }
 }

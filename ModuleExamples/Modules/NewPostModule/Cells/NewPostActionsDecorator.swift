@@ -42,7 +42,7 @@ class NewPostActionsDecorator: NSObject {
     }
 }
 
-//MARK: DecoratorBasicInfo
+//MARK: - DecoratorBasicInfo
 extension NewPostActionsDecorator {
     
     private var titleColor : UIColor {

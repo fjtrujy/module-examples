@@ -42,7 +42,7 @@ class StoryCollectionDecorator: NSObject {
     }
 }
 
-//MARK: DecoratorBasicInfo
+//MARK: - DecoratorBasicInfo
 extension StoryCollectionDecorator {
     
     private var titleColor : UIColor {
