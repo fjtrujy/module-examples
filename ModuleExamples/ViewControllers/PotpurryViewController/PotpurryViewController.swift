@@ -21,9 +21,16 @@ class PotpurryViewController: ModulesViewController {
     override func createModules() {
         super.createModules()
         
+        helloWorldModule()
         foldUnfoldModule()
         pushVCModule()
         addRemoveModule()
+    }
+    
+    func helloWorldModule() {
+        let module = HelloWorldModule(tableView: tableView!)
+        module.delegate = self
+        appendModule(module)
     }
 
     func foldUnfoldModule() {
@@ -42,8 +49,18 @@ class PotpurryViewController: ModulesViewController {
 }
 
 //MARK: - Modules delegate
-extension PotpurryViewController : PushVCModuleDelegate {
+extension PotpurryViewController : PushVCModuleDelegate, HelloWorldDelegate {
     func pushVCModuleRequestPush(_ pushVCModule: PushVCModule) {
         navigationController?.pushViewController(PotpurryViewController(), animated: true)
+    }
+    
+    //MARK: - HelloWorldModuleDelegate
+    func helloWorldSelected(_ module: HelloWorldModule!) {
+        let alertDesc = "Module " + module.description + " Section " + String(module.section)
+        let alertVC = UIAlertController(title: "Hello World! Module",
+                                        message: alertDesc,
+                                        preferredStyle: UIAlertController.Style.alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
+        present(alertVC, animated: true, completion: nil)
     }
 }

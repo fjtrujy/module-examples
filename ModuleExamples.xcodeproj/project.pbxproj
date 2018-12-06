@@ -58,6 +58,7 @@
 		B55BF7DD21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7DC21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift */; };
 		B55BF7DF21A1891900B937C7 /* StatusModuleAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55BF7DE21A1891800B937C7 /* StatusModuleAssets.xcassets */; };
 		B55BF7E121A1946000B937C7 /* WhatsappStateModuleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7E021A1946000B937C7 /* WhatsappStateModuleDecorator.swift */; };
+		B574FB9D21B7394600B4F6F4 /* HelloWorldModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B574FB9C21B7394600B4F6F4 /* HelloWorldModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		B55BF7DC21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatusCellDecorator.swift; sourceTree = "<group>"; };
 		B55BF7DE21A1891800B937C7 /* StatusModuleAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StatusModuleAssets.xcassets; sourceTree = "<group>"; };
 		B55BF7E021A1946000B937C7 /* WhatsappStateModuleDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStateModuleDecorator.swift; sourceTree = "<group>"; };
+		B574FB9C21B7394600B4F6F4 /* HelloWorldModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldModule.swift; sourceTree = "<group>"; };
 		B782DA01B35280E8E592AEB6 /* Pods-ModuleExamples-ModuleExamplesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamples-ModuleExamplesUITests.debug.xcconfig"; path = "Target Support Files/Pods-ModuleExamples-ModuleExamplesUITests/Pods-ModuleExamples-ModuleExamplesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D13D1109F93C8EBA265E1428 /* Pods-ModuleExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamples.debug.xcconfig"; path = "Target Support Files/Pods-ModuleExamples/Pods-ModuleExamples.debug.xcconfig"; sourceTree = "<group>"; };
 		F1EFAA66E22F6BE06DAC54EE /* Pods-ModuleExamples-ModuleExamplesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleExamples-ModuleExamplesUITests.release.xcconfig"; path = "Target Support Files/Pods-ModuleExamples-ModuleExamplesUITests/Pods-ModuleExamples-ModuleExamplesUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 		B55BF7BA219CD46600B937C7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B574FB9B21B7393400B4F6F4 /* HelloWorldModule */,
 				B5253BE121B4134700003820 /* AddRemoveCellsModule */,
 				B5253BDE21B40A0600003820 /* PushVCModule */,
 				B5253BDB21B1EF3700003820 /* FoldUnfoldModule */,
@@ -409,6 +412,14 @@
 				B55BF7DC21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B574FB9B21B7393400B4F6F4 /* HelloWorldModule */ = {
+			isa = PBXGroup;
+			children = (
+				B574FB9C21B7394600B4F6F4 /* HelloWorldModule.swift */,
+			);
+			path = HelloWorldModule;
 			sourceTree = "<group>";
 		};
 		E48E7882F69881F784C068B5 /* Pods */ = {
@@ -727,6 +738,7 @@
 				B5253BE021B40A2200003820 /* PushVCModule.swift in Sources */,
 				B5022A8421ADBE0B001E0FB0 /* StoriesImageCell.swift in Sources */,
 				B55BF7BD219CD4DD00B937C7 /* MainViewController.swift in Sources */,
+				B574FB9D21B7394600B4F6F4 /* HelloWorldModule.swift in Sources */,
 				B5253BE321B4138200003820 /* AddRemoveCellsModule.swift in Sources */,
 				B5022A6821A73642001E0FB0 /* WhatsOnYourMindDecorator.swift in Sources */,
 				B5022A7321AB2101001E0FB0 /* StoriesModule.swift in Sources */,
