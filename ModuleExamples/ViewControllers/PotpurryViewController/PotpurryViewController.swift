@@ -25,6 +25,7 @@ class PotpurryViewController: ModulesViewController {
         foldUnfoldModule()
         pushVCModule()
         addRemoveModule()
+        attributedModule()
     }
     
     func helloWorldModule() {
@@ -45,6 +46,10 @@ class PotpurryViewController: ModulesViewController {
     
     func addRemoveModule() {
         appendModule(AddRemoveCellsModule(tableView: tableView!))
+    }
+    
+    func attributedModule() {
+        appendModule(AttributedModule(tableView: tableView!))
     }
 }
 

@@ -37,6 +37,14 @@
 		B5253BE321B4138200003820 /* AddRemoveCellsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5253BE221B4138200003820 /* AddRemoveCellsModule.swift */; };
 		B5253BE721B419B900003820 /* PlaygroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5253BE521B419B900003820 /* PlaygroundViewController.swift */; };
 		B5253BE821B419B900003820 /* PlaygroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5253BE621B419B900003820 /* PlaygroundViewController.xib */; };
+		B52B260821C18A420076D5BD /* AttributedModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B260721C18A420076D5BD /* AttributedModule.swift */; };
+		B52B260C21C18AAF0076D5BD /* AttributtedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B260A21C18AAF0076D5BD /* AttributtedCell.swift */; };
+		B52B260D21C18AAF0076D5BD /* AttributtedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52B260B21C18AAF0076D5BD /* AttributtedCell.xib */; };
+		B52B261021C18BB60076D5BD /* CommonAttributedDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B260F21C18BB60076D5BD /* CommonAttributedDecorator.swift */; };
+		B52B261221C18D4B0076D5BD /* ThingsInCommonAttributedDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B261121C18D4B0076D5BD /* ThingsInCommonAttributedDecorator.swift */; };
+		B52B261421C18D860076D5BD /* BirthdateAttributedDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B261321C18D860076D5BD /* BirthdateAttributedDecorator.swift */; };
+		B52B261621C18D980076D5BD /* RequestFriendsAttributedDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B261521C18D980076D5BD /* RequestFriendsAttributedDecorator.swift */; };
+		B52B261821C1BC940076D5BD /* AttributedModuleAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52B261721C1BC940076D5BD /* AttributedModuleAssets.xcassets */; };
 		B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7A9219CD338005B7F38 /* AppDelegate.swift */; };
 		B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B536E7B2219CD339005B7F38 /* LaunchScreen.storyboard */; };
 		B536E7BF219CD339005B7F38 /* ModuleExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7BE219CD339005B7F38 /* ModuleExamplesTests.swift */; };
@@ -111,6 +119,14 @@
 		B5253BE221B4138200003820 /* AddRemoveCellsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemoveCellsModule.swift; sourceTree = "<group>"; };
 		B5253BE521B419B900003820 /* PlaygroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundViewController.swift; sourceTree = "<group>"; };
 		B5253BE621B419B900003820 /* PlaygroundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaygroundViewController.xib; sourceTree = "<group>"; };
+		B52B260721C18A420076D5BD /* AttributedModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedModule.swift; sourceTree = "<group>"; };
+		B52B260A21C18AAF0076D5BD /* AttributtedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributtedCell.swift; sourceTree = "<group>"; };
+		B52B260B21C18AAF0076D5BD /* AttributtedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributtedCell.xib; sourceTree = "<group>"; };
+		B52B260F21C18BB60076D5BD /* CommonAttributedDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAttributedDecorator.swift; sourceTree = "<group>"; };
+		B52B261121C18D4B0076D5BD /* ThingsInCommonAttributedDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsInCommonAttributedDecorator.swift; sourceTree = "<group>"; };
+		B52B261321C18D860076D5BD /* BirthdateAttributedDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdateAttributedDecorator.swift; sourceTree = "<group>"; };
+		B52B261521C18D980076D5BD /* RequestFriendsAttributedDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFriendsAttributedDecorator.swift; sourceTree = "<group>"; };
+		B52B261721C1BC940076D5BD /* AttributedModuleAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AttributedModuleAssets.xcassets; sourceTree = "<group>"; };
 		B536E7A6219CD338005B7F38 /* ModuleExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B536E7A9219CD338005B7F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B536E7AB219CD338005B7F38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +291,37 @@
 			path = PlaygroundViewController;
 			sourceTree = "<group>";
 		};
+		B52B260621C18A170076D5BD /* AttributedModule */ = {
+			isa = PBXGroup;
+			children = (
+				B52B260E21C18B980076D5BD /* Decorators */,
+				B52B260921C18A990076D5BD /* Cells */,
+				B52B260721C18A420076D5BD /* AttributedModule.swift */,
+				B52B261721C1BC940076D5BD /* AttributedModuleAssets.xcassets */,
+			);
+			path = AttributedModule;
+			sourceTree = "<group>";
+		};
+		B52B260921C18A990076D5BD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B52B260A21C18AAF0076D5BD /* AttributtedCell.swift */,
+				B52B260B21C18AAF0076D5BD /* AttributtedCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B52B260E21C18B980076D5BD /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				B52B260F21C18BB60076D5BD /* CommonAttributedDecorator.swift */,
+				B52B261121C18D4B0076D5BD /* ThingsInCommonAttributedDecorator.swift */,
+				B52B261321C18D860076D5BD /* BirthdateAttributedDecorator.swift */,
+				B52B261521C18D980076D5BD /* RequestFriendsAttributedDecorator.swift */,
+			);
+			path = Decorators;
+			sourceTree = "<group>";
+		};
 		B536E79D219CD337005B7F38 = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +391,7 @@
 		B55BF7BA219CD46600B937C7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B52B260621C18A170076D5BD /* AttributedModule */,
 				B574FB9B21B7393400B4F6F4 /* HelloWorldModule */,
 				B5253BE121B4134700003820 /* AddRemoveCellsModule */,
 				B5253BDE21B40A0600003820 /* PushVCModule */,
@@ -552,6 +600,7 @@
 				B5022A7721AB2148001E0FB0 /* StoriesTitleCell.xib in Resources */,
 				B5022A8521ADBE0B001E0FB0 /* StoriesImageCell.xib in Resources */,
 				B5022A6621A73437001E0FB0 /* WhatsOnYourMindCell.xib in Resources */,
+				B52B261821C1BC940076D5BD /* AttributedModuleAssets.xcassets in Resources */,
 				B5253BE821B419B900003820 /* PlaygroundViewController.xib in Resources */,
 				B5022A8121AB32B6001E0FB0 /* stories.json in Resources */,
 				B55BF7DF21A1891900B937C7 /* StatusModuleAssets.xcassets in Resources */,
@@ -561,6 +610,7 @@
 				B5022A6E21A74A0A001E0FB0 /* NewPostActionsCell.xib in Resources */,
 				B55BF7BC219CD4B300B937C7 /* MainViewController.xib in Resources */,
 				B55BF7CE219CF80400B937C7 /* FacebookViewController.xib in Resources */,
+				B52B260D21C18AAF0076D5BD /* AttributtedCell.xib in Resources */,
 				B5253BDA21B1EC9700003820 /* PotpurryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -734,9 +784,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5022A6121A73265001E0FB0 /* NewPostModule.swift in Sources */,
+				B52B261621C18D980076D5BD /* RequestFriendsAttributedDecorator.swift in Sources */,
 				B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */,
 				B5253BE021B40A2200003820 /* PushVCModule.swift in Sources */,
+				B52B261021C18BB60076D5BD /* CommonAttributedDecorator.swift in Sources */,
 				B5022A8421ADBE0B001E0FB0 /* StoriesImageCell.swift in Sources */,
+				B52B260821C18A420076D5BD /* AttributedModule.swift in Sources */,
 				B55BF7BD219CD4DD00B937C7 /* MainViewController.swift in Sources */,
 				B574FB9D21B7394600B4F6F4 /* HelloWorldModule.swift in Sources */,
 				B5253BE321B4138200003820 /* AddRemoveCellsModule.swift in Sources */,
@@ -749,8 +802,10 @@
 				B55BF7C5219CE9FC00B937C7 /* GenericAppInformation.swift in Sources */,
 				B5022A6D21A74A0A001E0FB0 /* NewPostActionsCell.swift in Sources */,
 				B55BF7C0219CD73500B937C7 /* AppModule.swift in Sources */,
+				B52B261221C18D4B0076D5BD /* ThingsInCommonAttributedDecorator.swift in Sources */,
 				B55BF7E121A1946000B937C7 /* WhatsappStateModuleDecorator.swift in Sources */,
 				B5022A7621AB2148001E0FB0 /* StoriesTitleCell.swift in Sources */,
+				B52B261421C18D860076D5BD /* BirthdateAttributedDecorator.swift in Sources */,
 				B5022A7921AB224B001E0FB0 /* StoriesTitleDecorator.swift in Sources */,
 				B5253BDD21B1EF6200003820 /* FoldUnfoldModule.swift in Sources */,
 				B5253BE721B419B900003820 /* PlaygroundViewController.swift in Sources */,
@@ -760,6 +815,7 @@
 				B5022A6521A73437001E0FB0 /* WhatsOnYourMindCell.swift in Sources */,
 				B55BF7DA219E232100B937C7 /* WhatsappStatusCell.swift in Sources */,
 				B5022A8C21ADC625001E0FB0 /* StoryCollectionCell.swift in Sources */,
+				B52B260C21C18AAF0076D5BD /* AttributtedCell.swift in Sources */,
 				B55BF7D2219E21B000B937C7 /* WhatsappViewController.swift in Sources */,
 				B5022A7C21AB262F001E0FB0 /* StoryDataModel.swift in Sources */,
 				B5253BD921B1EC9700003820 /* PotpurryViewController.swift in Sources */,
