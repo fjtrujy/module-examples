@@ -3,7 +3,7 @@
 //  FTMTableSectionModules
 //
 //  Created by Francisco Javier Trujillo Mata on 11/5/16.
-//  Copyright © 2016 CocoaPods. All rights reserved.
+//  Copyright © 2016 FJTRUJY. All rights reserved.
 //
 
 import UIKit
@@ -82,7 +82,7 @@ extension ModulesViewController: TableSectionModuleSectionSource {
     }
     
     public func sectionForModule(_ module: TableSectionModule) -> NSInteger {
-        return (self.modules.index(of: module))!
+        return (self.modules.firstIndex(of: module))!
     }
 }
 
