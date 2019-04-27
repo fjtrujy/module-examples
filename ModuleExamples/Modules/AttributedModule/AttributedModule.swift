@@ -19,9 +19,10 @@ class AttributedModule: TableSectionModule {
     override func createRows() {
         super.createRows()
         
-        rows.append(ThingsInCommonAttributedDecorator())
         rows.append(BirthdateAttributedDecorator())
+        rows.append(FavoriteMusicAttributedDecorator())
         rows.append(RequestFriendsAttributedDecorator())
+        rows.append(ThingsInCommonAttributedDecorator())
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {

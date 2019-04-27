@@ -15,34 +15,42 @@ class BirthdateAttributedDecorator: CommonAttributedDecorator {
         attr.append(attributedBreakLine)
         attr.append(descAttributedInfo)
         
-        return attr
+        return attr.copy() as? NSAttributedString
+    }
+    
+    override func backgroundColor() -> UIColor? {
+        return lightColor
     }
 }
 
 //MARK: - BirthdateAttributedDecorator
-extension BirthdateAttributedDecorator {
+private extension BirthdateAttributedDecorator {
     
-    private var mainColor : UIColor {
+    var mainColor : UIColor {
         return UIColor.black
     }
     
-    private var softColor : UIColor {
+    var softColor : UIColor {
         return UIColor.gray
     }
     
-    private var mainFont : UIFont {
+    var lightColor : UIColor {
+        return UIColor.init(white: 0.9, alpha: 1.0)
+    }
+    
+    var mainFont : UIFont {
         return UIFont.boldSystemFont(ofSize:13)
     }
     
-    private var secondaryFont : UIFont {
+    var secondaryFont : UIFont {
         return UIFont.systemFont(ofSize:13)
     }
     
-    private var smalFont : UIFont {
+    var smalFont : UIFont {
         return UIFont.systemFont(ofSize:3)
     }
     
-    private var mainAttributes : [NSAttributedString.Key : Any] {
+    var mainAttributes : [NSAttributedString.Key : Any] {
         
         return [
             NSAttributedString.Key.font : mainFont,
@@ -50,7 +58,7 @@ extension BirthdateAttributedDecorator {
         ]
     }
     
-    private var softAttributes : [NSAttributedString.Key : Any] {
+    var softAttributes : [NSAttributedString.Key : Any] {
         
         return [
             NSAttributedString.Key.font : secondaryFont,
@@ -58,27 +66,27 @@ extension BirthdateAttributedDecorator {
         ]
     }
     
-    private var smallAttributes : [NSAttributedString.Key : Any] {
+    var smallAttributes : [NSAttributedString.Key : Any] {
         
         return [
             NSAttributedString.Key.font : smalFont,
         ]
     }
     
-    private var attributedBreakLine : NSAttributedString {
+    var attributedBreakLine : NSAttributedString {
         return NSAttributedString(string: "\n", attributes:smallAttributes)
     }
     
-    private var mainAttributedInfo : NSAttributedString {
+    var mainAttributedInfo : NSAttributedString {
         let attr = NSMutableAttributedString()
         attr.append(NSAttributedString(string: "Francisco Javier, for your birthdate we'll donate €1 to a non-profit of your choice.\n", attributes: mainAttributes))
-        return attr
+        return attr.copy() as! NSAttributedString
     }
     
-    private var descAttributedInfo : NSAttributedString {
+    var descAttributedInfo : NSAttributedString {
         let attr = NSMutableAttributedString()
         attr.append(NSAttributedString(string: "Create your fundraiser to support a cause you care about, and we'll take care of the donation processing with no fees.\nRections apply.", attributes: softAttributes))
-        return attr
+        return attr.copy() as! NSAttributedString
     }
     
 }

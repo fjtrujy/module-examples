@@ -20,33 +20,33 @@ class RequestFriendsAttributedDecorator: CommonAttributedDecorator {
 }
 
 //MARK: - RequestFriendsAttributedDecorator
-extension RequestFriendsAttributedDecorator {
+private extension RequestFriendsAttributedDecorator {
     
-    private var mainColor : UIColor {
+    var mainColor : UIColor {
         return UIColor.black
     }
     
-    private var softColor : UIColor {
+    var softColor : UIColor {
         return UIColor.gray
     }
     
-    private var mainFont : UIFont {
+    var mainFont : UIFont {
         return UIFont.boldSystemFont(ofSize:15)
     }
     
-    private var secondaryFont : UIFont {
+    var secondaryFont : UIFont {
         return UIFont.systemFont(ofSize:13)
     }
     
-    private var alternativeFont : UIFont {
+    var alternativeFont : UIFont {
         return UIFont.systemFont(ofSize:15)
     }
     
-    private var smalFont : UIFont {
+    var smalFont : UIFont {
         return UIFont.systemFont(ofSize:9)
     }
     
-    private var mainAttributes : [NSAttributedString.Key : Any] {
+    var mainAttributes : [NSAttributedString.Key : Any] {
         
         return [
             NSAttributedString.Key.font : mainFont,
@@ -54,7 +54,7 @@ extension RequestFriendsAttributedDecorator {
         ]
     }
     
-    private var softAttributes : [NSAttributedString.Key : Any] {
+    var softAttributes : [NSAttributedString.Key : Any] {
         
         return [
             NSAttributedString.Key.font : secondaryFont,
@@ -62,7 +62,7 @@ extension RequestFriendsAttributedDecorator {
         ]
     }
     
-    private var alternativeAttributes : [NSAttributedString.Key : Any] {
+    var alternativeAttributes : [NSAttributedString.Key : Any] {
         
         return [
             NSAttributedString.Key.font : alternativeFont,
@@ -70,7 +70,7 @@ extension RequestFriendsAttributedDecorator {
         ]
     }
     
-    private var smallAttributes : [NSAttributedString.Key : Any] {
+    var smallAttributes : [NSAttributedString.Key : Any] {
         
         return [
             NSAttributedString.Key.font : smalFont,
@@ -78,11 +78,11 @@ extension RequestFriendsAttributedDecorator {
         ]
     }
     
-    private var attributedBreakLine : NSAttributedString {
+    var attributedBreakLine : NSAttributedString {
         return NSAttributedString(string: "\n", attributes:smallAttributes)
     }
     
-    private var requestFriendAttributedIcon : NSAttributedString {
+    var requestFriendAttributedIcon : NSAttributedString {
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = UIImage(named: "requestFriend")
         changeAttachmentImageHeight(attachment: imageAttachment, height: mainFont.pointSize)
@@ -90,14 +90,14 @@ extension RequestFriendsAttributedDecorator {
         return NSAttributedString(attachment: imageAttachment)
     }
     
-    private var mainAttributedInfo : NSAttributedString {
+    var mainAttributedInfo : NSAttributedString {
         let attr = NSMutableAttributedString()
         attr.append(NSAttributedString(string: "Miguél Ángel Gutiérrez, Elena Benítez ", attributes: mainAttributes))
         attr.append(NSAttributedString(string: "and other 3 accepted your friend requests.", attributes: alternativeAttributes))
         return attr
     }
     
-    private var descAttributedInfo : NSAttributedString {
+    var descAttributedInfo : NSAttributedString {
         let attr = NSMutableAttributedString()
         attr.append(requestFriendAttributedIcon)
         attr.append(NSAttributedString(string: " Wednesday at 19:25.", attributes: softAttributes))

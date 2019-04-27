@@ -23,6 +23,7 @@ class FacebookViewController: ModulesViewController {
         
         newPostModule()
         storiesModule()
+        attributedModule()
     }
     
     func newPostModule() {
@@ -31,5 +32,9 @@ class FacebookViewController: ModulesViewController {
     
     func storiesModule() {
         appendModule(StoriesModule.init(tableView: tableView!))
+    }
+    
+    func attributedModule() {
+        appendModule(AttributedModule(tableView: tableView!))
     }
 }

@@ -22,33 +22,33 @@ class ThingsInCommonAttributedDecorator: CommonAttributedDecorator {
 }
 
 //MARK: - ThingsInCommonAttributedDecorator
-extension ThingsInCommonAttributedDecorator {
+private extension ThingsInCommonAttributedDecorator {
     
-    private var mainColor : UIColor {
+    var mainColor : UIColor {
         return UIColor.black
     }
     
-    private var softColor : UIColor {
+    var softColor : UIColor {
         return UIColor.gray
     }
     
-    private var mainFont : UIFont {
+    var mainFont : UIFont {
         return UIFont.boldSystemFont(ofSize:15)
     }
     
-    private var secondaryFont : UIFont {
+    var secondaryFont : UIFont {
         return UIFont.systemFont(ofSize:13)
     }
     
-    private var alternativeFont : UIFont {
+    var alternativeFont : UIFont {
         return UIFont.boldSystemFont(ofSize:13)
     }
     
-    private var smalFont : UIFont {
+    var smalFont : UIFont {
         return UIFont.systemFont(ofSize:9)
     }
     
-    private var mainAttributes : [NSAttributedString.Key : Any] {
+    var mainAttributes : [NSAttributedString.Key : Any] {
         
         return [
             NSAttributedString.Key.font : mainFont,
@@ -56,7 +56,7 @@ extension ThingsInCommonAttributedDecorator {
         ]
     }
     
-    private var softAttributes : [NSAttributedString.Key : Any] {
+    var softAttributes : [NSAttributedString.Key : Any] {
         
         return [
             NSAttributedString.Key.font : secondaryFont,
@@ -64,7 +64,7 @@ extension ThingsInCommonAttributedDecorator {
         ]
     }
     
-    private var alternativeAttributes : [NSAttributedString.Key : Any] {
+    var alternativeAttributes : [NSAttributedString.Key : Any] {
         
         return [
             NSAttributedString.Key.font : alternativeFont,
@@ -72,7 +72,7 @@ extension ThingsInCommonAttributedDecorator {
         ]
     }
     
-    private var smallAttributes : [NSAttributedString.Key : Any] {
+    var smallAttributes : [NSAttributedString.Key : Any] {
         
         return [
             NSAttributedString.Key.font : smalFont,
@@ -80,11 +80,11 @@ extension ThingsInCommonAttributedDecorator {
         ]
     }
     
-    private var attributedBreakLine : NSAttributedString {
+    var attributedBreakLine : NSAttributedString {
         return NSAttributedString(string: "\n", attributes:smallAttributes)
     }
     
-    private var offLineFriendAttributedIcon : NSAttributedString {
+    var offLineFriendAttributedIcon : NSAttributedString {
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = UIImage(named: "offlineFriend")
         changeAttachmentImageHeight(attachment: imageAttachment, height: mainFont.pointSize)
@@ -92,7 +92,7 @@ extension ThingsInCommonAttributedDecorator {
         return NSAttributedString(attachment: imageAttachment)
     }
     
-    private var thanksHeartAttributedIcon : NSAttributedString {
+    var thanksHeartAttributedIcon : NSAttributedString {
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = UIImage(named: "thanksHeart")
         changeAttachmentImageHeight(attachment: imageAttachment, height: mainFont.pointSize)
@@ -100,13 +100,13 @@ extension ThingsInCommonAttributedDecorator {
         return NSAttributedString(attachment: imageAttachment)
     }
     
-    private var mainAttributedInfo : NSAttributedString {
+    var mainAttributedInfo : NSAttributedString {
         let attr = NSMutableAttributedString()
         attr.append(NSAttributedString(string: "Jose Luis Jordano Palma\n", attributes: mainAttributes))
         return attr
     }
     
-    private var mutualFriendsAttributedInfo : NSAttributedString {
+    var mutualFriendsAttributedInfo : NSAttributedString {
         let attr = NSMutableAttributedString()
         attr.append(offLineFriendAttributedIcon)
         attr.append(NSAttributedString(string: " Mutual friends ", attributes: softAttributes))
@@ -115,7 +115,7 @@ extension ThingsInCommonAttributedDecorator {
         return attr
     }
     
-    private var thingsInCommonAttributedInfo : NSAttributedString {
+    var thingsInCommonAttributedInfo : NSAttributedString {
         let attr = NSMutableAttributedString()
         attr.append(thanksHeartAttributedIcon)
         attr.append(NSAttributedString(string: " Things in common ", attributes: softAttributes))
