@@ -14,6 +14,7 @@ target 'ModuleExamples' do
 
   target 'ModuleExamplesTests' do
     # Pods for testing
+    pod 'iOSSnapshotTestCase'
   end
 
   target 'ModuleExamplesUITests' do

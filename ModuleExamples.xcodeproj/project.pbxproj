@@ -30,6 +30,7 @@
 		B5022A8C21ADC625001E0FB0 /* StoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A8A21ADC625001E0FB0 /* StoryCollectionCell.swift */; };
 		B5022A8D21ADC625001E0FB0 /* StoryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5022A8B21ADC625001E0FB0 /* StoryCollectionCell.xib */; };
 		B5022A8F21ADC85E001E0FB0 /* StoryCollectionDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5022A8E21ADC85E001E0FB0 /* StoryCollectionDecorator.swift */; };
+		B51E02CD2283636200DA6526 /* SnapshotTest1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E02CC2283636200DA6526 /* SnapshotTest1.swift */; };
 		B5253BD921B1EC9700003820 /* PotpurryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5253BD721B1EC9700003820 /* PotpurryViewController.swift */; };
 		B5253BDA21B1EC9700003820 /* PotpurryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5253BD821B1EC9700003820 /* PotpurryViewController.xib */; };
 		B5253BDD21B1EF6200003820 /* FoldUnfoldModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5253BDC21B1EF6200003820 /* FoldUnfoldModule.swift */; };
@@ -114,6 +115,7 @@
 		B5022A8A21ADC625001E0FB0 /* StoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionCell.swift; sourceTree = "<group>"; };
 		B5022A8B21ADC625001E0FB0 /* StoryCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionCell.xib; sourceTree = "<group>"; };
 		B5022A8E21ADC85E001E0FB0 /* StoryCollectionDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionDecorator.swift; sourceTree = "<group>"; };
+		B51E02CC2283636200DA6526 /* SnapshotTest1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTest1.swift; sourceTree = "<group>"; };
 		B5253BD721B1EC9700003820 /* PotpurryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotpurryViewController.swift; sourceTree = "<group>"; };
 		B5253BD821B1EC9700003820 /* PotpurryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PotpurryViewController.xib; sourceTree = "<group>"; };
 		B5253BDC21B1EF6200003820 /* FoldUnfoldModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldUnfoldModule.swift; sourceTree = "<group>"; };
@@ -201,7 +203,6 @@
 				FCA80C4B40E02B0F028708DE /* Pods-ModuleExamples-ModuleExamplesUITests.debug.xcconfig */,
 				DAF4790973B45C65660DB40A /* Pods-ModuleExamples-ModuleExamplesUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -379,6 +380,7 @@
 			children = (
 				B536E7BE219CD339005B7F38 /* ModuleExamplesTests.swift */,
 				B536E7C0219CD339005B7F38 /* Info.plist */,
+				B51E02CC2283636200DA6526 /* SnapshotTest1.swift */,
 			);
 			path = ModuleExamplesTests;
 			sourceTree = "<group>";
@@ -673,6 +675,7 @@
 				"${BUILT_PRODUCTS_DIR}/CircleImageView/CircleImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/FTMTableSectionModules/FTMTableSectionModules.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -681,6 +684,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTMTableSectionModules.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -835,6 +839,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B536E7BF219CD339005B7F38 /* ModuleExamplesTests.swift in Sources */,
+				B51E02CD2283636200DA6526 /* SnapshotTest1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +1003,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY8RPBG44E;
+				FB_REFERENCE_IMAGE_DIR = "$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/ReferenceImages";
+				IMAGE_DIFF_DIR = "$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/FailureDiffs";
 				INFOPLIST_FILE = ModuleExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1017,6 +1024,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY8RPBG44E;
+				FB_REFERENCE_IMAGE_DIR = "$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/ReferenceImages";
+				IMAGE_DIFF_DIR = "$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/FailureDiffs";
 				INFOPLIST_FILE = ModuleExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1037,6 +1046,8 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY8RPBG44E;
+				FB_REFERENCE_IMAGE_DIR = "$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/ReferenceImages";
+				IMAGE_DIFF_DIR = "$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/FailureDiffs";
 				INFOPLIST_FILE = ModuleExamplesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1059,6 +1070,8 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY8RPBG44E;
+				FB_REFERENCE_IMAGE_DIR = "$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/ReferenceImages";
+				IMAGE_DIFF_DIR = "$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/FailureDiffs";
 				INFOPLIST_FILE = ModuleExamplesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,6 +1,11 @@
 PODS:
   - CircleImageView (1.0.1)
   - FTMTableSectionModules (0.2.1)
+  - iOSSnapshotTestCase (5.0.2):
+    - iOSSnapshotTestCase/SwiftSupport (= 5.0.2)
+  - iOSSnapshotTestCase/Core (5.0.2)
+  - iOSSnapshotTestCase/SwiftSupport (5.0.2):
+    - iOSSnapshotTestCase/Core
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
@@ -8,19 +13,22 @@ PODS:
 DEPENDENCIES:
   - CircleImageView
   - FTMTableSectionModules
+  - iOSSnapshotTestCase
   - SDWebImage
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CircleImageView
     - FTMTableSectionModules
+    - iOSSnapshotTestCase
     - SDWebImage
 
 SPEC CHECKSUMS:
   CircleImageView: 3339a6d2755333cf9fefdc9a76aa00d62957c7fb
   FTMTableSectionModules: de829aa16fbc9837ace847638aaa9351767ba958
+  iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
 
-PODFILE CHECKSUM: 61033069d5521377583b3c27639afa1aba6c8976
+PODFILE CHECKSUM: ee1e61e5287e5f92e9bcd6a3539ef14d8296176a
 
 COCOAPODS: 1.6.1
