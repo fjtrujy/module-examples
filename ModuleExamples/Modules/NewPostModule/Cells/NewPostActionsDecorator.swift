@@ -10,11 +10,11 @@ import UIKit
 
 class NewPostActionsDecorator: NSObject {
     func backgroundColor() -> UIColor? {
-        return UIColor.white
+        return .white
     }
     
     func separatorColor() -> UIColor? {
-        return UIColor.gray
+        return .gray
     }
     
     func liveIcon() -> UIImage? {
@@ -46,18 +46,18 @@ class NewPostActionsDecorator: NSObject {
 extension NewPostActionsDecorator {
     
     private var titleColor : UIColor {
-        return UIColor.gray
+        return .gray
     }
     
     private var titleFont : UIFont {
-        return UIFont.boldSystemFont(ofSize:11)
+        return .boldSystemFont(ofSize:11)
     }
     
     private var attributes : [NSAttributedString.Key : Any] {
         
         return [
-            NSAttributedString.Key.font : titleFont,
-            NSAttributedString.Key.foregroundColor : titleColor,
+            .font : titleFont,
+            .foregroundColor : titleColor,
         ]
     }
 }

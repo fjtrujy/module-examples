@@ -10,7 +10,7 @@ import UIKit
 
 class WhatsOnYourMindDecorator: NSObject {
     func backgroundColor() -> UIColor? {
-        return UIColor.white
+        return .white
     }
     
     func profileIcon() -> UIImage? {
@@ -26,18 +26,18 @@ class WhatsOnYourMindDecorator: NSObject {
 extension WhatsOnYourMindDecorator {
     
     private var titleColor : UIColor {
-        return UIColor.darkGray
+        return .darkGray
     }
     
     private var titleFont : UIFont {
-        return UIFont.boldSystemFont(ofSize:13)
+        return .boldSystemFont(ofSize:13)
     }
     
     private var attributes : [NSAttributedString.Key : Any] {
         
         return [
-            NSAttributedString.Key.font : titleFont,
-            NSAttributedString.Key.foregroundColor : titleColor,
+            .font : titleFont,
+            .foregroundColor : titleColor,
             ]
     }
 }

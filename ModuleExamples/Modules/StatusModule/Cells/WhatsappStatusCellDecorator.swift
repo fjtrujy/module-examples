@@ -23,7 +23,7 @@ class WhatsappStatusCellDecorator: NSObject {
     }
     
     var backgroundColor : UIColor {
-        return UIColor.white
+        return .white
     }
     
     var attributedInfo : NSAttributedString {
@@ -58,19 +58,19 @@ class WhatsappStatusCellDecorator: NSObject {
 extension WhatsappStatusCellDecorator {
     
     private var titleColor : UIColor {
-        return UIColor.black
+        return .black
     }
     
     private var subtitleColor : UIColor {
-        return UIColor.gray
+        return .gray
     }
     
     private var titleFont : UIFont {
-        return UIFont.boldSystemFont(ofSize:15)
+        return .boldSystemFont(ofSize:15)
     }
     
     private var subtitleFont : UIFont {
-        return UIFont.boldSystemFont(ofSize:12)
+        return .boldSystemFont(ofSize:12)
     }
     
     private var attributedBreakLine : NSAttributedString {
@@ -79,19 +79,19 @@ extension WhatsappStatusCellDecorator {
     
     private var attributedTitle : NSAttributedString {
         
-        let attributes = [
-            NSAttributedString.Key.font : titleFont,
-            NSAttributedString.Key.foregroundColor : titleColor,
-            ]
+        let attributes : [NSAttributedString.Key : Any] = [
+            .font : titleFont,
+            .foregroundColor : titleColor,
+        ]
         
         return NSAttributedString(string: title!, attributes: attributes)
     }
     
     private var attributedSubtitle : NSAttributedString {
         
-        let attributes = [
-            NSAttributedString.Key.font : subtitleFont,
-            NSAttributedString.Key.foregroundColor : subtitleColor,
+        let attributes : [NSAttributedString.Key : Any] = [
+            .font : subtitleFont,
+            .foregroundColor : subtitleColor,
             ]
         
         return NSAttributedString(string: subtitle!, attributes: attributes)

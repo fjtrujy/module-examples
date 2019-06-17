@@ -27,49 +27,49 @@ class BirthdateAttributedDecorator: CommonAttributedDecorator {
 private extension BirthdateAttributedDecorator {
     
     var mainColor : UIColor {
-        return UIColor.black
+        return .black
     }
     
     var softColor : UIColor {
-        return UIColor.gray
+        return .gray
     }
     
     var lightColor : UIColor {
-        return UIColor.init(white: 0.9, alpha: 1.0)
+        return .init(white: 0.9, alpha: 1.0)
     }
     
     var mainFont : UIFont {
-        return UIFont.boldSystemFont(ofSize:13)
+        return .boldSystemFont(ofSize:13)
     }
     
     var secondaryFont : UIFont {
-        return UIFont.systemFont(ofSize:13)
+        return .systemFont(ofSize:13)
     }
     
     var smalFont : UIFont {
-        return UIFont.systemFont(ofSize:3)
+        return .systemFont(ofSize:3)
     }
     
     var mainAttributes : [NSAttributedString.Key : Any] {
         
         return [
-            NSAttributedString.Key.font : mainFont,
-            NSAttributedString.Key.foregroundColor : mainColor,
+            .font : mainFont,
+            .foregroundColor : mainColor,
         ]
     }
     
     var softAttributes : [NSAttributedString.Key : Any] {
         
         return [
-            NSAttributedString.Key.font : secondaryFont,
-            NSAttributedString.Key.foregroundColor : softColor,
+            .font : secondaryFont,
+            .foregroundColor : softColor,
         ]
     }
     
     var smallAttributes : [NSAttributedString.Key : Any] {
         
         return [
-            NSAttributedString.Key.font : smalFont,
+            .font : smalFont,
         ]
     }
     

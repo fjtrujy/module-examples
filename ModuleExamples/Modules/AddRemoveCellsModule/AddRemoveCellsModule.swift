@@ -16,10 +16,6 @@ private enum RowType {
 
 class AddRemoveCellsModule: TableSectionModule {
     
-    override init(tableView: UITableView) {
-        super.init(tableView: tableView)
-    }
-    
     override func registerClassForHeadersFooters() -> [AnyClass] {
         return super.registerClassForHeadersFooters() + [
             UITableViewHeaderFooterView.classForCoder(),
@@ -49,7 +45,7 @@ class AddRemoveCellsModule: TableSectionModule {
     func removeRow() {
         let lastItem : RowType = rows.last as! RowType
         
-        if lastItem == RowType.normal {
+        if lastItem == .normal {
             rows.removeLast()
             let indexPath = IndexPath(row: rows.count, section: section)
             

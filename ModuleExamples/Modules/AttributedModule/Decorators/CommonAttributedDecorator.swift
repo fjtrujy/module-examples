@@ -11,7 +11,7 @@ import UIKit
 class CommonAttributedDecorator: NSObject {
     
     func backgroundColor() -> UIColor? {
-        return UIColor.white
+        return .white
     }
     
     func attributedTitle() -> NSAttributedString? {

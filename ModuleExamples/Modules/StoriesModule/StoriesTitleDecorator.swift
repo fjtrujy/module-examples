@@ -11,7 +11,7 @@ import UIKit
 class StoriesTitleDecorator: NSObject {
 
     func backgroundColor() -> UIColor? {
-        return UIColor.white
+        return .white
     }
     
     func attributedTitle() -> NSAttributedString? {
@@ -27,18 +27,18 @@ class StoriesTitleDecorator: NSObject {
 extension StoriesTitleDecorator {
     
     private var titleColor : UIColor {
-        return UIColor.black
+        return .black
     }
     
     private var titleFont : UIFont {
-        return UIFont.boldSystemFont(ofSize:13)
+        return .boldSystemFont(ofSize:13)
     }
     
     private var attributes : [NSAttributedString.Key : Any] {
         
         return [
-            NSAttributedString.Key.font : titleFont,
-            NSAttributedString.Key.foregroundColor : titleColor,
+            .font : titleFont,
+            .foregroundColor : titleColor,
         ]
     }
 }

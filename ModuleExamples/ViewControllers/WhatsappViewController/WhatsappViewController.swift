@@ -14,7 +14,7 @@ class WhatsappViewController: ModulesViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "Whatsapp - States"
+        title = "Whatsapp - States"
     }
     
     override func createModules() {
@@ -34,7 +34,7 @@ class WhatsappViewController: ModulesViewController {
         
         let myStatusModule = WhatsappStateModule.init(tableView: tableView!)
         myStatusModule.configure(decorator: moduleDecorator)
-        self.appendModule(myStatusModule)
+        appendModule(myStatusModule)
     }
     
     func recentUpdatesModule() {
@@ -49,7 +49,7 @@ class WhatsappViewController: ModulesViewController {
         
         let recentStatusModule = WhatsappStateModule.init(tableView: tableView!)
         recentStatusModule.configure(decorator: moduleDecorator)
-        self.appendModule(recentStatusModule)
+        appendModule(recentStatusModule)
     }
     
     func viewedUpdatesModule() {
@@ -64,7 +64,7 @@ class WhatsappViewController: ModulesViewController {
         
         let viewedUpdatesModule = WhatsappStateModule.init(tableView: tableView!)
         viewedUpdatesModule.configure(decorator: moduleDecorator)
-        self.appendModule(viewedUpdatesModule)
+        appendModule(viewedUpdatesModule)
     }
 
 }

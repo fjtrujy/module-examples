@@ -34,11 +34,11 @@ class StoryCollectionDecorator: NSObject {
     }
     
     func backgroundColor() -> UIColor {
-        return UIColor.white
+        return .white
     }
     
     func borderColor() -> UIColor {
-        return UIColor.blue
+        return .blue
     }
 }
 
@@ -46,18 +46,18 @@ class StoryCollectionDecorator: NSObject {
 extension StoryCollectionDecorator {
     
     private var titleColor : UIColor {
-        return UIColor.white
+        return .white
     }
     
     private var titleFont : UIFont {
-        return UIFont.boldSystemFont(ofSize:12)
+        return .boldSystemFont(ofSize:12)
     }
     
     private var attributes : [NSAttributedString.Key : Any] {
         
         return [
-            NSAttributedString.Key.font : titleFont,
-            NSAttributedString.Key.foregroundColor : titleColor,
+            .font : titleFont,
+            .foregroundColor : titleColor,
         ]
     }
 }

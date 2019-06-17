@@ -23,58 +23,58 @@ class RequestFriendsAttributedDecorator: CommonAttributedDecorator {
 private extension RequestFriendsAttributedDecorator {
     
     var mainColor : UIColor {
-        return UIColor.black
+        return .black
     }
     
     var softColor : UIColor {
-        return UIColor.gray
+        return .gray
     }
     
     var mainFont : UIFont {
-        return UIFont.boldSystemFont(ofSize:15)
+        return .boldSystemFont(ofSize:15)
     }
     
     var secondaryFont : UIFont {
-        return UIFont.systemFont(ofSize:13)
+        return .systemFont(ofSize:13)
     }
     
     var alternativeFont : UIFont {
-        return UIFont.systemFont(ofSize:15)
+        return .systemFont(ofSize:15)
     }
     
     var smalFont : UIFont {
-        return UIFont.systemFont(ofSize:9)
+        return .systemFont(ofSize:9)
     }
     
     var mainAttributes : [NSAttributedString.Key : Any] {
         
         return [
-            NSAttributedString.Key.font : mainFont,
-            NSAttributedString.Key.foregroundColor : mainColor,
+            .font : mainFont,
+            .foregroundColor : mainColor,
         ]
     }
     
     var softAttributes : [NSAttributedString.Key : Any] {
         
         return [
-            NSAttributedString.Key.font : secondaryFont,
-            NSAttributedString.Key.foregroundColor : softColor,
+            .font : secondaryFont,
+            .foregroundColor : softColor,
         ]
     }
     
     var alternativeAttributes : [NSAttributedString.Key : Any] {
         
         return [
-            NSAttributedString.Key.font : alternativeFont,
-            NSAttributedString.Key.foregroundColor : mainColor,
+            .font : alternativeFont,
+            .foregroundColor : mainColor,
         ]
     }
     
     var smallAttributes : [NSAttributedString.Key : Any] {
         
         return [
-            NSAttributedString.Key.font : smalFont,
-            NSAttributedString.Key.foregroundColor : mainColor,
+            .font : smalFont,
+            .foregroundColor : mainColor,
         ]
     }
     

@@ -13,9 +13,9 @@ class MainViewController: ModulesViewController, AppModuleDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "Modules are wonderfull!"
-        self.tableView?.rowHeight = UITableView.automaticDimension
-        self.tableView?.tableFooterView = UIView()
+        title = "Modules are wonderfull!"
+        tableView?.rowHeight = UITableView.automaticDimension
+        tableView?.tableFooterView = UIView()
     }
     
     override func createModules() {

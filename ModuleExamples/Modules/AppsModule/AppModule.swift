@@ -30,7 +30,7 @@ class AppModule: TableSectionModule {
     override func createRows() {
         super.createRows()
         
-        self.rows.append(contentsOf: info.apps)
+        rows.append(contentsOf: info.apps)
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

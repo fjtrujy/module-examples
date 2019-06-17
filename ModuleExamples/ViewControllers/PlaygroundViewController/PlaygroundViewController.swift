@@ -15,7 +15,7 @@ class PlaygroundViewController: ModulesViewController {
 
         // Do any additional setup after loading the view.
         title = "Playground Modules"
-        self.tableView?.tableFooterView = UIView()
+        tableView?.tableFooterView = UIView()
     }
 
 
