@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-ModuleExamples-ModuleExamplesTests/Pods-ModuleExamples-ModuleExamplesTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CircleImageView/CircleImageView.framework
+${BUILT_PRODUCTS_DIR}/FTMTableSectionModules/FTMTableSectionModules.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
