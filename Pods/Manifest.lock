@@ -1,8 +1,21 @@
 PODS:
   - CircleImageView (1.0.1)
-  - FTMTableSectionModules (0.3):
-    - FTMTableSectionModules/Core (= 0.3)
-  - FTMTableSectionModules/Core (0.3)
+  - CombinationGenerator (0.1.2):
+    - Runtime (~> 2.1)
+  - CRuntime (2.1.2)
+  - FTMTableSectionModules (0.4):
+    - FTMTableSectionModules/Core (= 0.4)
+  - FTMTableSectionModules/Core (0.4)
+  - FTMTableSectionModules/Tests (0.4):
+    - CombinationGenerator (~> 0.1)
+    - FTMTableSectionModules/Core
+  - iOSSnapshotTestCase (5.0.2):
+    - iOSSnapshotTestCase/SwiftSupport (= 5.0.2)
+  - iOSSnapshotTestCase/Core (5.0.2)
+  - iOSSnapshotTestCase/SwiftSupport (5.0.2):
+    - iOSSnapshotTestCase/Core
+  - Runtime (2.1.0):
+    - CRuntime
   - SDWebImage (5.0.6):
     - SDWebImage/Core (= 5.0.6)
   - SDWebImage/Core (5.0.6)
@@ -10,19 +23,29 @@ PODS:
 DEPENDENCIES:
   - CircleImageView
   - FTMTableSectionModules
+  - FTMTableSectionModules/Tests
+  - iOSSnapshotTestCase
   - SDWebImage
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CircleImageView
+    - CombinationGenerator
+    - CRuntime
     - FTMTableSectionModules
+    - iOSSnapshotTestCase
+    - Runtime
     - SDWebImage
 
 SPEC CHECKSUMS:
   CircleImageView: 3339a6d2755333cf9fefdc9a76aa00d62957c7fb
-  FTMTableSectionModules: bf232cbf4d9e24d50d6d6050188fa8f8d222409c
+  CombinationGenerator: b14534387396780072be3f471e087b214d33a2e0
+  CRuntime: d7ae373e07ab36e92ad273259557e3817e0c214b
+  FTMTableSectionModules: 3db2eaf6e1168858d23a755c8845eb36eab5803d
+  iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
+  Runtime: 3e42815d18fa3075631768e79f02be2ad7e2b18f
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
 
-PODFILE CHECKSUM: 61033069d5521377583b3c27639afa1aba6c8976
+PODFILE CHECKSUM: 00b659c5fbf114f8a25a4a6071eb924e863e044c
 
 COCOAPODS: 1.7.2

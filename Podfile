@@ -9,11 +9,14 @@ target 'ModuleExamples' do
 
   # Pods for ModuleExamples
   pod 'FTMTableSectionModules'
+  pod 'FTMTableSectionModules/Tests'
   pod 'CircleImageView'
   pod 'SDWebImage'
 
   target 'ModuleExamplesTests' do
     # Pods for testing
+    use_frameworks!
+    pod 'iOSSnapshotTestCase'
   end
 
   target 'ModuleExamplesUITests' do
