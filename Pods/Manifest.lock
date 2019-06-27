@@ -1,12 +1,17 @@
 PODS:
   - CircleImageView (1.0.1)
+  - CodeInjection (1.5.4):
+    - CodeInjection/Core (= 1.5.4)
+    - CodeInjection/Test (= 1.5.4)
+  - CodeInjection/Core (1.5.4)
+  - CodeInjection/Test (1.5.4)
   - CombinationGenerator (0.1.2):
     - Runtime (~> 2.1)
   - CRuntime (2.1.2)
-  - FTMTableSectionModules (0.4):
-    - FTMTableSectionModules/Core (= 0.4)
-  - FTMTableSectionModules/Core (0.4)
-  - FTMTableSectionModules/Tests (0.4):
+  - FTMTableSectionModules (0.5):
+    - FTMTableSectionModules/Core (= 0.5)
+  - FTMTableSectionModules/Core (0.5)
+  - FTMTableSectionModules/Tests (0.5):
     - CombinationGenerator (~> 0.1)
     - FTMTableSectionModules/Core
   - iOSSnapshotTestCase (5.0.2):
@@ -22,6 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - CircleImageView
+  - CodeInjection
   - FTMTableSectionModules
   - FTMTableSectionModules/Tests
   - iOSSnapshotTestCase
@@ -30,6 +36,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CircleImageView
+    - CodeInjection
     - CombinationGenerator
     - CRuntime
     - FTMTableSectionModules
@@ -39,13 +46,14 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   CircleImageView: 3339a6d2755333cf9fefdc9a76aa00d62957c7fb
+  CodeInjection: a99e0301e204a1e60d266f556fb4d6a46abfe638
   CombinationGenerator: b14534387396780072be3f471e087b214d33a2e0
   CRuntime: d7ae373e07ab36e92ad273259557e3817e0c214b
-  FTMTableSectionModules: 3db2eaf6e1168858d23a755c8845eb36eab5803d
+  FTMTableSectionModules: f8596fb9c81716e772d4fe97adce562694063ea7
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   Runtime: 3e42815d18fa3075631768e79f02be2ad7e2b18f
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
 
-PODFILE CHECKSUM: 00b659c5fbf114f8a25a4a6071eb924e863e044c
+PODFILE CHECKSUM: 080f7618d19a7fea5f01d9d9f7d6141c4ccfd473
 
 COCOAPODS: 1.7.2

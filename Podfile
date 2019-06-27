@@ -10,6 +10,7 @@ target 'ModuleExamples' do
   # Pods for ModuleExamples
   pod 'FTMTableSectionModules'
   pod 'FTMTableSectionModules/Tests'
+  pod 'CodeInjection'
   pod 'CircleImageView'
   pod 'SDWebImage'
 
