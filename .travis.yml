@@ -23,9 +23,9 @@ script:
     - xcodebuild clean build -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -sdk iphonesimulator PLATFORM_NAME=iphonesimulator -configuration Debug | xcpretty -c
 
     - echo Build the Demo apps
-    - xcodebuild clean build -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -configuration Debug -destination 'name=iPhone 6s' | xcpretty -c
+    - xcodebuild clean build -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -configuration Debug -destination 'name=iPhone 8' | xcpretty -c
 
     - echo Run the tests
-    - xcodebuild test -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -configuration Debug -destination 'name=iPhone 6s' | xcpretty -c
+    - xcodebuild test -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -configuration Debug -destination 'name=iPhone 8' | xcpretty -c
 
 after_success:
