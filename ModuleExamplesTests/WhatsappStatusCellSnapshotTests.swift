@@ -14,7 +14,7 @@ import FTMTableSectionModules
 fileprivate var combinations: [WhatsappStatusSnapshotModel]?
 
 func prepareGenerator() {
-    let generator = SnapshotGenerator(baseClass: WhatsappStatusSnapshotModel.self)
+    let generator = SnapshotGenerator<WhatsappStatusSnapshotModel>()
     
     let titles = [
         "Jhon Smith",
