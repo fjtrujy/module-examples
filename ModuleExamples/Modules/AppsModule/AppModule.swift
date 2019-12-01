@@ -48,7 +48,7 @@ class AppModule: TableSectionModule {
         
         let appInfo = info.apps[indexPath.row]
         
-        cell.textLabel?.text = appInfo.appName
+        cell.textLabel?.text = appInfo.app.rawValue
         cell.imageView?.image = appInfo.appIcon
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         

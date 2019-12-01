@@ -59,12 +59,13 @@ class WhatsappStateModule: TableSectionModule {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        let cell : WhatsappStatusCell
         let identifier = String(describing: WhatsappStatusCell.self)
-        cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! WhatsappStatusCell
-        
-        let cellDecorator = decorator?.rows![indexPath.row]
-        cell.configure(decorator: cellDecorator!)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+            
+        if let statusCell = cell as? WhatsappStatusCell,
+            let decorator = decorator?.rows?[indexPath.row] {
+            statusCell.configure(decorator: decorator)
+        }
         
         return cell
     }

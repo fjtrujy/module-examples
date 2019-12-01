@@ -59,13 +59,13 @@ private extension BirthdateAttributedDecorator {
     var mainAttributedInfo : NSAttributedString {
         let attr = NSMutableAttributedString()
         attr.append(NSAttributedString(string: "Francisco Javier, for your birthdate we'll donate €1 to a non-profit of your choice.\n", attributes: mainAttributes))
-        return attr.copy() as! NSAttributedString
+        return attr
     }
     
     var descAttributedInfo : NSAttributedString {
         let attr = NSMutableAttributedString()
         attr.append(NSAttributedString(string: "Create your fundraiser to support a cause you care about, and we'll take care of the donation processing with no fees.\nRections apply.", attributes: softAttributes))
-        return attr.copy() as! NSAttributedString
+        return attr
     }
     
 }

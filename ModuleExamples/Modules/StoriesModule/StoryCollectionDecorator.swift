@@ -8,14 +8,12 @@
 
 import UIKit
 
-class StoryCollectionDecorator: NSObject {
+class StoryCollectionDecorator {
     private var title : String?
     private var storyURL : URL?
     private var profileURL : URL?
     
     init(storyDataModel : StoryDataModel) {
-        super.init()
-        
         title = storyDataModel.username
         storyURL = storyDataModel.storyImagePath
         profileURL = storyDataModel.profileImagePath

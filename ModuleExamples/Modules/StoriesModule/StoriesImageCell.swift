@@ -36,11 +36,13 @@ class StoriesImageCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : StoryCollectionCell
         let storyDataModel = dataModel?.stories?[indexPath.row]
-        let identifier : String = String(describing: StoryCollectionCell.self)
-        cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! StoryCollectionCell
-        cell.configure(decorator: StoryCollectionDecorator(storyDataModel: storyDataModel!))
+        let identifier = String(describing: StoryCollectionCell.self)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+        if let storyCollectionCell = cell as? StoryCollectionCell,
+            let storyDataModel = storyDataModel {
+            storyCollectionCell.configure(decorator: StoryCollectionDecorator(storyDataModel: storyDataModel))
+        }
         
         return cell
     }

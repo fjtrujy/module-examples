@@ -8,14 +8,13 @@
 
 import UIKit
 
-class WhatsappStatusCellDecorator: NSObject {
+class WhatsappStatusCellDecorator {
     private var imageName : String?
     private var title : String?
     private var subtitle : String?
     private var buttons : Bool?
     
     public init(imageName: String, title: String, subtitle: String, buttons: Bool) {
-        super.init()
         self.imageName = imageName
         self.title = title
         self.subtitle = subtitle

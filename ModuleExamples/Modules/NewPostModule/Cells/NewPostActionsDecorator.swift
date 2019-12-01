@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewPostActionsDecorator: NSObject {
+class NewPostActionsDecorator {
     func backgroundColor() -> UIColor? { .white }
     func separatorColor() -> UIColor? { .gray }
     

@@ -12,8 +12,8 @@ class NewPostModule: TableSectionModule {
     override func createRows() {
         super.createRows()
         
-        rows.append(String(describing: WhatsOnYourMindCell.self) as AnyObject)
-        rows.append(String(describing: NewPostActionsCell.self) as AnyObject)
+        rows.append(WhatsOnYourMindCell.self)
+        rows.append(NewPostActionsCell.self)
     }
     
     override func registerNibsForCells() -> [AnyClass] {
@@ -24,7 +24,7 @@ class NewPostModule: TableSectionModule {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        let identifier : String = rows[indexPath.row] as! String
+        let identifier = String(describing: rows[indexPath.row])
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         // insets separator
         setupSeparatorInsetForCell(cell, forIndexPath: indexPath)
@@ -35,7 +35,7 @@ class NewPostModule: TableSectionModule {
     override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
         var height = super.tableView(tableView, heightForRowAtIndexPath: indexPath)
         
-        let identifier : String = rows[indexPath.row] as! String
+        let identifier = String(describing: rows[indexPath.row])
         
         switch identifier {
         case String(describing: WhatsOnYourMindCell.self):

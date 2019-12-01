@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WhatsOnYourMindDecorator: NSObject {
+class WhatsOnYourMindDecorator {
     func backgroundColor() -> UIColor { .white }
     func profileIcon() -> UIImage? { UIImage(named: "whatsNewProfile") }
     func attributedDesc() -> NSAttributedString {

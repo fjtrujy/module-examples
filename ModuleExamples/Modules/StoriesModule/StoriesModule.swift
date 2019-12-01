@@ -18,7 +18,7 @@ class StoriesModule: TableSectionModule {
     }
     
     override func registerNibsForCells() -> [AnyClass] {
-        return super.registerNibsForCells() + [
+        super.registerNibsForCells() + [
             StoriesTitleCell.classForCoder(),
             StoriesImageCell.classForCoder(),
         ]
@@ -27,23 +27,20 @@ class StoriesModule: TableSectionModule {
     override func createRows() {
         super.createRows()
         
-        if (storiesDataModel != nil) {
-            rows.append(String(describing: StoriesTitleCell.self) as AnyObject)
-            rows.append(String(describing: StoriesImageCell.self) as AnyObject)
-        }
+        guard storiesDataModel != nil else { return }
         
+        rows += [
+            StoriesTitleCell.self,
+            StoriesImageCell.self,
+        ]
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell
-        let cellClass : String = rows[indexPath.row] as! String
-        
-        cell = tableView.dequeueReusableCell(withIdentifier: cellClass, for: indexPath)
-        switch cellClass {
-        case String(describing: StoriesImageCell.self):
-            let storiesImageCell : StoriesImageCell = cell as! StoriesImageCell
-            storiesImageCell.configure(dataModel: storiesDataModel!)
-        default: break
+        let identifier = String(describing: rows[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        if let storiesImageCell = cell as? StoriesImageCell,
+            let storiesDataModel = storiesDataModel {
+            storiesImageCell.configure(dataModel: storiesDataModel)
         }
         
         removeSeparatorInsetForCell(cell, forIndexPath: indexPath)
@@ -53,10 +50,10 @@ class StoriesModule: TableSectionModule {
     
     override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
         var height = super.tableView(tableView, heightForRowAtIndexPath: indexPath)
-        let cellClass : String = rows[indexPath.row] as! String
+        let identifier = String(describing: rows[indexPath.row])
         
-        switch cellClass {
-        case String(describing: StoriesImageCell.self):
+        switch identifier {
+        case String(describing:StoriesImageCell.self):
             height = 151
         default:
             height = 30

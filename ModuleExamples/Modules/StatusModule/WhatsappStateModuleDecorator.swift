@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WhatsappStateModuleDecorator: NSObject {
+class WhatsappStateModuleDecorator {
     var headerTitle : String?
-    var rows : Array<WhatsappStatusCellDecorator>?
+    var rows : [WhatsappStatusCellDecorator]?
 }

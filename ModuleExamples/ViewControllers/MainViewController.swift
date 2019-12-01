@@ -40,13 +40,13 @@ extension MainViewController: AppModuleDelegate {
         
         let viewcontroller : UIViewController
         switch appInformation!.app {
-        case .facebook:
+        case .Facebook:
             viewcontroller = FacebookViewController()
-        case .whatsapp:
+        case .Whatsapp:
             viewcontroller = WhatsappViewController()
-        case .potpurri:
+        case .Potpurri:
             viewcontroller = PotpurryViewController()
-        case .playground:
+        case .Playground:
             viewcontroller = PlaygroundViewController()
         }
         

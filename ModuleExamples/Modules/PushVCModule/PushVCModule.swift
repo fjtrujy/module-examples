@@ -14,7 +14,7 @@ class PushVCModule: TableSectionModule {
     override func createRows() {
         super.createRows()
         
-        rows.append(String(describing: UITableViewCell.self) as AnyObject)
+        rows.append(String(describing: UITableViewCell.self))
     }
     
     override func registerClassForHeadersFooters() -> [AnyClass] {

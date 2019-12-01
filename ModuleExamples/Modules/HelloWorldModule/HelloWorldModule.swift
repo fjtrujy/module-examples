@@ -20,7 +20,7 @@ class HelloWorldModule: TableSectionModule {
     override func createRows() {
         super.createRows()
         
-        rows.append(String(describing: UITableViewCell.self) as AnyObject)
+        rows.append(UITableViewCell.self)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
@@ -28,7 +28,7 @@ class HelloWorldModule: TableSectionModule {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        let identifier = rows[indexPath.row] as! String
+        let identifier = String(describing: rows[indexPath.row])
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         cell.textLabel?.text = "Hello World from my first Module!"
         

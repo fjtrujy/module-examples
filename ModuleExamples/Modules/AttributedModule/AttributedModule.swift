@@ -11,7 +11,7 @@ import FTMTableSectionModules
 class AttributedModule: TableSectionModule {
     
     override func registerNibsForCells() -> [AnyClass] {
-        return super.registerNibsForCells() + [
+        super.registerNibsForCells() + [
             AttributtedCell.classForCoder(),
         ]
     }
@@ -19,23 +19,26 @@ class AttributedModule: TableSectionModule {
     override func createRows() {
         super.createRows()
         
-        rows.append(BirthdateAttributedDecorator())
-        rows.append(FavoriteMusicAttributedDecorator())
-        rows.append(RequestFriendsAttributedDecorator())
-        rows.append(ThingsInCommonAttributedDecorator())
+        rows += [
+            BirthdateAttributedDecorator(),
+            FavoriteMusicAttributedDecorator(),
+            RequestFriendsAttributedDecorator(),
+            ThingsInCommonAttributedDecorator(),
+        ]
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        let attributedCell : AttributtedCell
-        let decorator = rows[indexPath.row] as! CommonAttributedDecorator
-        attributedCell = tableView.dequeueReusableCell(withIdentifier: String(describing: AttributtedCell.self), for: indexPath) as! AttributtedCell
-        attributedCell.configure(decorator: decorator)
+        let identifier = String(describing: AttributtedCell.self)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        if  let attributedCell = cell as? AttributtedCell,
+            let decorator = rows[indexPath.row] as? CommonAttributedDecorator{
+            attributedCell.configure(decorator: decorator)
+        }
         
-        return attributedCell
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
 }

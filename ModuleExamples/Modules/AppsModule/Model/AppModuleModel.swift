@@ -8,34 +8,13 @@
 
 import UIKit
 
-enum SupportedApp {
-    case facebook
-    case whatsapp
-    case potpurri
-    case playground
-}
-
-class AppModuleModel: NSObject {
-    private(set) var appsDescription: String
-    private(set) var apps : Array<GenericAppInformation>
-    override init() {
-        //Mocking values, ideally it should come from requests, BBDD....
-        appsDescription = "List of most used apps"
-        
-        apps = []
-        apps.append(GenericAppInformation(app: SupportedApp.facebook,
-                                          appName: "Facebook",
-                                          appIcon: UIImage(named: "facebookIcon")!))
-        apps.append(GenericAppInformation(app: SupportedApp.whatsapp,
-                                          appName: "Whatsapp",
-                                          appIcon: UIImage(named: "whatsappIcon")!))
-        apps.append(GenericAppInformation(app: SupportedApp.potpurri,
-                                          appName: "Potpurri",
-                                          appIcon: UIImage(named: "potpurryIcon")))
-        apps.append(GenericAppInformation(app: SupportedApp.playground,
-                                          appName: "Playground Modules",
-                                          appIcon: UIImage(named: "playgroundIcon")))
-        
-        super.init()
-    }
+struct AppModuleModel {
+    //Mocking values, ideally it should come from requests, BBDD....
+    let appsDescription: String = "List of most used apps"
+    let apps : [GenericAppInformation] = [
+        GenericAppInformation(app: .Facebook, appIcon: UIImage(named: "facebookIcon")),
+        GenericAppInformation(app: .Whatsapp, appIcon: UIImage(named: "whatsappIcon")),
+        GenericAppInformation(app: .Potpurri, appIcon: UIImage(named: "potpurryIcon")),
+        GenericAppInformation(app: .Playground, appIcon: UIImage(named: "playgroundIcon")),
+    ]
 }

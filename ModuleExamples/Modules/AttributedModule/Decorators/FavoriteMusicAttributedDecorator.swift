@@ -30,7 +30,7 @@ private extension FavoriteMusicAttributedDecorator {
     var paragraph : NSParagraphStyle {
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = .center
-        return paragraph.copy() as! NSParagraphStyle
+        return paragraph
     }
     
     var mainAttributes : [NSAttributedString.Key : Any] {
@@ -70,7 +70,7 @@ private extension FavoriteMusicAttributedDecorator {
         let radioIconAttributed = NSMutableAttributedString(attachment: imageAttachment)
         radioIconAttributed.addAttributes(attributes, range: NSRange(location: 0, length: radioIconAttributed.length))
         
-        return radioIconAttributed.copy() as! NSAttributedString
+        return radioIconAttributed
     }
     
     var attributedDescription : NSAttributedString {

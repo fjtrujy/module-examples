@@ -38,16 +38,14 @@ class FoldUnfoldModule: TableSectionModule {
         super.createRows()
         
         if fold == true {
-            rows.append(RowType.unfold as AnyObject)
+            rows.append(RowType.unfold)
         } else {
-            rows.append(RowType.fold as AnyObject)
-            rows.append(RowType.normal as AnyObject)
-            rows.append(RowType.normal as AnyObject)
-            rows.append(RowType.normal as AnyObject)
-            rows.append(RowType.normal as AnyObject)
+            rows.append(RowType.fold)
+            rows.append(RowType.normal)
+            rows.append(RowType.normal)
+            rows.append(RowType.normal)
+            rows.append(RowType.normal)
         }
-        
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -67,29 +65,30 @@ class FoldUnfoldModule: TableSectionModule {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        let rowType : RowType = rows[indexPath.row] as! RowType
         let identifier = String(describing: UITableViewCell.self)
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         
-        switch rowType {
-        case .unfold:
-            cell.textLabel?.text = "Click to unfold"
-        case .fold:
-            cell.textLabel?.text = "Click to fold"
-        default:
-            cell.textLabel?.text = "Click to do nothing"
+        if let rowType = rows[indexPath.row] as? RowType {
+            switch rowType {
+            case .unfold:
+                cell.textLabel?.text = "Click to unfold"
+            case .fold:
+                cell.textLabel?.text = "Click to fold"
+            default:
+                cell.textLabel?.text = "Click to do nothing"
+            }
         }
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
-        let rowType : RowType = rows[indexPath.row] as! RowType
-        
-        switch rowType {
-        case .unfold, .fold:
-            fold = !fold!
-        default: break
+        if let rowType = rows[indexPath.row] as? RowType {
+            switch rowType {
+            case .unfold, .fold:
+                fold = !fold!
+            default: break
+            }
         }
         
         tableView.deselectRow(at: indexPath, animated: true)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoriesTitleDecorator: NSObject {
+class StoriesTitleDecorator {
     func backgroundColor() -> UIColor? {
         return .white
     }

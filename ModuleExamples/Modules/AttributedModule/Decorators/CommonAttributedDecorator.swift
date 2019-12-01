@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CommonAttributedDecorator: NSObject {
+class CommonAttributedDecorator {
     
     func backgroundColor() -> UIColor? {
         return .white
