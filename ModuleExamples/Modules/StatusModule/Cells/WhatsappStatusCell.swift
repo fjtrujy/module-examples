@@ -10,15 +10,11 @@ import UIKit
 import CircleImageView
 
 class WhatsappStatusCell: UITableViewCell {
-    @IBOutlet weak open var stateDescription : UILabel?
-    @IBOutlet weak open var stateImage : CircleImageView?
-    @IBOutlet weak open var buttonsView : UIView?
-    @IBOutlet weak open var cameraButton : UIButton?
-    @IBOutlet weak open var editButton : UIButton?
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet private weak var stateDescription : UILabel?
+    @IBOutlet private weak var stateImage : CircleImageView?
+    @IBOutlet private weak var buttonsView : UIView?
+    @IBOutlet private weak var cameraButton : UIButton?
+    @IBOutlet private weak var editButton : UIButton?
 
     func configure(decorator : WhatsappStatusCellDecorator) {
         backgroundColor = decorator.backgroundColor
@@ -31,5 +27,4 @@ class WhatsappStatusCell: UITableViewCell {
         cameraButton?.setImage(decorator.camaraIcon, for: UIControl.State.normal)
         editButton?.setImage(decorator.editIcon, for: UIControl.State.normal)
     }
-    
 }

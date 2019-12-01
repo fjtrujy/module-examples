@@ -35,24 +35,6 @@ class AddRemoveCellsModule: TableSectionModule {
         rows.append(RowType.removeRow as AnyObject)
     }
     
-    func addRow() {
-        let indexPath = IndexPath(row: rows.count, section: section)
-        rows.append(RowType.normal as AnyObject)
-        
-        tableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.right)
-    }
-    
-    func removeRow() {
-        let lastItem : RowType = rows.last as! RowType
-        
-        if lastItem == .normal {
-            rows.removeLast()
-            let indexPath = IndexPath(row: rows.count, section: section)
-            
-            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.left)
-        }
-    }
-    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
@@ -98,5 +80,26 @@ class AddRemoveCellsModule: TableSectionModule {
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - Private Methods
+private extension AddRemoveCellsModule {
+    func addRow() {
+        let indexPath = IndexPath(row: rows.count, section: section)
+        rows.append(RowType.normal as AnyObject)
+        
+        tableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.right)
+    }
+    
+    func removeRow() {
+        let lastItem : RowType = rows.last as! RowType
+        
+        if lastItem == .normal {
+            rows.removeLast()
+            let indexPath = IndexPath(row: rows.count, section: section)
+            
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.left)
+        }
     }
 }

@@ -25,33 +25,14 @@ class BirthdateAttributedDecorator: CommonAttributedDecorator {
 
 //MARK: - BirthdateAttributedDecorator
 private extension BirthdateAttributedDecorator {
-    
-    var mainColor : UIColor {
-        return .black
-    }
-    
-    var softColor : UIColor {
-        return .gray
-    }
-    
-    var lightColor : UIColor {
-        return .init(white: 0.9, alpha: 1.0)
-    }
-    
-    var mainFont : UIFont {
-        return .boldSystemFont(ofSize:13)
-    }
-    
-    var secondaryFont : UIFont {
-        return .systemFont(ofSize:13)
-    }
-    
-    var smalFont : UIFont {
-        return .systemFont(ofSize:3)
-    }
+    var mainColor : UIColor { .black }
+    var softColor : UIColor { .gray }
+    var lightColor : UIColor { .init(white: 0.9, alpha: 1.0) }
+    var mainFont : UIFont { .boldSystemFont(ofSize:13) }
+    var secondaryFont : UIFont { .systemFont(ofSize:13) }
+    var smalFont : UIFont { .systemFont(ofSize:3) }
     
     var mainAttributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : mainFont,
             .foregroundColor : mainColor,
@@ -59,7 +40,6 @@ private extension BirthdateAttributedDecorator {
     }
     
     var softAttributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : secondaryFont,
             .foregroundColor : softColor,
@@ -67,7 +47,6 @@ private extension BirthdateAttributedDecorator {
     }
     
     var smallAttributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : smalFont,
         ]

@@ -11,10 +11,10 @@ import SDWebImage
 import CircleImageView
 
 class StoryCollectionCell: UICollectionViewCell {
-    @IBOutlet weak var storyImageView : UIImageView!
-    @IBOutlet weak var profileImageView : CircleImageView!
-    @IBOutlet weak var borderImageView : CircleImageView!
-    @IBOutlet weak var profileLabel : UILabel!
+    @IBOutlet private weak var storyImageView : UIImageView!
+    @IBOutlet private weak var profileImageView : CircleImageView!
+    @IBOutlet private weak var borderImageView : CircleImageView!
+    @IBOutlet private weak var profileLabel : UILabel!
         
     func configure(decorator: StoryCollectionDecorator) {
         backgroundColor = decorator.backgroundColor()

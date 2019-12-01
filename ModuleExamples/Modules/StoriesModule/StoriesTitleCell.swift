@@ -9,8 +9,8 @@
 import UIKit
 
 class StoriesTitleCell: UITableViewCell {
-    @IBOutlet weak var title : UILabel?
-    @IBOutlet weak var archives : UILabel?
+    @IBOutlet private weak var title : UILabel?
+    @IBOutlet private weak var archives : UILabel?
     
     override func awakeFromNib() {
         super.awakeFromNib()

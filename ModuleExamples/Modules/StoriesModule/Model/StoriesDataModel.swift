@@ -8,20 +8,6 @@
 
 import UIKit
 
-private struct Constants {
-    static let storiesKey : String = "stories"
-}
-
-class StoriesDataModel: NSObject {
-    private(set) var stories : Array<StoryDataModel>?
-    
-    init(payload : Dictionary<String, Any>) {
-        let storiesPayload = payload[Constants.storiesKey] as? Array<Dictionary<String, Any>>
-        var myStories : Array<StoryDataModel> = []
-        for storyDic in storiesPayload! {
-            myStories.append(StoryDataModel(payload: storyDic))
-        }
-        
-        stories = myStories
-    }
+class StoriesDataModel: Codable {
+    let stories : [StoryDataModel]?
 }

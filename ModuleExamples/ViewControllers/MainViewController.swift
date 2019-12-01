@@ -8,10 +8,10 @@
 
 import FTMTableSectionModules
 
-class MainViewController: ModulesViewController, AppModuleDelegate {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+class MainViewController: ModulesViewController {
+    override func setupStyle() {
+        super.setupStyle()
+        
         // Do any additional setup after loading the view, typically from a nib.
         title = "Modules are wonderfull!"
         tableView?.rowHeight = UITableView.automaticDimension
@@ -21,13 +21,21 @@ class MainViewController: ModulesViewController, AppModuleDelegate {
     override func createModules() {
         super.createModules()
         
-        //AppModule
+        loadAppModule()
+    }
+}
+
+// MARK: - Private Methods
+private extension MainViewController {
+    func loadAppModule() {
         let appModule = AppModule(tableView: tableView!)
         appModule.delegate = self
         appendModule(appModule)
     }
-    
-    //MARK: - AppModuleDelegate
+}
+
+//MARK: - AppModuleDelegate
+extension MainViewController: AppModuleDelegate {
     func appSelected(_ appInformation: GenericAppInformation?) {
         
         let viewcontroller : UIViewController
@@ -44,6 +52,4 @@ class MainViewController: ModulesViewController, AppModuleDelegate {
         
         navigationController?.pushViewController(viewcontroller, animated: true)
     }
-
 }
-

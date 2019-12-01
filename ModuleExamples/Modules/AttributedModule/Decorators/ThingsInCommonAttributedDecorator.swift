@@ -24,32 +24,14 @@ class ThingsInCommonAttributedDecorator: CommonAttributedDecorator {
 //MARK: - ThingsInCommonAttributedDecorator
 private extension ThingsInCommonAttributedDecorator {
     
-    var mainColor : UIColor {
-        return .black
-    }
-    
-    var softColor : UIColor {
-        return .gray
-    }
-    
-    var mainFont : UIFont {
-        return .boldSystemFont(ofSize:15)
-    }
-    
-    var secondaryFont : UIFont {
-        return .systemFont(ofSize:13)
-    }
-    
-    var alternativeFont : UIFont {
-        return .boldSystemFont(ofSize:13)
-    }
-    
-    var smalFont : UIFont {
-        return .systemFont(ofSize:9)
-    }
+    var mainColor : UIColor { .black }
+    var softColor : UIColor { .gray }
+    var mainFont : UIFont { .boldSystemFont(ofSize:15) }
+    var secondaryFont : UIFont { .systemFont(ofSize:13) }
+    var alternativeFont : UIFont { .boldSystemFont(ofSize:13) }
+    var smalFont : UIFont { .systemFont(ofSize:9) }
     
     var mainAttributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : mainFont,
             .foregroundColor : mainColor,
@@ -57,7 +39,6 @@ private extension ThingsInCommonAttributedDecorator {
     }
     
     var softAttributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : secondaryFont,
             .foregroundColor : softColor,
@@ -65,7 +46,6 @@ private extension ThingsInCommonAttributedDecorator {
     }
     
     var alternativeAttributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : alternativeFont,
             .foregroundColor : mainColor,
@@ -73,7 +53,6 @@ private extension ThingsInCommonAttributedDecorator {
     }
     
     var smallAttributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : smalFont,
             .foregroundColor : mainColor,

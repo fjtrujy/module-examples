@@ -9,7 +9,7 @@
 import FTMTableSectionModules
 
 class PushVCModule: TableSectionModule {
-    var delegate : PushVCModuleDelegate?
+    weak var delegate : PushVCModuleDelegate?
     
     override func createRows() {
         super.createRows()

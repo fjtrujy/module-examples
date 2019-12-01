@@ -35,7 +35,6 @@ class WhatsappStateModule: TableSectionModule {
         if (decorator != nil) {
             rows = rows + decorator!.rows!
         }
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

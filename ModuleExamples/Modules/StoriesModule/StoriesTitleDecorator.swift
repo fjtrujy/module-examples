@@ -9,7 +9,6 @@
 import UIKit
 
 class StoriesTitleDecorator: NSObject {
-
     func backgroundColor() -> UIColor? {
         return .white
     }
@@ -25,17 +24,10 @@ class StoriesTitleDecorator: NSObject {
 
 //MARK: - DecoratorBasicInfo
 extension StoriesTitleDecorator {
-    
-    private var titleColor : UIColor {
-        return .black
-    }
-    
-    private var titleFont : UIFont {
-        return .boldSystemFont(ofSize:13)
-    }
+    private var titleColor : UIColor { .black }
+    private var titleFont : UIFont { .boldSystemFont(ofSize:13) }
     
     private var attributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : titleFont,
             .foregroundColor : titleColor,

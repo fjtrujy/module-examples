@@ -27,7 +27,10 @@ class PotpurryViewController: ModulesViewController {
         addRemoveModule()
         attributedModule()
     }
-    
+}
+
+// MARK: - Private Methods
+private extension PotpurryViewController {
     func helloWorldModule() {
         let module = HelloWorldModule(tableView: tableView!)
         module.delegate = self
@@ -53,13 +56,15 @@ class PotpurryViewController: ModulesViewController {
     }
 }
 
-//MARK: - Modules delegate
-extension PotpurryViewController : PushVCModuleDelegate, HelloWorldDelegate {
+//MARK: - PushVCModuleDelegate
+extension PotpurryViewController : PushVCModuleDelegate {
     func pushVCModuleRequestPush(_ pushVCModule: PushVCModule) {
         navigationController?.pushViewController(PotpurryViewController(), animated: true)
     }
-    
-    //MARK: - HelloWorldModuleDelegate
+}
+
+//MARK: - HelloWorldModuleDelegate
+extension PotpurryViewController: HelloWorldDelegate {
     func helloWorldSelected(_ module: HelloWorldModule!) {
         let alertDesc = "Module " + module.description + " Section " + String(module.section)
         let alertVC = UIAlertController(title: "Hello World! Module",

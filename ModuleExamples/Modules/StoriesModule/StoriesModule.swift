@@ -9,27 +9,12 @@
 import FTMTableSectionModules
 
 class StoriesModule: TableSectionModule {
-    var storiesDataModel : StoriesDataModel?
+    private var storiesDataModel : StoriesDataModel?
     
     override init(tableView: UITableView) {
         super.init(tableView: tableView)
         
         fetchStories()
-    }
-    
-    func fetchStories() {
-        //Mocking information
-       if let filePath = Bundle.main.path(forResource: "stories", ofType: "json"), let data = NSData(contentsOfFile: filePath) {
-        
-            do {
-                let payload = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions.allowFragments)
-                storiesDataModel = StoriesDataModel(payload: payload as! Dictionary<String, Any>)
-                createRows()
-            }
-            catch {
-                //Handle error
-            }
-        }
     }
     
     override func registerNibsForCells() -> [AnyClass] {
@@ -48,7 +33,6 @@ class StoriesModule: TableSectionModule {
         }
         
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let cell : UITableViewCell
@@ -83,5 +67,19 @@ class StoriesModule: TableSectionModule {
     
     override func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - Private Methods
+private extension StoriesModule {
+    func fetchStories() {
+        //Mocking information
+        guard let filePath = Bundle.main.path(forResource: "stories", ofType: "json"),
+            let data = NSData(contentsOfFile: filePath) as Data?,
+            let stories = try? JSONDecoder().decode(StoriesDataModel.self, from: data)
+            else { return }
+        
+        storiesDataModel = stories
+        createRows()
     }
 }

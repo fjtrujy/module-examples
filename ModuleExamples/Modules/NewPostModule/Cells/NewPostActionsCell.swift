@@ -9,11 +9,11 @@
 import UIKit
 
 class NewPostActionsCell: UITableViewCell {
-    @IBOutlet weak var liveButton : UIButton?
-    @IBOutlet weak var firstSeparator : UIView?
-    @IBOutlet weak var pictureButton : UIButton?
-    @IBOutlet weak var secondSeparator : UIView?
-    @IBOutlet weak var checkInButton : UIButton?
+    @IBOutlet private weak var liveButton : UIButton?
+    @IBOutlet private weak var firstSeparator : UIView?
+    @IBOutlet private weak var pictureButton : UIButton?
+    @IBOutlet private weak var secondSeparator : UIView?
+    @IBOutlet private weak var checkInButton : UIButton?
     
     override func awakeFromNib() {
         super.awakeFromNib()

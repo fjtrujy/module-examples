@@ -22,21 +22,10 @@ class FavoriteMusicAttributedDecorator: CommonAttributedDecorator {
 
 //MARK: - FavoriteMusicAttributedDecorator
 private extension FavoriteMusicAttributedDecorator {
-    var mainColor : UIColor {
-        return .black
-    }
-    
-    var mainFont : UIFont {
-        return .boldSystemFont(ofSize:25)
-    }
-    
-    var secondaryFont : UIFont {
-        return .systemFont(ofSize:14)
-    }
-    
-    var smalFont : UIFont {
-        return .systemFont(ofSize:9)
-    }
+    var mainColor : UIColor { .black }
+    var mainFont : UIFont { .boldSystemFont(ofSize:25) }
+    var secondaryFont : UIFont { .systemFont(ofSize:14) }
+    var smalFont : UIFont { .systemFont(ofSize:9) }
     
     var paragraph : NSParagraphStyle {
         let paragraph = NSMutableParagraphStyle()
@@ -44,9 +33,7 @@ private extension FavoriteMusicAttributedDecorator {
         return paragraph.copy() as! NSParagraphStyle
     }
     
-    
     var mainAttributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : mainFont,
             .foregroundColor : mainColor,
@@ -54,7 +41,6 @@ private extension FavoriteMusicAttributedDecorator {
     }
     
     var softAttributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : secondaryFont,
             .foregroundColor : mainColor,
@@ -63,7 +49,6 @@ private extension FavoriteMusicAttributedDecorator {
     }
     
     var smallAttributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : smalFont,
         ]

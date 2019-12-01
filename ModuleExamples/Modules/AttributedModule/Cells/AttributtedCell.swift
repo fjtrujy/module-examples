@@ -9,7 +9,7 @@
 import UIKit
 
 class AttributtedCell: UITableViewCell {
-    @IBOutlet weak var myLabel : UILabel?
+    @IBOutlet private weak var myLabel : UILabel?
 
     func configure(decorator: CommonAttributedDecorator) {
         backgroundColor = decorator.backgroundColor()

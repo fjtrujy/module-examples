@@ -21,40 +21,19 @@ class StoryCollectionDecorator: NSObject {
         profileURL = storyDataModel.profileImagePath
     }
     
-    func storyImage() -> URL? {
-        return storyURL
-    }
-    
-    func profileImage() -> URL? {
-        return profileURL
-    }
-    
-    func attributedProfile() -> NSAttributedString? {
-        return NSAttributedString(string: title!, attributes: attributes)
-    }
-    
-    func backgroundColor() -> UIColor {
-        return .white
-    }
-    
-    func borderColor() -> UIColor {
-        return .blue
-    }
+    func storyImage() -> URL? { storyURL }
+    func profileImage() -> URL? { profileURL }
+    func attributedProfile() -> NSAttributedString? { NSAttributedString(string: title!, attributes: attributes) }
+    func backgroundColor() -> UIColor { .white }
+    func borderColor() -> UIColor { .blue }
 }
 
 //MARK: - DecoratorBasicInfo
-extension StoryCollectionDecorator {
-    
-    private var titleColor : UIColor {
-        return .white
-    }
-    
-    private var titleFont : UIFont {
-        return .boldSystemFont(ofSize:12)
-    }
+private extension StoryCollectionDecorator {
+    var titleColor : UIColor { .white }
+    var titleFont : UIFont { .boldSystemFont(ofSize:12) }
     
     private var attributes : [NSAttributedString.Key : Any] {
-        
         return [
             .font : titleFont,
             .foregroundColor : titleColor,

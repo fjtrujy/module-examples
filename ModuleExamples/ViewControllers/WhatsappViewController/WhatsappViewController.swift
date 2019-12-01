@@ -24,7 +24,10 @@ class WhatsappViewController: ModulesViewController {
         recentUpdatesModule()
         viewedUpdatesModule()
     }
-    
+}
+
+// MARK: - Private Methods
+private extension WhatsappViewController {
     func myStatusModule() {
         // Values ideally received from request/responses
         let moduleDecorator = WhatsappStateModuleDecorator()
@@ -66,5 +69,4 @@ class WhatsappViewController: ModulesViewController {
         viewedUpdatesModule.configure(decorator: moduleDecorator)
         appendModule(viewedUpdatesModule)
     }
-
 }

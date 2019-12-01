@@ -9,7 +9,7 @@
 import UIKit
 
 class StoriesImageCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    @IBOutlet weak var collection : UICollectionView?
+    @IBOutlet private weak var collection : UICollectionView?
     
     private var dataModel : StoriesDataModel?
     

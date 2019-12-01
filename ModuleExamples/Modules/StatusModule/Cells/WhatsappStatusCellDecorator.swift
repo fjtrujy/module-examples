@@ -22,9 +22,7 @@ class WhatsappStatusCellDecorator: NSObject {
         self.buttons = buttons
     }
     
-    var backgroundColor : UIColor {
-        return .white
-    }
+    var backgroundColor : UIColor { .white }
     
     var attributedInfo : NSAttributedString {
         let attr : NSMutableAttributedString = NSMutableAttributedString.init()
@@ -36,49 +34,21 @@ class WhatsappStatusCellDecorator: NSObject {
         return attr
     }
     
-    var profileIcon: UIImage? {
-        return UIImage(named: imageName!)
-    }
-    
-    var hideButtons : Bool {
-        return !buttons!
-    }
-    
-    var camaraIcon : UIImage? {
-        return (buttons! ? UIImage(named: "cameraStatusIcon") : nil)
-    }
-    
-    var editIcon : UIImage? {
-        return (buttons! ? UIImage(named: "editStatusIcon") : nil)
-    }
-    
+    var profileIcon: UIImage? {  UIImage(named: imageName!) }
+    var hideButtons : Bool { !buttons! }
+    var camaraIcon : UIImage? { (buttons! ? UIImage(named: "cameraStatusIcon") : nil) }
+    var editIcon : UIImage? { (buttons! ? UIImage(named: "editStatusIcon") : nil) }
 }
 
 //MARK: - DecoratorBasicInfo
-extension WhatsappStatusCellDecorator {
+private extension WhatsappStatusCellDecorator {
+    var titleColor : UIColor { .black }
+    var subtitleColor : UIColor { .gray }
+    var titleFont : UIFont { .boldSystemFont(ofSize:15) }
+    var subtitleFont : UIFont { .boldSystemFont(ofSize:12) }
+    var attributedBreakLine : NSAttributedString { NSAttributedString.init(string: "\n") }
     
-    private var titleColor : UIColor {
-        return .black
-    }
-    
-    private var subtitleColor : UIColor {
-        return .gray
-    }
-    
-    private var titleFont : UIFont {
-        return .boldSystemFont(ofSize:15)
-    }
-    
-    private var subtitleFont : UIFont {
-        return .boldSystemFont(ofSize:12)
-    }
-    
-    private var attributedBreakLine : NSAttributedString {
-        return NSAttributedString.init(string: "\n")
-    }
-    
-    private var attributedTitle : NSAttributedString {
-        
+    var attributedTitle : NSAttributedString {
         let attributes : [NSAttributedString.Key : Any] = [
             .font : titleFont,
             .foregroundColor : titleColor,
@@ -87,8 +57,7 @@ extension WhatsappStatusCellDecorator {
         return NSAttributedString(string: title!, attributes: attributes)
     }
     
-    private var attributedSubtitle : NSAttributedString {
-        
+    var attributedSubtitle : NSAttributedString {
         let attributes : [NSAttributedString.Key : Any] = [
             .font : subtitleFont,
             .foregroundColor : subtitleColor,

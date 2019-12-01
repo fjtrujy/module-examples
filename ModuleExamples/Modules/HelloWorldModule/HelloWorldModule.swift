@@ -9,7 +9,7 @@
 import FTMTableSectionModules
 
 class HelloWorldModule: TableSectionModule {
-    var delegate: HelloWorldDelegate?
+    weak var delegate: HelloWorldDelegate?
     
     override func registerClassForCells() -> [AnyClass] {
         return super.registerClassForCells() + [

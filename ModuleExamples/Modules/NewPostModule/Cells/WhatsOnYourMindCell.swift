@@ -9,8 +9,8 @@
 import CircleImageView
 
 class WhatsOnYourMindCell: UITableViewCell {
-    @IBOutlet weak var icon : CircleImageView?
-    @IBOutlet weak var desc : UILabel?
+    @IBOutlet private weak var icon : CircleImageView?
+    @IBOutlet private weak var desc : UILabel?
     
     override func awakeFromNib() {
         super.awakeFromNib()

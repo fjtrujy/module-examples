@@ -25,7 +25,10 @@ class FacebookViewController: ModulesViewController {
         storiesModule()
         attributedModule()
     }
-    
+}
+
+// MARK: - Private Methods
+private extension FacebookViewController {
     func newPostModule() {
         appendModule(NewPostModule.init(tableView: tableView!))
     }
