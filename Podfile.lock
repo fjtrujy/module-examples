@@ -21,9 +21,9 @@ PODS:
     - iOSSnapshotTestCase/Core
   - Runtime (2.1.1):
     - CRuntime
-  - SDWebImage (5.3.2):
-    - SDWebImage/Core (= 5.3.2)
-  - SDWebImage/Core (5.3.2)
+  - SDWebImage (5.4.0):
+    - SDWebImage/Core (= 5.4.0)
+  - SDWebImage/Core (5.4.0)
 
 DEPENDENCIES:
   - CircleImageView
@@ -52,8 +52,8 @@ SPEC CHECKSUMS:
   FTMTableSectionModules: 64c2cf2ad25f3ed251ed68ab3b5d2704f909cfce
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   Runtime: 2b0e7604e598b52c698c64f0b961640c074ed75e
-  SDWebImage: 6ac2eb96571bff96ecde31a987172c5934a0eb7d
+  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
 
-PODFILE CHECKSUM: 080f7618d19a7fea5f01d9d9f7d6141c4ccfd473
+PODFILE CHECKSUM: f14a5a6c5266c3af1a06dcce4ae696319950fd17
 
 COCOAPODS: 1.8.4

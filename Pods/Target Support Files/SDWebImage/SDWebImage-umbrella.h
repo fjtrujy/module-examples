@@ -55,6 +55,7 @@
 #import "SDWebImagePrefetcher.h"
 #import "SDWebImageTransition.h"
 #import "UIButton+WebCache.h"
+#import "UIImage+ExtendedCacheData.h"
 #import "UIImage+ForceDecode.h"
 #import "UIImage+GIF.h"
 #import "UIImage+MemoryCacheCost.h"

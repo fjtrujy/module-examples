@@ -37,7 +37,7 @@ func prepareGenerator() {
     generator.addCombination(propertyKey: "subtitle", values: subtitles)
     generator.addCombination(propertyKey: "buttons", values: [true, false])
     
-    combinations = generator.generateCombinations() as? [WhatsappStatusSnapshotModel]
+    combinations = generator.generateCombinations()
 }
 
 
