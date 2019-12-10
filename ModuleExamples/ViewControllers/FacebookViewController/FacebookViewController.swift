@@ -9,11 +9,9 @@
 import FTMTableSectionModules
 
 class FacebookViewController: ModulesViewController {
+    override func setupStyle() {
+        super.setupStyle()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         tableView?.tableFooterView = UIView()
         title = "Facebook - MainView"
     }

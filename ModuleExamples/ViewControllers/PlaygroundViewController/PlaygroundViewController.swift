@@ -10,14 +10,12 @@ import FTMTableSectionModules
 
 class PlaygroundViewController: ModulesViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func setupStyle() {
+        super.setupStyle()
+        
         title = "Playground Modules"
         tableView?.tableFooterView = UIView()
     }
-
 
     override func createModules() {
         super.createModules()
@@ -28,5 +26,4 @@ class PlaygroundViewController: ModulesViewController {
          - The delegate (if it is required)
         */
     }
-
 }

@@ -9,11 +9,9 @@
 import FTMTableSectionModules
 
 class PotpurryViewController: ModulesViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func setupStyle() {
+        super.setupStyle()
+        
         tableView?.tableFooterView = UIView()
         title = "Potpurry"
     }

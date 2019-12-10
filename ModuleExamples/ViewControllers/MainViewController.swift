@@ -12,7 +12,6 @@ class MainViewController: ModulesViewController {
     override func setupStyle() {
         super.setupStyle()
         
-        // Do any additional setup after loading the view, typically from a nib.
         title = "Modules are wonderfull!"
         tableView?.rowHeight = UITableView.automaticDimension
         tableView?.tableFooterView = UIView()
@@ -37,9 +36,10 @@ private extension MainViewController {
 //MARK: - AppModuleDelegate
 extension MainViewController: AppModuleDelegate {
     func appSelected(_ appInformation: GenericAppInformation?) {
+        guard let app = appInformation?.app else { return }
         
-        let viewcontroller : UIViewController
-        switch appInformation!.app {
+        let viewcontroller: UIViewController
+        switch app {
         case .Facebook:
             viewcontroller = FacebookViewController()
         case .Whatsapp:

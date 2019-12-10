@@ -9,11 +9,9 @@
 import FTMTableSectionModules
 
 class WhatsappViewController: ModulesViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func setupStyle() {
+        super.setupStyle()
+        
         title = "Whatsapp - States"
     }
     
