@@ -30,10 +30,10 @@ private extension WhatsappViewController {
         // Values ideally received from request/responses
         let moduleDecorator = WhatsappStateModuleDecorator()
         moduleDecorator.rows = [
-            WhatsappStatusCellDecorator.init(imageName: "trujy", title: "My Status", subtitle: "Add to my status", buttons: true),
+            WhatsappStatusCellDecorator(imageName: "trujy", title: "My Status", subtitle: "Add to my status", buttons: true),
         ]
         
-        let myStatusModule = WhatsappStateModule.init(tableView: tableView!)
+        let myStatusModule = WhatsappStateModule(tableView: tableView!)
         myStatusModule.configure(decorator: moduleDecorator)
         appendModule(myStatusModule)
     }
@@ -43,12 +43,12 @@ private extension WhatsappViewController {
         let moduleDecorator = WhatsappStateModuleDecorator()
         moduleDecorator.headerTitle = "Recent Updates"
         moduleDecorator.rows = [
-            WhatsappStatusCellDecorator.init(imageName: "trujy", title: "Carles Tete", subtitle: "20 minutes ago", buttons: false),
-            WhatsappStatusCellDecorator.init(imageName: "trujy", title: "Mad Mocana", subtitle: "25 minutes ago", buttons: false),
-            WhatsappStatusCellDecorator.init(imageName: "trujy", title: "Pableras Pan", subtitle: "32 minutes ago", buttons: false),
+            WhatsappStatusCellDecorator(imageName: "trujy", title: "Carles Tete", subtitle: "20 minutes ago", buttons: false),
+            WhatsappStatusCellDecorator(imageName: "trujy", title: "Mad Mocana", subtitle: "25 minutes ago", buttons: false),
+            WhatsappStatusCellDecorator(imageName: "trujy", title: "Pableras Pan", subtitle: "32 minutes ago", buttons: false),
         ]
         
-        let recentStatusModule = WhatsappStateModule.init(tableView: tableView!)
+        let recentStatusModule = WhatsappStateModule(tableView: tableView!)
         recentStatusModule.configure(decorator: moduleDecorator)
         appendModule(recentStatusModule)
     }
@@ -58,12 +58,12 @@ private extension WhatsappViewController {
         let moduleDecorator = WhatsappStateModuleDecorator()
         moduleDecorator.headerTitle = "Viewed Updates"
         moduleDecorator.rows = [
-            WhatsappStatusCellDecorator.init(imageName: "trujy", title: "JDRap", subtitle: "5h ago", buttons: false),
-            WhatsappStatusCellDecorator.init(imageName: "trujy", title: "Jhon Hater", subtitle: "7h ago", buttons: false),
-            WhatsappStatusCellDecorator.init(imageName: "trujy", title: "Barry Lete", subtitle: "9h ago", buttons: false),
+            WhatsappStatusCellDecorator(imageName: "trujy", title: "JDRap", subtitle: "5h ago", buttons: false),
+            WhatsappStatusCellDecorator(imageName: "trujy", title: "Jhon Hater", subtitle: "7h ago", buttons: false),
+            WhatsappStatusCellDecorator(imageName: "trujy", title: "Barry Lete", subtitle: "9h ago", buttons: false),
         ]
         
-        let viewedUpdatesModule = WhatsappStateModule.init(tableView: tableView!)
+        let viewedUpdatesModule = WhatsappStateModule(tableView: tableView!)
         viewedUpdatesModule.configure(decorator: moduleDecorator)
         appendModule(viewedUpdatesModule)
     }

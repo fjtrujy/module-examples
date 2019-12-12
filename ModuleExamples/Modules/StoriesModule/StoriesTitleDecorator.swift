@@ -14,11 +14,11 @@ class StoriesTitleDecorator {
     }
     
     func attributedTitle() -> NSAttributedString? {
-        return NSAttributedString.init(string: "Stories", attributes: attributes)
+        return NSAttributedString(string: "Stories", attributes: attributes)
     }
     
     func attributedArchive() -> NSAttributedString? {
-        return NSAttributedString.init(string: "Your archive", attributes: attributes)
+        return NSAttributedString(string: "Your archive", attributes: attributes)
     }
 }
 

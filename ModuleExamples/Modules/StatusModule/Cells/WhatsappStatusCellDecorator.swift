@@ -24,7 +24,7 @@ class WhatsappStatusCellDecorator {
     var backgroundColor : UIColor { .white }
     
     var attributedInfo : NSAttributedString {
-        let attr : NSMutableAttributedString = NSMutableAttributedString.init()
+        let attr : NSMutableAttributedString = NSMutableAttributedString()
         
         attr.append(attributedTitle)
         attr.append(attributedBreakLine)
@@ -45,7 +45,7 @@ private extension WhatsappStatusCellDecorator {
     var subtitleColor : UIColor { .gray }
     var titleFont : UIFont { .boldSystemFont(ofSize:15) }
     var subtitleFont : UIFont { .boldSystemFont(ofSize:12) }
-    var attributedBreakLine : NSAttributedString { NSAttributedString.init(string: "\n") }
+    var attributedBreakLine : NSAttributedString { NSAttributedString(string: "\n") }
     
     var attributedTitle : NSAttributedString {
         let attributes : [NSAttributedString.Key : Any] = [

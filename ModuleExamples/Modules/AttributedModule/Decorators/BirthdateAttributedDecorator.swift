@@ -27,7 +27,7 @@ class BirthdateAttributedDecorator: CommonAttributedDecorator {
 private extension BirthdateAttributedDecorator {
     var mainColor : UIColor { .black }
     var softColor : UIColor { .gray }
-    var lightColor : UIColor { .init(white: 0.9, alpha: 1.0) }
+    var lightColor : UIColor { UIColor(white: 0.9, alpha: 1.0) }
     var mainFont : UIFont { .boldSystemFont(ofSize:13) }
     var secondaryFont : UIFont { .systemFont(ofSize:13) }
     var smalFont : UIFont { .systemFont(ofSize:3) }
