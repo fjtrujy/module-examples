@@ -67,24 +67,18 @@ class WhatsappStatusCellSnapshotTests: FBSnapshotTestCase {
     }
     
     override class var defaultTestSuite: XCTestSuite {
-        let suite = XCTestSuite(forTestCaseClass: WhatsappStatusCellSnapshotTests.self)
-        
         prepareGenerator()
-        
-        combinations?.forEach { configurableSnapshotModel in
-            
+        let scenarios = combinations ?? []
+        return scenarios.reduce(into: XCTestSuite(forTestCaseClass: WhatsappStatusCellSnapshotTests.self)) {
             // Generate a test for our specific selector
             let snapshotTest = WhatsappStatusCellSnapshotTests(selector: #selector(verifyView))
-            let stringIndex: String = combinations!.firstIndex(of: configurableSnapshotModel)?.description ?? ""
+            let stringIndex: String = scenarios.firstIndex(of: $1)?.description ?? ""
             
-            snapshotTest.model = configurableSnapshotModel
+            snapshotTest.model = $1
             snapshotTest.identifier = stringIndex
             
-            suite.addTest(snapshotTest)
+            $0.addTest(snapshotTest)
         }
-        
-        return suite
     }
-    
 }
 
