@@ -62,13 +62,15 @@
 		B55BF7DD21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7DC21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift */; };
 		B55BF7DF21A1891900B937C7 /* StatusModuleAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55BF7DE21A1891800B937C7 /* StatusModuleAssets.xcassets */; };
 		B55BF7E121A1946000B937C7 /* WhatsappStateModuleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7E021A1946000B937C7 /* WhatsappStateModuleDecorator.swift */; };
+		B56DD32024595E6C00DF45F0 /* GenericSnapshotTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56DD31F24595E6C00DF45F0 /* GenericSnapshotTestSuite.swift */; };
 		B574FB9D21B7394600B4F6F4 /* HelloWorldModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B574FB9C21B7394600B4F6F4 /* HelloWorldModule.swift */; };
 		B598411825373F3800C461DA /* ModuleServices in Frameworks */ = {isa = PBXBuildFile; productRef = B598411725373F3800C461DA /* ModuleServices */; };
 		B598411D25373F4600C461DA /* ModuleSnapshotServices in Frameworks */ = {isa = PBXBuildFile; productRef = B598411C25373F4600C461DA /* ModuleSnapshotServices */; };
 		B5B41BD0252DD94D00D2F64C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B41BCF252DD94D00D2F64C /* CircleImageView.swift */; };
+		B58729832459627500C2185B /* SnapshotEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58729822459627500C2185B /* SnapshotEngine.swift */; };
+		B5872985245963B900C2185B /* WhatsappSnapshotGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5872984245963B900C2185B /* WhatsappSnapshotGenerator.swift */; };
+		B5872987245966E700C2185B /* WhatsappStatusCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5872986245966E700C2185B /* WhatsappStatusCellSnapshotTests.swift */; };
 		B5B41BD6252DDA6100D2F64C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B5B41BD5252DDA6100D2F64C /* SDWebImage */; };
-		B5CBBF6B22C41D73004C903C /* WhatsappStatusCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBBF6A22C41D73004C903C /* WhatsappStatusCellSnapshotTests.swift */; };
-		B5CBBF6D22C4331F004C903C /* WhatsappStatusSnapshotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBBF6C22C4331F004C903C /* WhatsappStatusSnapshotModel.swift */; };
 		B5EC90C3252E0D5C00EFEDB6 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = B5EC90C2252E0D5C00EFEDB6 /* SnapshotTesting */; };
 		B5FA6B3622749FC000B08316 /* FavoriteMusicAttributedDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA6B3522749FC000B08316 /* FavoriteMusicAttributedDecorator.swift */; };
 /* End PBXBuildFile section */
@@ -152,10 +154,12 @@
 		B55BF7DC21A17C0E00B937C7 /* WhatsappStatusCellDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatusCellDecorator.swift; sourceTree = "<group>"; };
 		B55BF7DE21A1891800B937C7 /* StatusModuleAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StatusModuleAssets.xcassets; sourceTree = "<group>"; };
 		B55BF7E021A1946000B937C7 /* WhatsappStateModuleDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStateModuleDecorator.swift; sourceTree = "<group>"; };
+		B56DD31F24595E6C00DF45F0 /* GenericSnapshotTestSuite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSnapshotTestSuite.swift; sourceTree = "<group>"; };
 		B574FB9C21B7394600B4F6F4 /* HelloWorldModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldModule.swift; sourceTree = "<group>"; };
 		B5B41BCF252DD94D00D2F64C /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
-		B5CBBF6A22C41D73004C903C /* WhatsappStatusCellSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatusCellSnapshotTests.swift; sourceTree = "<group>"; };
-		B5CBBF6C22C4331F004C903C /* WhatsappStatusSnapshotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatusSnapshotModel.swift; sourceTree = "<group>"; };
+		B58729822459627500C2185B /* SnapshotEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotEngine.swift; sourceTree = "<group>"; };
+		B5872984245963B900C2185B /* WhatsappSnapshotGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappSnapshotGenerator.swift; sourceTree = "<group>"; };
+		B5872986245966E700C2185B /* WhatsappStatusCellSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatusCellSnapshotTests.swift; sourceTree = "<group>"; };
 		B5FA6B3522749FC000B08316 /* FavoriteMusicAttributedDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMusicAttributedDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -350,9 +354,11 @@
 		B536E7BD219CD339005B7F38 /* ModuleExamplesTests */ = {
 			isa = PBXGroup;
 			children = (
-				B5CBBF6A22C41D73004C903C /* WhatsappStatusCellSnapshotTests.swift */,
-				B5CBBF6C22C4331F004C903C /* WhatsappStatusSnapshotModel.swift */,
 				B536E7C0219CD339005B7F38 /* Info.plist */,
+				B56DD31F24595E6C00DF45F0 /* GenericSnapshotTestSuite.swift */,
+				B58729822459627500C2185B /* SnapshotEngine.swift */,
+				B5872984245963B900C2185B /* WhatsappSnapshotGenerator.swift */,
+				B5872986245966E700C2185B /* WhatsappStatusCellSnapshotTests.swift */,
 			);
 			path = ModuleExamplesTests;
 			sourceTree = "<group>";
@@ -684,8 +690,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5CBBF6B22C41D73004C903C /* WhatsappStatusCellSnapshotTests.swift in Sources */,
-				B5CBBF6D22C4331F004C903C /* WhatsappStatusSnapshotModel.swift in Sources */,
+				B56DD32024595E6C00DF45F0 /* GenericSnapshotTestSuite.swift in Sources */,
+				B58729832459627500C2185B /* SnapshotEngine.swift in Sources */,
+				B5872987245966E700C2185B /* WhatsappStatusCellSnapshotTests.swift in Sources */,
+				B5872985245963B900C2185B /* WhatsappSnapshotGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
