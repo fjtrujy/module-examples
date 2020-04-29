@@ -11,9 +11,7 @@ import FTMTableSectionModules
 
 @testable import ModuleExamples
 
-fileprivate var combinations: [WhatsappStatusSnapshotModel]?
-
-func prepareGenerator() {
+private let combinations: [WhatsappStatusSnapshotModel] = {
     let generator = SnapshotGenerator<WhatsappStatusSnapshotModel>()
     
     let titles = [
@@ -37,9 +35,8 @@ func prepareGenerator() {
     generator.addCombination(propertyKey: "subtitle", values: subtitles)
     generator.addCombination(propertyKey: "buttons", values: [true, false])
     
-    combinations = generator.generateCombinations()
-}
-
+    return generator.generateCombinations()
+}()
 
 class WhatsappStatusCellSnapshotTests: FBSnapshotTestCase {
     var cell: WhatsappStatusCell?
@@ -67,12 +64,10 @@ class WhatsappStatusCellSnapshotTests: FBSnapshotTestCase {
     }
     
     override class var defaultTestSuite: XCTestSuite {
-        prepareGenerator()
-        let scenarios = combinations ?? []
-        return scenarios.reduce(into: XCTestSuite(forTestCaseClass: WhatsappStatusCellSnapshotTests.self)) {
+        combinations.reduce(into: XCTestSuite(forTestCaseClass: WhatsappStatusCellSnapshotTests.self)) {
             // Generate a test for our specific selector
             let snapshotTest = WhatsappStatusCellSnapshotTests(selector: #selector(verifyView))
-            let stringIndex: String = scenarios.firstIndex(of: $1)?.description ?? ""
+            let stringIndex: String = combinations.firstIndex(of: $1)?.description ?? ""
             
             snapshotTest.model = $1
             snapshotTest.identifier = stringIndex
