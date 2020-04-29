@@ -39,7 +39,8 @@ private let combinations: [WhatsappStatusSnapshotModel] = {
 }()
 
 class WhatsappStatusCellSnapshotTests: FBSnapshotTestCase {
-    var cell: WhatsappStatusCell?
+    let cell = (Bundle.main.loadNibNamed(String(describing: WhatsappStatusCell.self), owner: nil, options: nil)?.first as! WhatsappStatusCell)
+    
     var model: WhatsappStatusSnapshotModel?
     var identifier: String?
     
@@ -47,33 +48,30 @@ class WhatsappStatusCellSnapshotTests: FBSnapshotTestCase {
         super.setUp()
         
         recordMode = false
-        
-        cell = (Bundle.main.loadNibNamed(String(describing: WhatsappStatusCell.self), owner: nil, options: nil)?.first as! WhatsappStatusCell)
     }
     
     @objc func verifyView() {
-        let decorator = WhatsappStatusCellDecorator(imageName: model!.imageName!,
-                                                    title: model!.title!,
-                                                    subtitle: model!.subtitle!,
-                                                    buttons: model!.buttons!)
+        guard let image = model?.imageName, let title = model?.title, let subtitle = model?.subtitle,
+            let buttons = model?.buttons, let orientation = model?.orientation, let identifier = identifier
+        else { return XCTFail("The model or identifier for the snapshot were not set") }
         
-        cell?.configure(decorator: decorator)
-        cell?.adjustToFitScreen(orientation: model!.orientation!)
+        let decorator = WhatsappStatusCellDecorator(imageName: image, title: title, subtitle: subtitle, buttons: buttons)
         
-        FBSnapshotVerifyView(cell!, identifier: identifier!)
+        cell.configure(decorator: decorator)
+        cell.adjustToFitScreen(orientation: orientation)
+        
+        FBSnapshotVerifyView(cell, identifier: identifier)
     }
     
     override class var defaultTestSuite: XCTestSuite {
         combinations.reduce(into: XCTestSuite(forTestCaseClass: WhatsappStatusCellSnapshotTests.self)) {
             // Generate a test for our specific selector
             let snapshotTest = WhatsappStatusCellSnapshotTests(selector: #selector(verifyView))
-            let stringIndex: String = combinations.firstIndex(of: $1)?.description ?? ""
             
             snapshotTest.model = $1
-            snapshotTest.identifier = stringIndex
+            snapshotTest.identifier = combinations.firstIndex(of: $1)?.description
             
             $0.addTest(snapshotTest)
         }
     }
 }
-
