@@ -42,6 +42,7 @@
 		B52B261421C18D860076D5BD /* BirthdateAttributedDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B261321C18D860076D5BD /* BirthdateAttributedDecorator.swift */; };
 		B52B261621C18D980076D5BD /* RequestFriendsAttributedDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B261521C18D980076D5BD /* RequestFriendsAttributedDecorator.swift */; };
 		B52B261821C1BC940076D5BD /* AttributedModuleAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52B261721C1BC940076D5BD /* AttributedModuleAssets.xcassets */; };
+		B530248B24597DEB00429B95 /* SnapshotsTestLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530248A24597DEB00429B95 /* SnapshotsTestLauncher.swift */; };
 		B536E7AA219CD338005B7F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7A9219CD338005B7F38 /* AppDelegate.swift */; };
 		B536E7B4219CD339005B7F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B536E7B2219CD339005B7F38 /* LaunchScreen.storyboard */; };
 		B536E7CA219CD339005B7F38 /* ModuleExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536E7C9219CD339005B7F38 /* ModuleExamplesUITests.swift */; };
@@ -128,6 +129,7 @@
 		B52B261321C18D860076D5BD /* BirthdateAttributedDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdateAttributedDecorator.swift; sourceTree = "<group>"; };
 		B52B261521C18D980076D5BD /* RequestFriendsAttributedDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFriendsAttributedDecorator.swift; sourceTree = "<group>"; };
 		B52B261721C1BC940076D5BD /* AttributedModuleAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AttributedModuleAssets.xcassets; sourceTree = "<group>"; };
+		B530248A24597DEB00429B95 /* SnapshotsTestLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotsTestLauncher.swift; sourceTree = "<group>"; };
 		B536E7A6219CD338005B7F38 /* ModuleExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B536E7A9219CD338005B7F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B536E7AB219CD338005B7F38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				B58729822459627500C2185B /* SnapshotEngine.swift */,
 				B5872984245963B900C2185B /* WhatsappSnapshotGenerator.swift */,
 				B5872986245966E700C2185B /* WhatsappStatusCellSnapshotTests.swift */,
+				B530248A24597DEB00429B95 /* SnapshotsTestLauncher.swift */,
 			);
 			path = ModuleExamplesTests;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 			files = (
 				B56DD32024595E6C00DF45F0 /* GenericSnapshotTestSuite.swift in Sources */,
 				B58729832459627500C2185B /* SnapshotEngine.swift in Sources */,
+				B530248B24597DEB00429B95 /* SnapshotsTestLauncher.swift in Sources */,
 				B5872987245966E700C2185B /* WhatsappStatusCellSnapshotTests.swift in Sources */,
 				B5872985245963B900C2185B /* WhatsappSnapshotGenerator.swift in Sources */,
 			);
