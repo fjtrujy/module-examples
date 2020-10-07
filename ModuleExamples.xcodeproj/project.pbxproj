@@ -63,13 +63,13 @@
 		B55BF7DF21A1891900B937C7 /* StatusModuleAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55BF7DE21A1891800B937C7 /* StatusModuleAssets.xcassets */; };
 		B55BF7E121A1946000B937C7 /* WhatsappStateModuleDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF7E021A1946000B937C7 /* WhatsappStateModuleDecorator.swift */; };
 		B574FB9D21B7394600B4F6F4 /* HelloWorldModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B574FB9C21B7394600B4F6F4 /* HelloWorldModule.swift */; };
-		B5B41BC4252DD6CE00D2F64C /* ModulesKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5B41BC3252DD6CE00D2F64C /* ModulesKit */; };
 		B5B41BD0252DD94D00D2F64C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B41BCF252DD94D00D2F64C /* CircleImageView.swift */; };
 		B5B41BD6252DDA6100D2F64C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B5B41BD5252DDA6100D2F64C /* SDWebImage */; };
-		B5B41BDC252DDC7A00D2F64C /* ModulesKitSnapshot in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = B5B41BDB252DDC7A00D2F64C /* ModulesKitSnapshot */; };
-		B5B41BF5252DDE6500D2F64C /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = B5B41BF4252DDE6500D2F64C /* SnapshotTesting */; };
 		B5CBBF6B22C41D73004C903C /* WhatsappStatusCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBBF6A22C41D73004C903C /* WhatsappStatusCellSnapshotTests.swift */; };
 		B5CBBF6D22C4331F004C903C /* WhatsappStatusSnapshotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBBF6C22C4331F004C903C /* WhatsappStatusSnapshotModel.swift */; };
+		B5EC90BC252E0D4C00EFEDB6 /* ModulesKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5EC90BB252E0D4C00EFEDB6 /* ModulesKit */; };
+		B5EC90C1252E0D5600EFEDB6 /* ModulesKitSnapshot in Frameworks */ = {isa = PBXBuildFile; productRef = B5EC90C0252E0D5600EFEDB6 /* ModulesKitSnapshot */; };
+		B5EC90C3252E0D5C00EFEDB6 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = B5EC90C2252E0D5C00EFEDB6 /* SnapshotTesting */; };
 		B5FA6B3622749FC000B08316 /* FavoriteMusicAttributedDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA6B3522749FC000B08316 /* FavoriteMusicAttributedDecorator.swift */; };
 /* End PBXBuildFile section */
 
@@ -165,7 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5B41BD6252DDA6100D2F64C /* SDWebImage in Frameworks */,
-				B5B41BC4252DD6CE00D2F64C /* ModulesKit in Frameworks */,
+				B5EC90BC252E0D4C00EFEDB6 /* ModulesKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,8 +173,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5B41BDC252DDC7A00D2F64C /* ModulesKitSnapshot in Frameworks */,
-				B5B41BF5252DDE6500D2F64C /* SnapshotTesting in Frameworks */,
+				B5EC90C1252E0D5600EFEDB6 /* ModulesKitSnapshot in Frameworks */,
+				B5EC90C3252E0D5C00EFEDB6 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,8 +493,8 @@
 			);
 			name = ModuleExamples;
 			packageProductDependencies = (
-				B5B41BC3252DD6CE00D2F64C /* ModulesKit */,
 				B5B41BD5252DDA6100D2F64C /* SDWebImage */,
+				B5EC90BB252E0D4C00EFEDB6 /* ModulesKit */,
 			);
 			productName = moduleExamples;
 			productReference = B536E7A6219CD338005B7F38 /* ModuleExamples.app */;
@@ -515,8 +515,8 @@
 			);
 			name = ModuleExamplesTests;
 			packageProductDependencies = (
-				B5B41BDB252DDC7A00D2F64C /* ModulesKitSnapshot */,
-				B5B41BF4252DDE6500D2F64C /* SnapshotTesting */,
+				B5EC90C0252E0D5600EFEDB6 /* ModulesKitSnapshot */,
+				B5EC90C2252E0D5C00EFEDB6 /* SnapshotTesting */,
 			);
 			productName = moduleExamplesTests;
 			productReference = B536E7BA219CD339005B7F38 /* ModuleExamplesTests.xctest */;
@@ -576,9 +576,9 @@
 			);
 			mainGroup = B536E79D219CD337005B7F38;
 			packageReferences = (
-				B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "ModulesKit" */,
 				B5B41BD4252DDA6100D2F64C /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				B5B41BEB252DDE5000D2F64C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				B5EC90BA252E0D4C00EFEDB6 /* XCRemoteSwiftPackageReference "ModulesKit" */,
 			);
 			productRefGroup = B536E7A7219CD338005B7F38 /* Products */;
 			projectDirPath = "";
@@ -1006,14 +1006,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "ModulesKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/cosmicfools/ModulesKit";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		B5B41BD4252DDA6100D2F64C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
@@ -1030,25 +1022,33 @@
 				minimumVersion = 1.8.2;
 			};
 		};
+		B5EC90BA252E0D4C00EFEDB6 /* XCRemoteSwiftPackageReference "ModulesKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cosmicfools/ModulesKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B5B41BC3252DD6CE00D2F64C /* ModulesKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "ModulesKit" */;
-			productName = ModulesKit;
-		};
 		B5B41BD5252DDA6100D2F64C /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B5B41BD4252DDA6100D2F64C /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
-		B5B41BDB252DDC7A00D2F64C /* ModulesKitSnapshot */ = {
+		B5EC90BB252E0D4C00EFEDB6 /* ModulesKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "ModulesKit" */;
+			package = B5EC90BA252E0D4C00EFEDB6 /* XCRemoteSwiftPackageReference "ModulesKit" */;
+			productName = ModulesKit;
+		};
+		B5EC90C0252E0D5600EFEDB6 /* ModulesKitSnapshot */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5EC90BA252E0D4C00EFEDB6 /* XCRemoteSwiftPackageReference "ModulesKit" */;
 			productName = ModulesKitSnapshot;
 		};
-		B5B41BF4252DDE6500D2F64C /* SnapshotTesting */ = {
+		B5EC90C2252E0D5C00EFEDB6 /* SnapshotTesting */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B5B41BEB252DDE5000D2F64C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;

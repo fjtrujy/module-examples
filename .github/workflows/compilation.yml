@@ -12,10 +12,17 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Force xcode
+      run: sudo xcode-select -switch /Applications/Xcode_12.app
+
+    # - name: Resolve dependencies
+    #   run: |
+    #     xcodebuild -resolvePackageDependencies
+
     - name: Run tests
       run: |
-        xcodebuild test -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -configuration Debug -destination 'name=iPhone 8' | xcpretty -c
+        xcodebuild test -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -destination 'name=iPhone 8'
 
     - name: Compile project
       run: |
-        xcodebuild clean build -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -configuration Debug -destination 'name=iPhone 8' | xcpretty -c
+        xcodebuild clean build -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -destination 'name=iPhone 8'
