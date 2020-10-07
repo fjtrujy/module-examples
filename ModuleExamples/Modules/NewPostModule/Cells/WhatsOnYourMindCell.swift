@@ -6,7 +6,7 @@
 //  Copyright © 2018 Francisco Javier Trujillo Mata. All rights reserved.
 //
 
-import CircleImageView
+import UIKit
 
 class WhatsOnYourMindCell: UITableViewCell {
     @IBOutlet private weak var icon : CircleImageView?

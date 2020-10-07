@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CombinationGenerator",
+        "repositoryURL": "https://github.com/cosmicfools/CombinationGenerator",
+        "state": {
+          "branch": "master",
+          "revision": "b24ceb84c79b92214c37802cc221a3fc7dfbd116",
+          "version": null
+        }
+      },
+      {
+        "package": "ModulesKit",
+        "repositoryURL": "https://github.com/cosmicfools/ModulesKit",
+        "state": {
+          "branch": "master",
+          "revision": "6e96c128ce320e0fb48d64c0cfb55b76f14845e5",
+          "version": null
+        }
+      },
+      {
+        "package": "Runtime",
+        "repositoryURL": "https://github.com/wickwirew/Runtime.git",
+        "state": {
+          "branch": "master",
+          "revision": "102ea0dc60db7178754c2b5a120b14a361126141",
+          "version": null
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
+        "state": {
+          "branch": null,
+          "revision": "665d02280f5c04515e76feb78078dd89da091f3e",
+          "version": "5.9.2"
+        }
+      },
+      {
+        "package": "SnapshotTesting",
+        "repositoryURL": "https://github.com/pointfreeco/swift-snapshot-testing",
+        "state": {
+          "branch": null,
+          "revision": "c466812aa2e22898f27557e2e780d3aad7a27203",
+          "version": "1.8.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

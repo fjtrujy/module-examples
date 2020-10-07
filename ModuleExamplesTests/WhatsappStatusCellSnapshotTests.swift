@@ -6,8 +6,10 @@
 //  Copyright © 2019 Francisco Javier Trujillo Mata. All rights reserved.
 //
 
-import FBSnapshotTestCase
-import FTMTableSectionModules
+import XCTest
+import UIKit
+import ModulesKitSnapshot
+import SnapshotTesting
 
 @testable import ModuleExamples
 
@@ -38,8 +40,9 @@ private let combinations: [WhatsappStatusSnapshotModel] = {
     return generator.generateCombinations()
 }()
 
-class WhatsappStatusCellSnapshotTests: FBSnapshotTestCase {
-    let cell = (Bundle.main.loadNibNamed(String(describing: WhatsappStatusCell.self), owner: nil, options: nil)?.first as! WhatsappStatusCell)
+class WhatsappStatusCellSnapshotTests: XCTestCase {
+    let cell = (Bundle.main.loadNibNamed(String(describing: WhatsappStatusCell.self),
+                                         owner: nil, options: nil)?.first as! WhatsappStatusCell)
     
     var model: WhatsappStatusSnapshotModel?
     var identifier: String?
@@ -47,20 +50,21 @@ class WhatsappStatusCellSnapshotTests: FBSnapshotTestCase {
     override func setUp() {
         super.setUp()
         
-        recordMode = false
+        isRecording = false
     }
     
     @objc func verifyView() {
         guard let image = model?.imageName, let title = model?.title, let subtitle = model?.subtitle,
-            let buttons = model?.buttons, let orientation = model?.orientation, let identifier = identifier
+            let buttons = model?.buttons, let orientation = model?.orientation
         else { return XCTFail("The model or identifier for the snapshot were not set") }
         
-        let decorator = WhatsappStatusCellDecorator(imageName: image, title: title, subtitle: subtitle, buttons: buttons)
+        let decorator = WhatsappStatusCellDecorator(imageName: image, title: title, subtitle: subtitle,
+                                                    buttons: buttons)
         
         cell.configure(decorator: decorator)
         cell.adjustToFitScreen(orientation: orientation)
         
-        FBSnapshotVerifyView(cell, identifier: identifier)
+        assertSnapshot(matching: cell, as: .image)
     }
     
     override class var defaultTestSuite: XCTestSuite {

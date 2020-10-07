@@ -8,7 +8,6 @@
 
 import UIKit
 import SDWebImage
-import CircleImageView
 
 class StoryCollectionCell: UICollectionViewCell {
     @IBOutlet private weak var storyImageView : UIImageView!
