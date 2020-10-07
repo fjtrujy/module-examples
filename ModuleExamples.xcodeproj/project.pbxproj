@@ -67,7 +67,7 @@
 		B5B41BD0252DD94D00D2F64C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B41BCF252DD94D00D2F64C /* CircleImageView.swift */; };
 		B5B41BD6252DDA6100D2F64C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B5B41BD5252DDA6100D2F64C /* SDWebImage */; };
 		B5B41BDC252DDC7A00D2F64C /* ModulesKitSnapshot in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = B5B41BDB252DDC7A00D2F64C /* ModulesKitSnapshot */; };
-		B5B41BF5252DDE6500D2F64C /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = B5B41BF4252DDE6500D2F64C /* SnapshotTesting */; };
+		B5B41BF5252DDE6500D2F64C /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = B5B41BF4252DDE6500D2F64C /* SnapshotTesting */; };
 		B5CBBF6B22C41D73004C903C /* WhatsappStatusCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBBF6A22C41D73004C903C /* WhatsappStatusCellSnapshotTests.swift */; };
 		B5CBBF6D22C4331F004C903C /* WhatsappStatusSnapshotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBBF6C22C4331F004C903C /* WhatsappStatusSnapshotModel.swift */; };
 		B5FA6B3622749FC000B08316 /* FavoriteMusicAttributedDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA6B3522749FC000B08316 /* FavoriteMusicAttributedDecorator.swift */; };
@@ -576,7 +576,7 @@
 			);
 			mainGroup = B536E79D219CD337005B7F38;
 			packageReferences = (
-				B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "FTMTableSectionModules" */,
+				B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "ModulesKit" */,
 				B5B41BD4252DDA6100D2F64C /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				B5B41BEB252DDE5000D2F64C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
@@ -1006,11 +1006,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "FTMTableSectionModules" */ = {
+		B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "ModulesKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/cosmicfools/FTMTableSectionModules";
+			repositoryURL = "https://github.com/cosmicfools/ModulesKit";
 			requirement = {
-				branch = "feature/spm-support";
+				branch = master;
 				kind = branch;
 			};
 		};
@@ -1035,7 +1035,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		B5B41BC3252DD6CE00D2F64C /* ModulesKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "FTMTableSectionModules" */;
+			package = B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "ModulesKit" */;
 			productName = ModulesKit;
 		};
 		B5B41BD5252DDA6100D2F64C /* SDWebImage */ = {
@@ -1045,7 +1045,7 @@
 		};
 		B5B41BDB252DDC7A00D2F64C /* ModulesKitSnapshot */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "FTMTableSectionModules" */;
+			package = B5B41BC2252DD6CE00D2F64C /* XCRemoteSwiftPackageReference "ModulesKit" */;
 			productName = ModulesKitSnapshot;
 		};
 		B5B41BF4252DDE6500D2F64C /* SnapshotTesting */ = {

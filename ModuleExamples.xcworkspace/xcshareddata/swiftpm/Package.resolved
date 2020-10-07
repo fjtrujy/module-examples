@@ -6,16 +6,16 @@
         "repositoryURL": "https://github.com/cosmicfools/CombinationGenerator",
         "state": {
           "branch": "master",
-          "revision": "debebbe0714f940e6b0e3be6ef89a49c0c62d26c",
+          "revision": "b24ceb84c79b92214c37802cc221a3fc7dfbd116",
           "version": null
         }
       },
       {
         "package": "ModulesKit",
-        "repositoryURL": "https://github.com/cosmicfools/FTMTableSectionModules",
+        "repositoryURL": "https://github.com/cosmicfools/ModulesKit",
         "state": {
-          "branch": "feature/spm-support",
-          "revision": "b24ae6576128d9c9fe764b930f76dd9ecf1d168f",
+          "branch": "master",
+          "revision": "6e96c128ce320e0fb48d64c0cfb55b76f14845e5",
           "version": null
         }
       },
