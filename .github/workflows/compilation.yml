@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+
+jobs:
+  build:
+    runs-on: macos-latest
+        
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run tests
+      run: |
+        xcodebuild test -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -configuration Debug -destination 'name=iPhone 8' | xcpretty -c
+
+    - name: Compile project
+      run: |
+        xcodebuild clean build -workspace ModuleExamples.xcworkspace -scheme 'ModuleExamples' -configuration Debug -destination 'name=iPhone 8' | xcpretty -c
