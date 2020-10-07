@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CircleImageView
 
 class WhatsappStatusCell: UITableViewCell {
     @IBOutlet private weak var stateDescription : UILabel?

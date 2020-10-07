@@ -6,7 +6,8 @@
 //  Copyright © 2018 Francisco Javier Trujillo Mata. All rights reserved.
 //
 
-import FTMTableSectionModules
+import ModulesKit
+import UIKit
 
 class AppModule: TableSectionModule {
     weak var delegate: AppModuleDelegate?

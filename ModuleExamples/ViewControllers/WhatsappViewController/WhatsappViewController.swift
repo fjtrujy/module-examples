@@ -6,7 +6,7 @@
 //  Copyright © 2018 Francisco Javier Trujillo Mata. All rights reserved.
 //
 
-import FTMTableSectionModules
+import ModulesKit
 
 class WhatsappViewController: ModulesViewController {
     override func setupStyle() {

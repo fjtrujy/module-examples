@@ -1,9 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-ModuleExamples-ModuleExamplesTests/Pods-ModuleExamples-ModuleExamplesTests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/CRuntime/CRuntime.framework
-${BUILT_PRODUCTS_DIR}/CircleImageView/CircleImageView.framework
-${BUILT_PRODUCTS_DIR}/CodeInjection/CodeInjection.framework
-${BUILT_PRODUCTS_DIR}/CombinationGenerator/CombinationGenerator.framework
-${BUILT_PRODUCTS_DIR}/FTMTableSectionModules/FTMTableSectionModules.framework
-${BUILT_PRODUCTS_DIR}/Runtime/Runtime.framework
-${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
-${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework

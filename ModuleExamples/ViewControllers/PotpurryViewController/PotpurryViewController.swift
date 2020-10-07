@@ -6,7 +6,8 @@
 //  Copyright © 2018 Francisco Javier Trujillo Mata. All rights reserved.
 //
 
-import FTMTableSectionModules
+import ModulesKit
+import UIKit
 
 class PotpurryViewController: ModulesViewController {
     override func setupStyle() {
