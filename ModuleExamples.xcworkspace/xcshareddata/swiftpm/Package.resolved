@@ -5,27 +5,27 @@
         "package": "CombinationGenerator",
         "repositoryURL": "https://github.com/cosmicfools/CombinationGenerator",
         "state": {
-          "branch": "master",
-          "revision": "b24ceb84c79b92214c37802cc221a3fc7dfbd116",
-          "version": null
+          "branch": null,
+          "revision": "48fe12420a4765c126af9799540f474da5848f3c",
+          "version": "0.2.3"
         }
       },
       {
-        "package": "ModulesKit",
-        "repositoryURL": "https://github.com/cosmicfools/ModulesKit",
+        "package": "ModuleServices",
+        "repositoryURL": "https://github.com/cosmicfools/ModuleServices",
         "state": {
-          "branch": "master",
-          "revision": "6e96c128ce320e0fb48d64c0cfb55b76f14845e5",
-          "version": null
+          "branch": null,
+          "revision": "04e28d18bd682546f23e79b9226600049e88c819",
+          "version": "0.9.1"
         }
       },
       {
         "package": "Runtime",
         "repositoryURL": "https://github.com/wickwirew/Runtime.git",
         "state": {
-          "branch": "master",
-          "revision": "102ea0dc60db7178754c2b5a120b14a361126141",
-          "version": null
+          "branch": null,
+          "revision": "a848b81e1a0100801f572e5273ffe4352fd54088",
+          "version": "2.2.2"
         }
       },
       {

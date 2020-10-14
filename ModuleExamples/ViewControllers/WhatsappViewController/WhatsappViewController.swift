@@ -6,7 +6,7 @@
 //  Copyright © 2018 Francisco Javier Trujillo Mata. All rights reserved.
 //
 
-import ModulesKit
+import ModuleServices
 
 class WhatsappViewController: ModulesViewController {
     override func setupStyle() {

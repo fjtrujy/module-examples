@@ -6,7 +6,7 @@
 //  Copyright © 2019 Francisco Javier Trujillo Mata. All rights reserved.
 //
 
-import ModulesKitSnapshot
+import ModuleSnapshotServices
 
 class WhatsappStatusSnapshotModel: SnapshotObject {
     var imageName : String?

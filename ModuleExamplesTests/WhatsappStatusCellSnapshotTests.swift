@@ -8,7 +8,7 @@
 
 import XCTest
 import UIKit
-import ModulesKitSnapshot
+import ModuleSnapshotServices
 import SnapshotTesting
 
 @testable import ModuleExamples
