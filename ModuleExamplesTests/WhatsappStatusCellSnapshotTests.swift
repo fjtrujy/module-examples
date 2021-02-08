@@ -6,8 +6,9 @@
 //  Copyright © 2020 Francisco Javier Trujillo Mata. All rights reserved.
 //
 
-import FBSnapshotTestCase
-import FTMTableSectionModules
+import XCTest
+import SnapshotTesting
+import ModuleSnapshotServices
 
 @testable import ModuleExamples
 
@@ -23,6 +24,6 @@ class WhatsappStatusCellSnapshotTests: GenericSnapshotTestSuite<WhatsappStatusCe
         view.configure(decorator: decorator)
         view.adjustToFitScreen(orientation: orientation)
         
-        FBSnapshotVerifyView(view, identifier: identifier)
+        assertSnapshot(matching: view, as: .image)
     }
 }

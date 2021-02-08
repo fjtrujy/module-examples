@@ -6,7 +6,8 @@
 //  Copyright © 2020 Francisco Javier Trujillo Mata. All rights reserved.
 //
 
-import FTMTableSectionModules
+import Foundation
+import ModuleSnapshotServices
 
 class WhatsappSnapshotGenerator: NSObject, SnapshotEngine {
     class Model: SnapshotObject {

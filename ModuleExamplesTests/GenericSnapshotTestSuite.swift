@@ -6,10 +6,11 @@
 //  Copyright © 2020 Francisco Javier Trujillo Mata. All rights reserved.
 //
 
-import FBSnapshotTestCase
-import FTMTableSectionModules
+import XCTest
+import SnapshotTesting
+import ModuleSnapshotServices
 
-class GenericSnapshotTestSuite<View: UIView, Engine: SnapshotEngine>: FBSnapshotTestCase {
+class GenericSnapshotTestSuite<View: UIView, Engine: SnapshotEngine>: XCTestCase {
     let view = (Bundle.main.loadNibNamed(String(describing: View.self), owner: nil, options: nil)?.first as! View)
     var model: Engine.ModelGenerated?
     var identifier: String?
