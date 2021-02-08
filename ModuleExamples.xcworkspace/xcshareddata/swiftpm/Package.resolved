@@ -14,9 +14,9 @@
         "package": "ModuleServices",
         "repositoryURL": "https://github.com/cosmicfools/ModuleServices",
         "state": {
-          "branch": null,
-          "revision": "04e28d18bd682546f23e79b9226600049e88c819",
-          "version": "0.9.1"
+          "branch": "master",
+          "revision": "9d548f8cb0c96030fc6b180defcd11ec6080d3c8",
+          "version": null
         }
       },
       {
