@@ -9,18 +9,15 @@
 import UIKit
 
 class BirthdateAttributedDecorator: CommonAttributedDecorator {
-    override func attributedTitle() -> NSAttributedString? {
-        let attr = NSMutableAttributedString()
-        attr.append(mainAttributedInfo)
-        attr.append(attributedBreakLine)
-        attr.append(descAttributedInfo)
-        
-        return attr.copy() as? NSAttributedString
+    override var attributedTitle: NSAttributedString {
+        [
+            mainAttributedInfo,
+            attributedBreakLine,
+            descAttributedInfo,
+        ].reduce(into: NSMutableAttributedString()) { $0.append($1) }
     }
     
-    override func backgroundColor() -> UIColor? {
-        return lightColor
-    }
+    override var backgroundColor: UIColor { lightColor }
 }
 
 //MARK: - BirthdateAttributedDecorator
@@ -33,39 +30,33 @@ private extension BirthdateAttributedDecorator {
     var smalFont : UIFont { .systemFont(ofSize:3) }
     
     var mainAttributes : [NSAttributedString.Key : Any] {
-        return [
+        [
             .font : mainFont,
             .foregroundColor : mainColor,
         ]
     }
     
     var softAttributes : [NSAttributedString.Key : Any] {
-        return [
+        [
             .font : secondaryFont,
             .foregroundColor : softColor,
         ]
     }
     
     var smallAttributes : [NSAttributedString.Key : Any] {
-        return [
+        [
             .font : smalFont,
         ]
     }
     
-    var attributedBreakLine : NSAttributedString {
-        return NSAttributedString(string: "\n", attributes:smallAttributes)
-    }
+    var attributedBreakLine : NSAttributedString { .init(string: "\n", attributes:smallAttributes) }
     
     var mainAttributedInfo : NSAttributedString {
-        let attr = NSMutableAttributedString()
-        attr.append(NSAttributedString(string: "Francisco Javier, for your birthdate we'll donate €1 to a non-profit of your choice.\n", attributes: mainAttributes))
-        return attr
+        .init(string: "Francisco Javier, for your birthdate we'll donate €1 to a non-profit of your choice.\n", attributes: mainAttributes)
     }
     
     var descAttributedInfo : NSAttributedString {
-        let attr = NSMutableAttributedString()
-        attr.append(NSAttributedString(string: "Create your fundraiser to support a cause you care about, and we'll take care of the donation processing with no fees.\nRections apply.", attributes: softAttributes))
-        return attr
+        .init(string: "Create your fundraiser to support a cause you care about, and we'll take care of the donation processing with no fees.\nRections apply.", attributes: softAttributes)
     }
     
 }

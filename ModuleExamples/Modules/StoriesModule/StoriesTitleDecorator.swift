@@ -9,26 +9,18 @@
 import UIKit
 
 class StoriesTitleDecorator {
-    func backgroundColor() -> UIColor? {
-        return .white
-    }
-    
-    func attributedTitle() -> NSAttributedString? {
-        return NSAttributedString(string: "Stories", attributes: attributes)
-    }
-    
-    func attributedArchive() -> NSAttributedString? {
-        return NSAttributedString(string: "Your archive", attributes: attributes)
-    }
+    var backgroundColor: UIColor { .white }
+    var attributedTitle: NSAttributedString { .init(string: "Stories", attributes: attributes) }
+    var attributedArchive: NSAttributedString { .init(string: "Your archive", attributes: attributes) }
 }
 
 //MARK: - DecoratorBasicInfo
 extension StoriesTitleDecorator {
-    private var titleColor : UIColor { .black }
-    private var titleFont : UIFont { .boldSystemFont(ofSize:13) }
+    private var titleColor: UIColor { .black }
+    private var titleFont: UIFont { .boldSystemFont(ofSize:13) }
     
-    private var attributes : [NSAttributedString.Key : Any] {
-        return [
+    private var attributes: [NSAttributedString.Key : Any] {
+        [
             .font : titleFont,
             .foregroundColor : titleColor,
         ]

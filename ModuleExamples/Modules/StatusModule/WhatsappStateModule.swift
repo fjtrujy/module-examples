@@ -19,13 +19,13 @@ class WhatsappStateModule: TableSectionModule {
     }
     
     override func registerClassForHeadersFooters() -> [AnyClass] {
-        return super.registerClassForHeadersFooters() + [
+        super.registerClassForHeadersFooters() + [
             UITableViewHeaderFooterView.classForCoder(),
         ]
     }
     
     override func registerNibsForCells() -> [AnyClass] {
-        return super.registerNibsForCells() + [
+        super.registerNibsForCells() + [
             WhatsappStatusCell.classForCoder(),
         ]
     }
@@ -38,17 +38,9 @@ class WhatsappStateModule: TableSectionModule {
         }
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 25
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return 70;
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 25;
-    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { 25 }
+    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat { 70 }
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { 25 }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let identifier = String(describing: UITableViewHeaderFooterView.self)
@@ -63,10 +55,8 @@ class WhatsappStateModule: TableSectionModule {
         let identifier = String(describing: WhatsappStatusCell.self)
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
             
-        if let statusCell = cell as? WhatsappStatusCell,
-            let decorator = decorator?.rows?[indexPath.row] {
-            statusCell.configure(decorator: decorator)
-        }
+        guard let statusCell = cell as? WhatsappStatusCell, let decorator = decorator?.rows?[indexPath.row] else { return cell }
+        statusCell.configure(decorator: decorator)
         
         return cell
     }

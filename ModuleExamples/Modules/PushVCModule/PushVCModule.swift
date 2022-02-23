@@ -19,24 +19,19 @@ class PushVCModule: TableSectionModule {
     }
     
     override func registerClassForHeadersFooters() -> [AnyClass] {
-        return super.registerClassForHeadersFooters() + [
+        super.registerClassForHeadersFooters() + [
             UITableViewHeaderFooterView.classForCoder(),
         ]
     }
     
     override func registerClassForCells() -> [AnyClass] {
-        return super.registerClassForCells() + [
+        super.registerClassForCells() + [
             UITableViewCell.classForCoder(),
         ]
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return 44
-    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { 30 }
+    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat { 44 }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let identifier = String(describing: UITableViewHeaderFooterView.self)
@@ -62,6 +57,6 @@ class PushVCModule: TableSectionModule {
 }
 
 //MARK: - PushVCModuleDelegate
-protocol PushVCModuleDelegate: class {
+protocol PushVCModuleDelegate: AnyObject {
     func pushVCModuleRequestPush(_ pushVCModule: PushVCModule)
 }

@@ -1011,7 +1011,7 @@
 			repositoryURL = "https://github.com/cosmicfools/ModuleServices";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.1;
+				minimumVersion = 1.1.0;
 			};
 		};
 		B5B41BD4252DDA6100D2F64C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
@@ -1019,7 +1019,7 @@
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.2;
+				minimumVersion = 5.12.3;
 			};
 		};
 		B5B41BEB252DDE5000D2F64C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
@@ -1027,7 +1027,7 @@
 			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.8.2;
+				minimumVersion = 1.9.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

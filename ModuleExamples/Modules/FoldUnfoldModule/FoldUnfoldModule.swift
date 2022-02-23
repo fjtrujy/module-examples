@@ -24,13 +24,13 @@ class FoldUnfoldModule: TableSectionModule {
     }
     
     override func registerClassForHeadersFooters() -> [AnyClass] {
-        return super.registerClassForHeadersFooters() + [
+        super.registerClassForHeadersFooters() + [
             UITableViewHeaderFooterView.classForCoder(),
         ]
     }
     
     override func registerClassForCells() -> [AnyClass] {
-        return super.registerClassForCells() + [
+        super.registerClassForCells() + [
             UITableViewCell.classForCoder(),
         ]
     }
@@ -49,13 +49,9 @@ class FoldUnfoldModule: TableSectionModule {
         }
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
-    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { 30 }
     
-    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return 44
-    }
+    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat { 44 }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let identifier = String(describing: UITableViewHeaderFooterView.self)
@@ -69,30 +65,24 @@ class FoldUnfoldModule: TableSectionModule {
         let identifier = String(describing: UITableViewCell.self)
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         
-        if let rowType = rows[indexPath.row] as? RowType {
-            switch rowType {
-            case .unfold:
-                cell.textLabel?.text = "Click to unfold"
-            case .fold:
-                cell.textLabel?.text = "Click to fold"
-            default:
-                cell.textLabel?.text = "Click to do nothing"
-            }
+        guard let rowType = rows[indexPath.row] as? RowType else { return cell }
+        switch rowType {
+        case .unfold: cell.textLabel?.text = "Click to unfold"
+        case .fold: cell.textLabel?.text = "Click to fold"
+        default: cell.textLabel?.text = "Click to do nothing"
         }
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
-        if let rowType = rows[indexPath.row] as? RowType {
-            switch rowType {
-            case .unfold, .fold:
-                fold = !fold!
-            default: break
-            }
-        }
+        defer { tableView.deselectRow(at: indexPath, animated: true) }
         
-        tableView.deselectRow(at: indexPath, animated: true)
+        guard let rowType = rows[indexPath.row] as? RowType else { return }
+        switch rowType {
+        case .unfold, .fold: fold = !fold!
+        default: break
+        }
         
         refreshSection()
     }

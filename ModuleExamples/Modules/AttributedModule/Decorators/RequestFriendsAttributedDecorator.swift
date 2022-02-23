@@ -9,13 +9,12 @@
 import UIKit
 
 class RequestFriendsAttributedDecorator: CommonAttributedDecorator {
-    override func attributedTitle() -> NSAttributedString? {
-        let attr = NSMutableAttributedString()
-        attr.append(mainAttributedInfo)
-        attr.append(attributedBreakLine)
-        attr.append(descAttributedInfo)
-        
-        return attr
+    override var attributedTitle: NSAttributedString {
+        [
+            mainAttributedInfo,
+            attributedBreakLine,
+            descAttributedInfo,
+        ].reduce(into: NSMutableAttributedString()) { $0.append($1) }
     }
 }
 
@@ -29,36 +28,34 @@ private extension RequestFriendsAttributedDecorator {
     var smalFont : UIFont { .systemFont(ofSize:9) }
     
     var mainAttributes : [NSAttributedString.Key : Any] {
-        return [
+        [
             .font : mainFont,
             .foregroundColor : mainColor,
         ]
     }
     
     var softAttributes : [NSAttributedString.Key : Any] {
-        return [
+        [
             .font : secondaryFont,
             .foregroundColor : softColor,
         ]
     }
     
     var alternativeAttributes : [NSAttributedString.Key : Any] {
-        return [
+        [
             .font : alternativeFont,
             .foregroundColor : mainColor,
         ]
     }
     
     var smallAttributes : [NSAttributedString.Key : Any] {
-        return [
+        [
             .font : smalFont,
             .foregroundColor : mainColor,
         ]
     }
     
-    var attributedBreakLine : NSAttributedString {
-        return NSAttributedString(string: "\n", attributes:smallAttributes)
-    }
+    var attributedBreakLine : NSAttributedString { .init(string: "\n", attributes:smallAttributes) }
     
     var requestFriendAttributedIcon : NSAttributedString {
         let imageAttachment = NSTextAttachment()
@@ -69,19 +66,17 @@ private extension RequestFriendsAttributedDecorator {
     }
     
     var mainAttributedInfo : NSAttributedString {
-        let attr = NSMutableAttributedString()
-        attr.append(NSAttributedString(string: "Miguél Ángel Gutiérrez, Elena Benítez ",
-                                       attributes: mainAttributes))
-        attr.append(NSAttributedString(string: "and other 3 accepted your friend requests.",
-                                       attributes: alternativeAttributes))
-        return attr
+        [
+            .init(string: "Miguél Ángel Gutiérrez, Elena Benítez ", attributes: mainAttributes),
+            .init(string: "and other 3 accepted your friend requests.", attributes: alternativeAttributes),
+        ].reduce(into: NSMutableAttributedString()) { $0.append($1) }
     }
     
     var descAttributedInfo : NSAttributedString {
-        let attr = NSMutableAttributedString()
-        attr.append(requestFriendAttributedIcon)
-        attr.append(NSAttributedString(string: " Wednesday at 19:25.", attributes: softAttributes))
-        return attr
+        [
+            requestFriendAttributedIcon,
+            .init(string: " Wednesday at 19:25.", attributes: softAttributes),
+        ].reduce(into: NSMutableAttributedString()) { $0.append($1) }
     }
 }
 

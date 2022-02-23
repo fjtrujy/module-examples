@@ -16,7 +16,6 @@ private enum RowType {
 }
 
 class AddRemoveCellsModule: TableSectionModule {
-    
     override func registerClassForHeadersFooters() -> [AnyClass] {
         super.registerClassForHeadersFooters() + [
             UITableViewHeaderFooterView.classForCoder(),
@@ -36,13 +35,8 @@ class AddRemoveCellsModule: TableSectionModule {
         rows.append(RowType.removeRow)
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return 44
-    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { 30 }
+    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat { 44 }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let identifier = String(describing: UITableViewHeaderFooterView.self)
@@ -56,32 +50,25 @@ class AddRemoveCellsModule: TableSectionModule {
         let identifier = String(describing: UITableViewCell.self)
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         
-        if let rowType = rows[indexPath.row] as? RowType {
-            switch rowType {
-            case .addRow:
-                cell.textLabel?.text = "Click to add new row"
-            case .removeRow:
-                cell.textLabel?.text = "Click to remove new row"
-            default:
-                cell.textLabel?.text = "Index:" + String(indexPath.row) + " - Click to do nothing"
-            }
+        guard let rowType = rows[indexPath.row] as? RowType else { return cell }
+        switch rowType {
+        case .addRow: cell.textLabel?.text = "Click to add new row"
+        case .removeRow: cell.textLabel?.text = "Click to remove new row"
+        default: cell.textLabel?.text = "Index:" + String(indexPath.row) + " - Click to do nothing"
         }
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
-        if let rowType = rows[indexPath.row] as? RowType {
-            switch rowType {
-            case .addRow:
-                addRow()
-            case .removeRow:
-                removeRow()
-            default: break
-            }
-        }
+        defer { tableView.deselectRow(at: indexPath, animated: true) }
+        guard let rowType = rows[indexPath.row] as? RowType else { return }
         
-        tableView.deselectRow(at: indexPath, animated: true)
+        switch rowType {
+        case .addRow: addRow()
+        case .removeRow: removeRow()
+        default: break
+        }
     }
 }
 

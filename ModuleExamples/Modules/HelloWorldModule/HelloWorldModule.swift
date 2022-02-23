@@ -13,7 +13,7 @@ class HelloWorldModule: TableSectionModule {
     weak var delegate: HelloWorldDelegate?
     
     override func registerClassForCells() -> [AnyClass] {
-        return super.registerClassForCells() + [
+        super.registerClassForCells() + [
             UITableViewCell.classForCoder(),
         ]
     }
@@ -24,9 +24,7 @@ class HelloWorldModule: TableSectionModule {
         rows.append(UITableViewCell.self)
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return 44
-    }
+    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat { 44 }
     
     override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let identifier = String(describing: rows[indexPath.row])
@@ -44,6 +42,6 @@ class HelloWorldModule: TableSectionModule {
 }
 
 //MARK: - HelloWorldDelegate
-protocol HelloWorldDelegate: class {
+protocol HelloWorldDelegate: AnyObject {
     func helloWorldSelected(_ module: HelloWorldModule!)
 }

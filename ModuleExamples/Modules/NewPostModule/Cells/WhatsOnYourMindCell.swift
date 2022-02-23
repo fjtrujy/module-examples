@@ -17,9 +17,9 @@ class WhatsOnYourMindCell: UITableViewCell {
         // Initialization code
         let decorator = WhatsOnYourMindDecorator()
         
-        backgroundColor = decorator.backgroundColor()
-        icon?.image = decorator.profileIcon()
-        desc?.attributedText = decorator.attributedDesc()
+        backgroundColor = decorator.backgroundColor
+        icon?.image = decorator.profileIcon
+        desc?.attributedText = decorator.attributedDesc
     }
     
 }

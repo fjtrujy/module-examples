@@ -16,12 +16,12 @@ class StoryCollectionCell: UICollectionViewCell {
     @IBOutlet private weak var profileLabel : UILabel!
         
     func configure(decorator: StoryCollectionDecorator) {
-        backgroundColor = decorator.backgroundColor()
-        borderImageView.backgroundColor = decorator.borderColor()
+        backgroundColor = decorator.backgroundColor
+        borderImageView.backgroundColor = decorator.borderColor
         
-        storyImageView.sd_setImage(with: decorator.storyImage(), completed: nil)
-        profileImageView.sd_setImage(with: decorator.profileImage(), completed: nil)
-        profileLabel.attributedText = decorator.attributedProfile()
+        storyImageView.sd_setImage(with: decorator.storyImage, completed: nil)
+        profileImageView.sd_setImage(with: decorator.profileImage, completed: nil)
+        profileLabel.attributedText = decorator.attributedProfile
     }
 
 }

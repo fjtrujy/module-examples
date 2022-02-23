@@ -9,26 +9,23 @@
 import UIKit
 
 class NewPostActionsDecorator {
-    func backgroundColor() -> UIColor? { .white }
-    func separatorColor() -> UIColor? { .gray }
-    
-    func liveIcon() -> UIImage? { UIImage(named: "recordLiveIcon") }
-    func liveAttributedString() -> NSAttributedString? { NSAttributedString(string: "Live", attributes: attributes) }
-    func pictureIcon() -> UIImage? { UIImage(named: "newPhoto") }
-    func photoAttributedString() -> NSAttributedString? { NSAttributedString(string: "Photo", attributes: attributes) }
-    func checkInIcon() -> UIImage? { UIImage(named: "checkIn") }
-    func checkInAttributedString() -> NSAttributedString? {
-        NSAttributedString(string: "Check In", attributes: attributes)
-    }
+    var backgroundColor: UIColor? { .white }
+    var separatorColor: UIColor? { .gray }
+    var liveIcon: UIImage? { UIImage(named: "recordLiveIcon") }
+    var liveAttributedString: NSAttributedString? { NSAttributedString(string: "Live", attributes: attributes) }
+    var pictureIcon: UIImage? { UIImage(named: "newPhoto") }
+    var photoAttributedString: NSAttributedString? { NSAttributedString(string: "Photo", attributes: attributes) }
+    var checkInIcon: UIImage? { UIImage(named: "checkIn") }
+    var checkInAttributedString: NSAttributedString? { .init(string: "Check In", attributes: attributes) }
 }
 
 //MARK: - DecoratorBasicInfo
 private extension NewPostActionsDecorator {
     var titleColor : UIColor { .gray }
-    private var titleFont : UIFont { .boldSystemFont(ofSize:11) }
+    var titleFont : UIFont { .boldSystemFont(ofSize:11) }
     
-    private var attributes : [NSAttributedString.Key : Any] {
-        return [
+    var attributes : [NSAttributedString.Key : Any] {
+        [
             .font : titleFont,
             .foregroundColor : titleColor,
         ]

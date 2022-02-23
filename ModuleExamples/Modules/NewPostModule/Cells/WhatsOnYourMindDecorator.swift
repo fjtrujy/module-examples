@@ -9,11 +9,9 @@
 import UIKit
 
 class WhatsOnYourMindDecorator {
-    func backgroundColor() -> UIColor { .white }
-    func profileIcon() -> UIImage? { UIImage(named: "whatsNewProfile") }
-    func attributedDesc() -> NSAttributedString {
-        NSAttributedString(string: "What's on your mind?", attributes: attributes)
-    }
+    var backgroundColor: UIColor { .white }
+    var profileIcon: UIImage? { UIImage(named: "whatsNewProfile") }
+    var attributedDesc: NSAttributedString { .init(string: "What's on your mind?", attributes: attributes) }
 }
 
 //MARK: - DecoratorBasicInfo
@@ -22,9 +20,9 @@ private extension WhatsOnYourMindDecorator {
     var titleFont : UIFont { .boldSystemFont(ofSize:13) }
     
     var attributes : [NSAttributedString.Key : Any] {
-        return [
+        [
             .font : titleFont,
             .foregroundColor : titleColor,
-            ]
+        ]
     }
 }

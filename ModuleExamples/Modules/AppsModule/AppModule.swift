@@ -21,11 +21,15 @@ class AppModule: TableSectionModule {
     }
     
     override func registerClassForHeadersFooters() -> [AnyClass] {
-        return super.registerClassForHeadersFooters() + [UITableViewHeaderFooterView.classForCoder()]
+        super.registerClassForHeadersFooters() + [
+            UITableViewHeaderFooterView.classForCoder(),
+        ]
     }
 
     override func registerClassForCells() -> [AnyClass] {
-        return super.registerClassForCells() + [UITableViewCell.classForCoder()]
+        super.registerClassForCells() + [
+            UITableViewCell.classForCoder(),
+        ]
     }
     
     override func createRows() {
@@ -56,13 +60,8 @@ class AppModule: TableSectionModule {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30.0
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return 60.0
-    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { 30.0 }
+    override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat { 60.0 }
     
     override func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
         let appInfo = info.apps[indexPath.row]
@@ -74,6 +73,6 @@ class AppModule: TableSectionModule {
 }
 
 //MARK: - ApppModuleDelegate
-protocol AppModuleDelegate: class {
+protocol AppModuleDelegate: AnyObject {
     func appSelected(_ appInformation: GenericAppInformation?)
 }

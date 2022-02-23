@@ -41,14 +41,10 @@ extension MainViewController: AppModuleDelegate {
         
         let viewcontroller: UIViewController
         switch app {
-        case .Facebook:
-            viewcontroller = FacebookViewController()
-        case .Whatsapp:
-            viewcontroller = WhatsappViewController()
-        case .Potpurri:
-            viewcontroller = PotpurryViewController()
-        case .Playground:
-            viewcontroller = PlaygroundViewController()
+        case .Facebook: viewcontroller = FacebookViewController()
+        case .Whatsapp: viewcontroller = WhatsappViewController()
+        case .Potpurri: viewcontroller = PotpurryViewController()
+        case .Playground: viewcontroller = PlaygroundViewController()
         }
         
         navigationController?.pushViewController(viewcontroller, animated: true)

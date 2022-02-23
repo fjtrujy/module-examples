@@ -9,14 +9,13 @@
 import UIKit
 
 class FavoriteMusicAttributedDecorator: CommonAttributedDecorator {
-    override func attributedTitle() -> NSAttributedString? {
-        let attr = NSMutableAttributedString()
-        attr.append(attributedRadioIcon)
-        attr.append(attributedBreakLine)
-        attr.append(attributedBreakLine)
-        attr.append(attributedDescription)
-        
-        return attr.copy() as? NSAttributedString
+    override var attributedTitle: NSAttributedString {
+        [
+            attributedRadioIcon,
+            attributedBreakLine,
+            attributedBreakLine,
+            attributedDescription,
+        ].reduce(into: NSMutableAttributedString()) { $0.append($1) }
     }
 }
 
@@ -34,14 +33,14 @@ private extension FavoriteMusicAttributedDecorator {
     }
     
     var mainAttributes : [NSAttributedString.Key : Any] {
-        return [
+        [
             .font : mainFont,
             .foregroundColor : mainColor,
         ]
     }
     
     var softAttributes : [NSAttributedString.Key : Any] {
-        return [
+        [
             .font : secondaryFont,
             .foregroundColor : mainColor,
             .paragraphStyle : paragraph,
@@ -49,14 +48,12 @@ private extension FavoriteMusicAttributedDecorator {
     }
     
     var smallAttributes : [NSAttributedString.Key : Any] {
-        return [
+        [
             .font : smalFont,
         ]
     }
     
-    var attributedBreakLine : NSAttributedString {
-        return NSAttributedString(string: "\n", attributes:smallAttributes)
-    }
+    var attributedBreakLine : NSAttributedString { .init(string: "\n", attributes:smallAttributes) }
     
     var attributedRadioIcon : NSAttributedString {
         let paragraph = NSMutableParagraphStyle()
@@ -74,6 +71,7 @@ private extension FavoriteMusicAttributedDecorator {
     }
     
     var attributedDescription : NSAttributedString {
-        return NSAttributedString(string: "What music do you listen to? Add songs to your profile to show people your tastes and how you are.", attributes: softAttributes)
+        .init(string: "What music do you listen to? Add songs to your profile to show people your tastes and how you are.",
+              attributes: softAttributes)
     }
 }

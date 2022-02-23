@@ -34,16 +34,13 @@ class NewPostModule: TableSectionModule {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        var height = super.tableView(tableView, heightForRowAtIndexPath: indexPath)
-        
         let identifier = String(describing: rows[indexPath.row])
         
+        let height: CGFloat
         switch identifier {
-        case String(describing: WhatsOnYourMindCell.self):
-            height = 70
-        case String(describing: NewPostActionsCell.self):
-            height = 40
-        default: break
+        case String(describing: WhatsOnYourMindCell.self): height = 70
+        case String(describing: NewPostActionsCell.self): height = 40
+        default: height = super.tableView(tableView, heightForRowAtIndexPath: indexPath)
         }
         
         return height

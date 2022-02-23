@@ -22,15 +22,12 @@ class WhatsappStatusCellDecorator {
     }
     
     var backgroundColor : UIColor { .white }
-    
     var attributedInfo : NSAttributedString {
-        let attr : NSMutableAttributedString = NSMutableAttributedString()
-        
-        attr.append(attributedTitle)
-        attr.append(attributedBreakLine)
-        attr.append(attributedSubtitle)
-        
-        return attr
+        [
+            attributedTitle,
+            attributedBreakLine,
+            attributedSubtitle,
+        ].reduce(into: NSMutableAttributedString()) { $0.append($1) }
     }
     
     var profileIcon: UIImage? {  UIImage(named: imageName!) }

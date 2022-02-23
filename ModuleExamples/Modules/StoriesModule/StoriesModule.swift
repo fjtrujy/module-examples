@@ -39,10 +39,8 @@ class StoriesModule: TableSectionModule {
     override func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let identifier = String(describing: rows[indexPath.row])
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        if let storiesImageCell = cell as? StoriesImageCell,
-            let storiesDataModel = storiesDataModel {
-            storiesImageCell.configure(dataModel: storiesDataModel)
-        }
+        guard let storiesImageCell = cell as? StoriesImageCell, let storiesDataModel = storiesDataModel else { return cell }
+        storiesImageCell.configure(dataModel: storiesDataModel)
         
         removeSeparatorInsetForCell(cell, forIndexPath: indexPath)
         
@@ -50,14 +48,12 @@ class StoriesModule: TableSectionModule {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
-        var height = super.tableView(tableView, heightForRowAtIndexPath: indexPath)
         let identifier = String(describing: rows[indexPath.row])
         
+        let height: CGFloat
         switch identifier {
-        case String(describing:StoriesImageCell.self):
-            height = 151
-        default:
-            height = 30
+        case String(describing:StoriesImageCell.self): height = 151
+        default: height = 30
         }
         
         return height;

@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/cosmicfools/ModuleServices",
         "state": {
           "branch": null,
-          "revision": "04e28d18bd682546f23e79b9226600049e88c819",
-          "version": "0.9.1"
+          "revision": "39f73fcfa657226740398b09957f701eecf2735b",
+          "version": "1.1.0"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
         "state": {
           "branch": null,
-          "revision": "665d02280f5c04515e76feb78078dd89da091f3e",
-          "version": "5.9.2"
+          "revision": "2c53f531f1bedd253f55d85105409c28ed4a922c",
+          "version": "5.12.3"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/pointfreeco/swift-snapshot-testing",
         "state": {
           "branch": null,
-          "revision": "c466812aa2e22898f27557e2e780d3aad7a27203",
-          "version": "1.8.2"
+          "revision": "f8a9c997c3c1dab4e216a8ec9014e23144cbab37",
+          "version": "1.9.0"
         }
       }
     ]

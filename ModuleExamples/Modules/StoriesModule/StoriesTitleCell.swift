@@ -17,9 +17,9 @@ class StoriesTitleCell: UITableViewCell {
         // Initialization code
         let decorator = StoriesTitleDecorator()
         
-        backgroundColor = decorator.backgroundColor()
-        title?.attributedText = decorator.attributedTitle()
-        archives?.attributedText = decorator.attributedArchive()
+        backgroundColor = decorator.backgroundColor
+        title?.attributedText = decorator.attributedTitle
+        archives?.attributedText = decorator.attributedArchive
     }
     
 }

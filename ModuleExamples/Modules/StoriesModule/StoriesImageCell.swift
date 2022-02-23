@@ -32,23 +32,22 @@ class StoriesImageCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (dataModel?.stories?.count)!
+        (dataModel?.stories?.count) ?? .zero
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let storyDataModel = dataModel?.stories?[indexPath.row]
         let identifier = String(describing: StoryCollectionCell.self)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
-        if let storyCollectionCell = cell as? StoryCollectionCell,
-            let storyDataModel = storyDataModel {
-            storyCollectionCell.configure(decorator: StoryCollectionDecorator(storyDataModel: storyDataModel))
-        }
+        guard let storyCollectionCell = cell as? StoryCollectionCell, let storyDataModel = storyDataModel else { return cell }
+        storyCollectionCell.configure(decorator: StoryCollectionDecorator(storyDataModel: storyDataModel))
         
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 110, height: 150)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: 110, height: 150)
     }
     
 }

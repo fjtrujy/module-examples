@@ -10,14 +10,8 @@ import UIKit
 
 class CommonAttributedDecorator {
     
-    func backgroundColor() -> UIColor? {
-        return .white
-    }
-    
-    func attributedTitle() -> NSAttributedString? {
-        return NSAttributedString()
-    }
-    
+    var backgroundColor: UIColor { .white }
+    var attributedTitle: NSAttributedString { .init() }
     
     //To resize images
     func changeAttachmentImageHeight(attachment: NSTextAttachment, height: CGFloat) {

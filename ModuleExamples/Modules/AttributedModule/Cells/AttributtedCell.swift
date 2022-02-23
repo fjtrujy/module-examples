@@ -12,7 +12,7 @@ class AttributtedCell: UITableViewCell {
     @IBOutlet private weak var myLabel : UILabel?
 
     func configure(decorator: CommonAttributedDecorator) {
-        backgroundColor = decorator.backgroundColor()
-        myLabel?.attributedText = decorator.attributedTitle()
+        backgroundColor = decorator.backgroundColor
+        myLabel?.attributedText = decorator.attributedTitle
     }
 }
